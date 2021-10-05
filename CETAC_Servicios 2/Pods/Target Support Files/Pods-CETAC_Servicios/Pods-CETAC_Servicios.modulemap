@@ -1,0 +1,6 @@
+framework module Pods_CETAC_Servicios {
+  umbrella header "Pods-CETAC_Servicios-umbrella.h"
+
+  export *
+  module * { export * }
+}
