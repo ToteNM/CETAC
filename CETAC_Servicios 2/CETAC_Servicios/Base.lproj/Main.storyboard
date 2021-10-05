@@ -190,7 +190,7 @@
         <!--Usuario-->
         <scene sceneID="ikq-0T-u91">
             <objects>
-                <viewController id="0ZQ-kz-J3l" sceneMemberID="viewController">
+                <viewController id="0ZQ-kz-J3l" customClass="InicioUsuarioViewController" customModule="CETAC_Servicios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q5G-xC-xMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,10 +204,16 @@
                                             <constraint firstAttribute="height" constant="40" id="Gfq-XH-hb5"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <segue destination="zwO-Gg-RMr" kind="show" id="saq-zV-d55"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKh-j4-g9j">
                                         <rect key="frame" x="0.0" y="60" width="334" height="30"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <segue destination="w9V-0E-yFC" kind="show" id="Lay-I2-6ul"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -225,6 +231,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Usuario" id="lFo-NJ-JXi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="login" destination="HKh-j4-g9j" id="Wlf-qr-M8a"/>
+                        <outlet property="signup" destination="8XQ-Nq-vqi" id="sun-aY-Yv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etm-uQ-qgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,8 +247,20 @@
                     <view key="view" contentMode="scaleToFill" id="A7K-D7-etG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-lI-0iq">
+                                <rect key="frame" x="169.5" y="437.5" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="To5-eb-LJb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2aK-lI-0iq" firstAttribute="centerY" secondItem="A7K-D7-etG" secondAttribute="centerY" id="kzl-uA-ORV"/>
+                            <constraint firstItem="2aK-lI-0iq" firstAttribute="centerX" secondItem="A7K-D7-etG" secondAttribute="centerX" id="zH1-Sj-aEt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7y-QI-MDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="odg-YF-Ab9">
-                                <rect key="frame" x="40" y="84" width="334" height="320.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="320.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-3A-s4k">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -282,6 +304,9 @@
                                             <constraint firstAttribute="height" constant="40" id="BJp-Of-Xh5"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signupTapped:" destination="zwO-Gg-RMr" eventType="touchUpInside" id="WKP-yl-uuI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCe-8i-qFb">
                                         <rect key="frame" x="0.0" y="300" width="334" height="20.5"/>
@@ -306,6 +331,15 @@
                             <constraint firstItem="odg-YF-Ab9" firstAttribute="leading" secondItem="FJd-LW-pci" secondAttribute="leading" constant="40" id="qzx-KT-okg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oa0-up-P3b"/>
+                    <connections>
+                        <outlet property="apellidosField" destination="Pvo-eh-ydD" id="SSn-i4-gCb"/>
+                        <outlet property="emailField" destination="YhV-UD-XZl" id="d2u-8n-nWT"/>
+                        <outlet property="error" destination="mCe-8i-qFb" id="4bb-mI-MgL"/>
+                        <outlet property="nombreField" destination="zmw-3A-s4k" id="Gpg-hz-dg3"/>
+                        <outlet property="passwordField" destination="5oi-gB-cuE" id="7uq-r8-rX9"/>
+                        <outlet property="signup" destination="YoJ-aA-lL6" id="RSP-r6-WSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVZ-2H-RqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1669,7 +1703,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oBc-GK-Z6B">
-                                <rect key="frame" x="40" y="84" width="334" height="220"/>
+                                <rect key="frame" x="40" y="128" width="334" height="220"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-n0-blC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -1693,6 +1727,9 @@
                                             <constraint firstAttribute="height" constant="40" id="f0Y-1B-xWv"/>
                                         </constraints>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="w9V-0E-yFC" eventType="touchUpInside" id="bmd-Vm-17f"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-zV-twJ">
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
@@ -1714,6 +1751,13 @@
                             <constraint firstItem="oBc-GK-Z6B" firstAttribute="top" secondItem="w0B-Ia-kph" secondAttribute="top" constant="40" id="u3W-gb-f0y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pvu-BT-4g2"/>
+                    <connections>
+                        <outlet property="emailField" destination="Fhj-n0-blC" id="Rxb-eP-pmN"/>
+                        <outlet property="error" destination="Vcg-zV-twJ" id="ovn-T3-PAz"/>
+                        <outlet property="login" destination="3OI-CG-hJg" id="4cz-g2-0eV"/>
+                        <outlet property="passwordField" destination="Nzg-pE-o17" id="xtS-Tx-iGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ut-Xo-Jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

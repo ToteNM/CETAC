@@ -9,12 +9,26 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var error: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setUpElements()
     }
-    
+    func setUpElements() {
+        //Esconder el error
+        error.alpha = 0
+        
+        //Estilo a los elementos
+        Utilities.styleTextField(emailField)
+        Utilities.styleTextField(passwordField)
+        Utilities.styleFilledButton(login)
+    }
 
     /*
     // MARK: - Navigation
@@ -25,5 +39,8 @@ class LogInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func loginTapped(_ sender: Any) {
+    }
+    
 }

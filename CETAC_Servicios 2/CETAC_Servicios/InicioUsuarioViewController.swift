@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  InicioUsuarioViewController.swift
 //  CETAC_Servicios
 //
 //  Created by user193304 on 10/5/21.
@@ -7,14 +7,21 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class InicioUsuarioViewController: UIViewController {
 
+    @IBOutlet weak var signup: UIButton!
+    @IBOutlet weak var login: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
     }
     
+    func setUpElements() {
+        Utilities.styleFilledButton(signup)
+        Utilities.styleHollowButton(login)
+    }
 
     /*
     // MARK: - Navigation
