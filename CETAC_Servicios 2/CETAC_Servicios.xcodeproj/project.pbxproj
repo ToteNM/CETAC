@@ -13,6 +13,9 @@
 		351E3FB82702B6CD00C09617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351E3FB62702B6CD00C09617 /* Main.storyboard */; };
 		351E3FBA2702B6D600C09617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351E3FB92702B6D600C09617 /* Assets.xcassets */; };
 		351E3FBD2702B6D600C09617 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351E3FBB2702B6D600C09617 /* LaunchScreen.storyboard */; };
+		3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */; };
+		3550C3B1270CEBF300FE6844 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3B0270CEBF300FE6844 /* LogInViewController.swift */; };
+		3550C3B6270CEC1200FE6844 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3B5270CEC1200FE6844 /* HomeViewController.swift */; };
 		35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
 		9C607046270C0316000C5A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C607045270C0315000C5A5F /* GoogleService-Info.plist */; };
@@ -30,6 +33,9 @@
 		351E3FB92702B6D600C09617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351E3FBC2702B6D600C09617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351E3FBE2702B6D600C09617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3550C3B0270CEBF300FE6844 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3550C3B5270CEC1200FE6844 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,8 +91,19 @@
 				351E3FBE2702B6D600C09617 /* Info.plist */,
 				35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */,
 				9C607045270C0315000C5A5F /* GoogleService-Info.plist */,
+				3550C3AC270CEB1100FE6844 /* View Controllers */,
 			);
 			path = CETAC_Servicios;
+			sourceTree = "<group>";
+		};
+		3550C3AC270CEB1100FE6844 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */,
+				3550C3B0270CEBF300FE6844 /* LogInViewController.swift */,
+				3550C3B5270CEC1200FE6844 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		42EA7F06CC9DEC5AAE2A23EC /* Frameworks */ = {
@@ -214,8 +231,11 @@
 			files = (
 				351E3FB52702B6CD00C09617 /* ViewController.swift in Sources */,
 				351E3FB12702B6CD00C09617 /* AppDelegate.swift in Sources */,
+				3550C3B1270CEBF300FE6844 /* LogInViewController.swift in Sources */,
 				35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */,
 				351E3FB32702B6CD00C09617 /* SceneDelegate.swift in Sources */,
+				3550C3B6270CEC1200FE6844 /* HomeViewController.swift in Sources */,
+				3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
