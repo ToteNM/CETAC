@@ -212,7 +212,7 @@
                                         <rect key="frame" x="0.0" y="70" width="334" height="37.5"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="w9V-0E-yFC" kind="show" id="Lay-I2-6ul"/>
+                                            <segue destination="w9V-0E-yFC" kind="show" id="5kO-jX-law"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1754,7 +1754,6 @@
                     <navigationItem key="navigationItem" id="Pvu-BT-4g2"/>
                     <connections>
                         <outlet property="emailField" destination="Fhj-n0-blC" id="Rxb-eP-pmN"/>
-                        <outlet property="error" destination="Vcg-zV-twJ" id="ovn-T3-PAz"/>
                         <outlet property="errorLabel" destination="Vcg-zV-twJ" id="gdN-5F-xEl"/>
                         <outlet property="login" destination="3OI-CG-hJg" id="4cz-g2-0eV"/>
                         <outlet property="passwordField" destination="Nzg-pE-o17" id="xtS-Tx-iGP"/>
