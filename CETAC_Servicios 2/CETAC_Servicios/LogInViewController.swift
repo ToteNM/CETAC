@@ -8,15 +8,20 @@
 import UIKit
 import FirebaseAuth
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    
+    var usuariosCuenta = UsersController()
+    var UID = ""
+    var roles = 1
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailField.delegate = self
+        passwordField.delegate = self
         // Do any additional setup after loading the view.
         
         setUpElements()
@@ -41,18 +46,27 @@ class LogInViewController: UIViewController {
         let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // Sign in con el usuario
-        Auth.auth().signIn(withEmail: email, password: password) {
+        Auth.auth().signIn(withEmail: email, password: password) { [self]
             (result, error) in
             
             if error != nil {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             }
+            //self.UID = resultado!.user.uid
+            usuariosCuenta.leerUsuario(id: self.UID) {(nombre, email, rol) in
+                self.roles = rol
+                if rol == 1 {
+                    self.performSegue(withIdentifier: "irTanatologos", sender: self)
+                    return
+                }
+                if rol == 2 {
+                    self.performSegue(withIdentifier: "irAdmin", sender: self)
+                    return
+                }
             else {
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
                 
-                self.view.window?.rootViewController = homeViewController
-                self.view.window?.makeKeyAndVisible()
+                }
             }
         }
     }

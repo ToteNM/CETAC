@@ -19,6 +19,7 @@
 		3550C3BD270CFA3800FE6844 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3BC270CFA3800FE6844 /* Utilities.swift */; };
 		3550C3D3270CFDAA00FE6844 /* InicioUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */; };
 		358E7EA1270D49CB00242DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358E7EA0270D49CB00242DB2 /* Constants.swift */; };
+		358FA91E270E2B8F0031A542 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358FA91D270E2B8F0031A542 /* UsersController.swift */; };
 		35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
 		9C607046270C0316000C5A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C607045270C0315000C5A5F /* GoogleService-Info.plist */; };
@@ -42,6 +43,7 @@
 		3550C3BC270CFA3800FE6844 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioUsuarioViewController.swift; sourceTree = "<group>"; };
 		358E7EA0270D49CB00242DB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		358FA91D270E2B8F0031A542 /* UsersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				3550C3B5270CEC1200FE6844 /* HomeViewController.swift */,
 				3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */,
 				3550C3AC270CEB1100FE6844 /* View Controllers */,
+				358FA91D270E2B8F0031A542 /* UsersController.swift */,
 			);
 			path = CETAC_Servicios;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				358E7EA1270D49CB00242DB2 /* Constants.swift in Sources */,
 				351E3FB32702B6CD00C09617 /* SceneDelegate.swift in Sources */,
 				3550C3B6270CEC1200FE6844 /* HomeViewController.swift in Sources */,
+				358FA91E270E2B8F0031A542 /* UsersController.swift in Sources */,
 				3550C3BD270CFA3800FE6844 /* Utilities.swift in Sources */,
 				3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */,
 			);

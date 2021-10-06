@@ -265,7 +265,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7y-QI-MDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="1404"/>
+            <point key="canvasLocation" x="1328" y="1473"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cMx-ZZ-L8Y">
+            <objects>
+                <viewController id="FXV-90-Ie3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aBU-qy-n1w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tanatologos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGU-uW-QKL">
+                                <rect key="frame" x="186" y="342" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3fm-rS-Pym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qTL-S8-Uii"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCX-A4-ltg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116" y="1457"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N5t-ga-syB">
+            <objects>
+                <viewController id="07d-fe-FwM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hu-Ev-vhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDk-N2-F3R">
+                                <rect key="frame" x="186" y="395" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BQR-Xl-UPK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OmV-BC-GoW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8q-7X-4jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="1456"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="XSg-Rk-CgB">
@@ -1757,6 +1807,8 @@
                         <outlet property="errorLabel" destination="Vcg-zV-twJ" id="gdN-5F-xEl"/>
                         <outlet property="login" destination="3OI-CG-hJg" id="4cz-g2-0eV"/>
                         <outlet property="passwordField" destination="Nzg-pE-o17" id="xtS-Tx-iGP"/>
+                        <segue destination="FXV-90-Ie3" kind="show" identifier="irTanatologos" id="EPH-fD-1AH"/>
+                        <segue destination="07d-fe-FwM" kind="show" identifier="irAdmin" id="49L-wo-F2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ut-Xo-Jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
