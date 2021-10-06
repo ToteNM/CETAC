@@ -52,8 +52,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             if error != nil {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
+                return
             }
-            //self.UID = resultado!.user.uid
+            self.UID = result!.user.uid
             usuariosCuenta.leerUsuario(id: self.UID) {(nombre, email, rol) in
                 self.roles = rol
                 if rol == 1 {
@@ -65,7 +66,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
             else {
-                
+                return
                 }
             }
         }
