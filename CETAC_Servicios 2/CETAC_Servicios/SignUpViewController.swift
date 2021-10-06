@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var nombreField: UITextField!
@@ -71,15 +72,49 @@ class SignUpViewController: UIViewController {
             
         }
         else {
-            // Crear el usuario
+            // Crear variables
+            let nombre = nombreField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let apellidos = apellidosField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // Transicion a la pantalla
+            // Crear el usuario
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                // Checar errores
+                if err != nil {
+                    // Hay un error creado por el usuario
+                    self.showError("Error creating user")
+                }
+                else {
+                    //Usuario creado exitoso, ahora se alamacena los datos
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["nombre":nombre, "apellidos":apellidos, "uid": result!.user.uid]) { (error) in
+                        
+                        if error != nil {
+                            // mostrar mensaje de error
+                            self.showError("Error al guardar datos")
+                        }
+                        
+                    }
+                    // Transicion a la pantalla
+                    self.transitionInicioUsuario()
+                }
+                
+            }
+            
         }
         
     }
     func showError(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
+    }
+    func transitionInicioUsuario () {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
