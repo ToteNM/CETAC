@@ -12,7 +12,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var login: UIButton!
-    @IBOutlet weak var error: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +22,7 @@ class LogInViewController: UIViewController {
     }
     func setUpElements() {
         //Esconder el error
-        error.alpha = 0
+        errorLabel.alpha = 0
         
         //Estilo a los elementos
         Utilities.styleTextField(emailField)
