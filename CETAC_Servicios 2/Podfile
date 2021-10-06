@@ -8,6 +8,8 @@ target 'CETAC_Servicios' do
   pod 'Firebase/Firestore'
 
   pod 'FirebaseFirestoreSwift'
+
+  pod 'Firebase/Auth'
   # Pods for CETAC_Servicios
 
 end
