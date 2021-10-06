@@ -55,7 +55,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             self.UID = result!.user.uid
-            usuariosCuenta.leerUsuario(id: self.UID) {(nombre, email, rol) in
+            usuariosCuenta.leerUsuario(id: result!.user.uid) {(nombre, email, rol) in
                 self.roles = rol
                 if rol == 1 {
                     self.performSegue(withIdentifier: "irTanatologos", sender: self)

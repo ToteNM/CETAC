@@ -43,14 +43,14 @@ class UsersController{
                 /*let email = document.get("email") as? String ?? ""
                 let nombre = document.get("nombre") as? String ?? ""
                 let rol = document.get("rol") as? Int ?? 0*/
-                
+                //let nombre = document.get("nombre") as! String
                 let nombre = document.get("nombre") as! String
+                print("\(nombre)")
                 let email = document.get("email") as! String
+                print("\(email)")
                 let rol = document.get("rol") as! Int
-                
                 completion(nombre,email,rol)
             }
-            
         }
     }
 }
