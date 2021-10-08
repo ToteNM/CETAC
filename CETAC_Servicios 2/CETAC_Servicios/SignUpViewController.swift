@@ -18,12 +18,25 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var pasarUID = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+                    //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+                    tap.cancelsTouchesInView = false
+
+                view.addGestureRecognizer(tap)
+
         setUpElements()
     }
+    @objc func dismissKeyboard() {
+            //Causes the view (or one of its embedded text fields) to resign the first responder status.
+            view.endEditing(true)
+        }
+
     func setUpElements() {
         //Esconder el error
         errorLabel.alpha = 0
@@ -50,8 +63,8 @@ class SignUpViewController: UIViewController {
     func validateFields() -> String? {
         
         // Checar que los campos esten completos
-        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" /*||
-            Int(rolField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) == ""*/{
+        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            rolField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             return "Por favor, llena todos los campos"
         }
         // checar si la contraseña es segura
@@ -80,8 +93,10 @@ class SignUpViewController: UIViewController {
             let apellidos = apellidosField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            //let rol = String(rolField.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+            let rol = String(rolField.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+            let rolnum = Int(rol) ?? 0
             // Crear el usuario
+            
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 // Checar errores
                 if err != nil {
@@ -90,8 +105,9 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     //Usuario creado exitoso, ahora se alamacena los datos
+                    
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["nombre":nombre, "apellidos":apellidos, "uid": result!.user.uid]) { (error) in
+                     db.collection("users").document(result!.user.uid).setData(["nombre":nombre, "apellidos":apellidos, "rol":rolnum, "email": email]) { (error) in
                         
                         if error != nil {
                             // mostrar mensaje de error
@@ -99,6 +115,8 @@ class SignUpViewController: UIViewController {
                         }
                         
                     }
+                    
+
                     // Transicion a la pantalla
                     self.showError("Usuario Creado")
                 }

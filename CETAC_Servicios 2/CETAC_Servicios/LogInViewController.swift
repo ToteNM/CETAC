@@ -16,8 +16,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
     
     var usuariosCuenta = UsersController()
-    var UID = ""
+    var pasarUID = ""
     var roles = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailField.delegate = self
@@ -54,8 +55,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.alpha = 1
                 return
             }
-            self.UID = result!.user.uid
-            usuariosCuenta.leerUsuario(id: result!.user.uid) {(nombre, email, rol) in
+            self.pasarUID = result!.user.uid
+            self.usuariosCuenta.leerUsuario(id: self.pasarUID) {(nombre, email, rol) in
                 self.roles = rol
                 if rol == 1 {
                     self.performSegue(withIdentifier: "irAdmin", sender: self)
