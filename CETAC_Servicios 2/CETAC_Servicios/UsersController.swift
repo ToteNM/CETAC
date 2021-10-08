@@ -50,7 +50,7 @@ class UsersController{
                 
                 let rol = document.get("rol") as! Int
                 completion(nombre,email,rol)
-            }
+            }	
         }
     }
 }

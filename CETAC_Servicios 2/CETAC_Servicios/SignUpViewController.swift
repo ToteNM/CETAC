@@ -14,6 +14,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var apellidosField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var rolField: UITextField!
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -33,6 +34,7 @@ class SignUpViewController: UIViewController {
         Utilities.styleTextField(emailField)
         Utilities.styleTextField(passwordField)
         Utilities.styleFilledButton(signup)
+        Utilities.styleTextField(rolField)
     }
 
     /*
@@ -48,7 +50,8 @@ class SignUpViewController: UIViewController {
     func validateFields() -> String? {
         
         // Checar que los campos esten completos
-        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" /*||
+            Int(rolField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) == ""*/{
             return "Por favor, llena todos los campos"
         }
         // checar si la contraseña es segura
@@ -77,7 +80,7 @@ class SignUpViewController: UIViewController {
             let apellidos = apellidosField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+            //let rol = String(rolField.text!.trimmingCharacters(in: .whitespacesAndNewlines))
             // Crear el usuario
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 // Checar errores
@@ -97,7 +100,7 @@ class SignUpViewController: UIViewController {
                         
                     }
                     // Transicion a la pantalla
-                    self.transitionInicioUsuario()
+                    self.showError("Usuario Creado")
                 }
                 
             }
@@ -109,12 +112,12 @@ class SignUpViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    func transitionInicioUsuario () {
+    /*func transitionInicioUsuario () {
         
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
-    }
+    }*/
     
 }

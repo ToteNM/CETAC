@@ -58,15 +58,16 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             usuariosCuenta.leerUsuario(id: result!.user.uid) {(nombre, email, rol) in
                 self.roles = rol
                 if rol == 1 {
-                    self.performSegue(withIdentifier: "irTanatologos", sender: self)
-                    return
-                }
-                if rol == 2 {
                     self.performSegue(withIdentifier: "irAdmin", sender: self)
                     return
                 }
-            else {
-                return
+                if rol == 2 {
+                    self.performSegue(withIdentifier: "irTanatologos", sender: self)
+                    return
+                }
+                if rol == 3 {
+                    self.performSegue(withIdentifier: "irSoporte", sender: self)
+                    return
                 }
             }
         }
