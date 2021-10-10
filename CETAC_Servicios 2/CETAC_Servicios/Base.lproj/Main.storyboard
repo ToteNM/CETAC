@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CETAC" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-Er-d6E">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoCETAC" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-Er-d6E">
                                 <rect key="frame" x="68" y="241" width="278" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="278" id="thC-VZ-pPA"/>
@@ -90,7 +90,7 @@
                                             <constraint firstAttribute="height" constant="150" id="6RN-8o-Qgp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="Acompañamiento individual"/>
                                         <connections>
                                             <segue destination="ddD-RM-nh2" kind="show" id="RAd-lj-gBm"/>
                                         </connections>
@@ -110,7 +110,7 @@
                                             <constraint firstAttribute="height" constant="150" id="LCv-gO-gKO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="cristales"/>
                                         <connections>
                                             <segue destination="y1d-B4-2r7" kind="show" id="YIG-D8-Ths"/>
                                         </connections>
@@ -130,7 +130,7 @@
                                             <constraint firstAttribute="height" constant="150" id="2za-aH-c74"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="4"/>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="relajante_fondoverde"/>
                                         <connections>
                                             <segue destination="vQI-rG-oFV" kind="show" id="5fc-sW-4fs"/>
                                         </connections>
@@ -161,10 +161,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PdJ-3R-1Hz">
-                                <rect key="frame" x="10" y="158" width="394" height="470"/>
+                                <rect key="frame" x="10" y="158" width="374" height="470"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="eEH-QB-xPo">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanatología" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS9-Jd-rqs">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="70"/>
@@ -177,7 +177,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento Individual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msi-b5-Fcw">
-                                                <rect key="frame" x="194" y="0.0" width="200" height="70"/>
+                                                <rect key="frame" x="194" y="0.0" width="180" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="4K7-C6-6SU"/>
                                                     <constraint firstAttribute="width" constant="180" id="ymU-3x-6KC"/>
@@ -189,7 +189,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xya-hM-Hpq">
-                                        <rect key="frame" x="0.0" y="70" width="394" height="130"/>
+                                        <rect key="frame" x="0.0" y="70" width="374" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-AX-SK0">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="130"/>
@@ -198,19 +198,19 @@
                                                     <constraint firstAttribute="height" constant="130" id="qau-CB-iLm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Tanatologia"/>
                                                 <connections>
                                                     <segue destination="yHB-6e-u9x" kind="show" id="pFr-tW-ITC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-ZC-kr9">
-                                                <rect key="frame" x="189" y="0.0" width="205" height="130"/>
+                                                <rect key="frame" x="189" y="0.0" width="185" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="EiC-VL-h6e"/>
                                                     <constraint firstAttribute="height" constant="130" id="xFR-ef-9ZC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Acompañamiento individual"/>
                                                 <connections>
                                                     <segue destination="WV2-tA-s6F" kind="show" id="Xvz-Q8-OcL"/>
                                                 </connections>
@@ -218,7 +218,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="sf8-El-cqG">
-                                        <rect key="frame" x="0.0" y="200" width="394" height="70"/>
+                                        <rect key="frame" x="0.0" y="200" width="374" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento Grupal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlY-nI-obo">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="70"/>
@@ -231,7 +231,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logoterapia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCi-xv-eOg">
-                                                <rect key="frame" x="194" y="0.0" width="200" height="70"/>
+                                                <rect key="frame" x="194" y="0.0" width="180" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="Frh-7C-XrW"/>
                                                     <constraint firstAttribute="width" constant="180" id="yg4-Nw-me8"/>
@@ -243,7 +243,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="egc-58-nyP">
-                                        <rect key="frame" x="0.0" y="270" width="394" height="130"/>
+                                        <rect key="frame" x="0.0" y="270" width="374" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydV-K7-Bf4">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="130"/>
@@ -252,19 +252,19 @@
                                                     <constraint firstAttribute="height" constant="130" id="XvS-aJ-CZp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Acompañamiento grupal"/>
                                                 <connections>
                                                     <segue destination="8Qo-2e-5KR" kind="show" id="fmB-VF-GVM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-ws-79W">
-                                                <rect key="frame" x="189" y="0.0" width="205" height="130"/>
+                                                <rect key="frame" x="189" y="0.0" width="185" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="lfq-gK-yc1"/>
                                                     <constraint firstAttribute="width" constant="175" id="scG-fG-Hsc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Logoterapia"/>
                                                 <connections>
                                                     <segue destination="Ds4-wX-uZ2" kind="show" id="DCB-T9-Yov"/>
                                                 </connections>
@@ -272,10 +272,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xy8-bB-4Kx">
-                                        <rect key="frame" x="0.0" y="400" width="394" height="70"/>
+                                        <rect key="frame" x="0.0" y="400" width="374" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEq-b8-rrd">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="6fC-we-ztc"/>
                                                     <constraint firstAttribute="width" constant="180" id="Gse-is-ubX"/>
@@ -289,15 +289,15 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="76q-7o-HBY" userLabel="imagen">
-                                <rect key="frame" x="95" y="628" width="224" height="130"/>
+                                <rect key="frame" x="95" y="628" width="204" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgD-5d-PgK">
-                                        <rect key="frame" x="0.0" y="0.0" width="224" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="iiH-9r-IK0"/>
                                             <constraint firstAttribute="height" constant="130" id="q3S-lg-dYR"/>
                                         </constraints>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="Mindfulness"/>
                                         <connections>
                                             <segue destination="cuv-F3-4RV" kind="show" id="dhs-Ke-4ey"/>
                                         </connections>
@@ -579,7 +579,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="Jzh-1J-RHn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="vision"/>
                                                 <connections>
                                                     <segue destination="9Hk-BP-yQJ" kind="show" id="lsS-yn-As7"/>
                                                 </connections>
@@ -587,7 +587,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-lr-UmQ">
                                                 <rect key="frame" x="210" y="0.0" width="200" height="205"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="mision"/>
                                                 <connections>
                                                     <segue destination="WPF-h6-xcX" kind="show" id="Xjl-b3-sQg"/>
                                                 </connections>
@@ -633,7 +633,7 @@
                                                     <constraint firstAttribute="height" constant="205" id="FBX-fY-uHu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="valores"/>
                                                 <connections>
                                                     <segue destination="BIn-Om-6j3" kind="show" id="J1V-fH-D1d"/>
                                                 </connections>
@@ -641,7 +641,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LD-VO-tbB">
                                                 <rect key="frame" x="210" y="0.0" width="200" height="205"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="objetivos"/>
                                                 <connections>
                                                     <segue destination="3qO-H8-ATI" kind="show" id="57X-QI-aqZ"/>
                                                 </connections>
@@ -679,18 +679,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-h2-L2K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-h2-L2K">
                                 <rect key="frame" x="0.0" y="150" width="414" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Ffu-xX-i8A"/>
+                                    <constraint firstAttribute="height" constant="45" id="w3E-r3-VZN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J13-HN-usb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J13-HN-usb">
                                 <rect key="frame" x="53" y="314" width="307" height="401"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="7iF-sI-p2m"/>
+                                    <constraint firstAttribute="height" constant="401" id="UhL-aC-BCP"/>
+                                </constraints>
                                 <string key="text">Ser la mejor opción en el servicio en tanatología en la Ciudad de México ampliando nuestros servicios en el interior de la República Mexicana asumiendo nuestro compromiso de ofrecer beneficios a las personas con calidez humana.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -699,6 +705,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KPP-hV-9eO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R9L-h2-L2K" firstAttribute="trailing" secondItem="KPP-hV-9eO" secondAttribute="trailing" id="4zq-hU-Zxa"/>
+                            <constraint firstItem="R9L-h2-L2K" firstAttribute="leading" secondItem="KPP-hV-9eO" secondAttribute="leading" id="8Zs-cu-8gO"/>
+                            <constraint firstItem="J13-HN-usb" firstAttribute="top" secondItem="R9L-h2-L2K" secondAttribute="bottom" constant="119" id="WCK-Ge-wKi"/>
+                            <constraint firstItem="J13-HN-usb" firstAttribute="leading" secondItem="KPP-hV-9eO" secondAttribute="leading" constant="53" id="ruU-h1-Szc"/>
+                            <constraint firstItem="R9L-h2-L2K" firstAttribute="top" secondItem="KPP-hV-9eO" secondAttribute="top" constant="62" id="vDk-LJ-tYT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lAm-Tm-kIY"/>
                 </viewController>
@@ -752,18 +765,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Misión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjI-qB-0jB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjI-qB-0jB">
                                 <rect key="frame" x="0.0" y="150" width="414" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="k6R-Xi-pAe"/>
+                                    <constraint firstAttribute="width" constant="414" id="xja-ZW-RaE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akL-WP-bnI">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akL-WP-bnI">
                                 <rect key="frame" x="53" y="314" width="307" height="496"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="Yb9-0f-da7"/>
+                                    <constraint firstAttribute="height" constant="496" id="sx8-Bn-aNO"/>
+                                </constraints>
                                 <string key="text">Acompañar,  guiar  y  encauzar  a  personas,  pacientes  con  alguna  enfermedad  y  a  sus  familiares  a través   de   la   tanatología   mejorando   su   estado   emocional,   físico,   psicológico   y   espiritual   logrando reencuentren un sentido a la vida asumiendo nuestro compromiso y calidad humana con cada uno de ellos.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -772,6 +791,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iaC-Xe-evg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="akL-WP-bnI" firstAttribute="top" secondItem="KjI-qB-0jB" secondAttribute="bottom" constant="119" id="0Ld-ZO-Jbs"/>
+                            <constraint firstItem="KjI-qB-0jB" firstAttribute="top" secondItem="iaC-Xe-evg" secondAttribute="top" constant="62" id="GKT-td-oRC"/>
+                            <constraint firstItem="akL-WP-bnI" firstAttribute="leading" secondItem="iaC-Xe-evg" secondAttribute="leading" constant="53" id="RSA-xL-UpO"/>
+                            <constraint firstItem="KjI-qB-0jB" firstAttribute="trailing" secondItem="iaC-Xe-evg" secondAttribute="trailing" id="cPt-aw-LFd"/>
+                            <constraint firstItem="KjI-qB-0jB" firstAttribute="leading" secondItem="iaC-Xe-evg" secondAttribute="leading" id="xHK-KI-OQ8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9EV-jI-eRa"/>
                 </viewController>
@@ -787,30 +813,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-cB-2SK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-cB-2SK">
                                 <rect key="frame" x="0.0" y="150" width="414" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="9N4-Z5-sZR"/>
+                                    <constraint firstAttribute="height" constant="45" id="bzR-KY-Eqf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-WS-FEW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-WS-FEW">
                                 <rect key="frame" x="54" y="308" width="307" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">•Respeto: Dar valía a la ideología de cada individuo respetando sus creencias, estatus económico o género.
-•Honestidad: Conducirnos  con  la  verdad  y  transparencia  con  todos  los  individuos,  asociados  y aliados.
-•Empatía: Reconocer, comprender y apreciar las emociones y sentimientos de los demás.
-•Integridad: Conducirnos con rectitud y ética en las ideas, creencias y comportamientos de nuestros colaboradores con la interacción con la comunidad.
-•Humildad:  Tener  la  sabiduría  de  reconocer  y  respetar  las  habilidades,  cualidades,  capacidades  y aptitudes del ser humano.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="GHK-Cm-439"/>
+                                    <constraint firstAttribute="height" constant="554" id="lCz-hB-4aZ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="•Respeto:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17478450567055082" green="0.55340448337068116" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Dar valía a la ideología de cada individuo respetando sus creencias, estatus económico o género.                                    
+                                </string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="•Honestidad:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Conducirnos  con  la  verdad  y  transparencia  con  todos  los  individuos,  asociados  y aliados.
+                                        </string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="•Empatía:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Reconocer, comprender y apreciar las emociones y sentimientos de los demás.
+                                 </string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="•Integridad: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Conducirnos con rectitud y ética en las ideas, creencias y comportamientos de nuestros colaboradores con la interacción con la comunidad.
+                                      </string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="•Humildad: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Tener  la  sabiduría  de  reconocer  y  respetar  las  habilidades,  cualidades,  capacidades  y aptitudes del ser humano.">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Ua-AT-Al7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gi4-cB-2SK" firstAttribute="top" secondItem="4Ua-AT-Al7" secondAttribute="top" constant="62" id="50L-jK-0UE"/>
+                            <constraint firstItem="gi4-cB-2SK" firstAttribute="leading" secondItem="4Ua-AT-Al7" secondAttribute="leading" id="Fty-Lh-77g"/>
+                            <constraint firstItem="gi4-cB-2SK" firstAttribute="trailing" secondItem="4Ua-AT-Al7" secondAttribute="trailing" id="It7-kv-AiT"/>
+                            <constraint firstItem="dZJ-WS-FEW" firstAttribute="top" secondItem="gi4-cB-2SK" secondAttribute="bottom" constant="113" id="YG8-F7-8Cw"/>
+                            <constraint firstItem="dZJ-WS-FEW" firstAttribute="leading" secondItem="4Ua-AT-Al7" secondAttribute="leading" constant="54" id="xLM-w8-rqs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fAM-at-BSZ"/>
                 </viewController>
@@ -826,28 +938,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objetivos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-b6-wtq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objetivos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-b6-wtq">
                                 <rect key="frame" x="0.0" y="150" width="414" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="RTj-Ic-E9g"/>
+                                    <constraint firstAttribute="height" constant="45" id="ZbF-gY-ACp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSC-Pd-Spx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSC-Pd-Spx">
                                 <rect key="frame" x="34" y="320" width="346" height="542"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">•Apoyar  a  personas  de  escasos  recursos  con  algún  tipo  de  discapacidad  para  satisfacer  sus necesidades   humanas   de   acuerdo   a   la   pirámide   de   Maslow:   fisiológicas,   de   seguridad,   de pertenencia, reconocimiento y autorrealización, a través de la disciplina de tanatología.
-•Brindar  cuidado,  capacitación  y  orientación  tanto  emocional,  psicológica  y  espiritualmente  a  los adultos mayores, personas con enfermedades, personas con enfermedades crónico-degenerativas y  en  fase  terminal,  como  también  a  sus  familiares.  Asimismo,  proporcionando  contención  a cualquier tipo de pérdida significativa y por muerte logrando reencuentren un nuevo sentido a la vida.
-•Dar acompañamiento y consejería a personas y pacientes que enfrentan situaciones en crisis, estrés postraumático, abusos, maltratos, así como situaciones que provocan pérdidas de distinta índole: pérdida de un familiar, de una extremidad del cuerpo, de autoestima, de identidad, laboral, bienes materiales;   infertilidad,   anorexia,   bulimia,   intentos   de   suicidio,   viudez,   divorcio,   violencia intrafamiliar, infidelidad, portadores de VIH-SIDA o personas con enfermedades en fase terminal, entre otras. También se da acompañamiento a los familiares que son afectados por la situación y el entorno.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="542" id="ABs-ic-D3Q"/>
+                                    <constraint firstAttribute="width" constant="346" id="eHy-or-7vn"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">•Apoyar  a  personas  de  escasos  recursos  con  algún  tipo  de  discapacidad  para  satisfacer  sus necesidades   humanas   de   acuerdo   a   la   pirámide   de   Maslow:   fisiológicas,   de   seguridad,   de pertenencia, reconocimiento y autorrealización, a través de la disciplina de tanatología.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">                                                         •Brindar  cuidado,  capacitación  y  orientación  tanto  emocional,  psicológica  y  espiritualmente  a  los adultos mayores, personas con enfermedades, personas con enfermedades crónico-degenerativas y  en  fase  terminal,  como  también  a  sus  familiares.  Asimismo,  proporcionando  contención  a cualquier tipo de pérdida significativa y por muerte logrando reencuentren un nuevo sentido a la vida.                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                   •                           Dar acompañamiento y consejería a personas y pacientes que enfrentan situaciones en crisis, estrés postraumático, abusos, maltratos, así como situaciones que provocan pérdidas de distinta índole: pérdida de un familiar, de una extremidad del cuerpo, de autoestima, de identidad, laboral, bienes materiales;   infertilidad,   anorexia,   bulimia,   intentos   de   suicidio,   viudez,   divorcio,   violencia intrafamiliar, infidelidad, portadores de VIH-SIDA o personas con enfermedades en fase terminal, entre otras. También se da acompañamiento a los familiares que son afectados por la situación y el entorno.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xr0-R5-XxY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iSC-Pd-Spx" firstAttribute="top" secondItem="hjf-b6-wtq" secondAttribute="bottom" constant="125" id="Dq8-Xz-MAe"/>
+                            <constraint firstItem="hjf-b6-wtq" firstAttribute="top" secondItem="Xr0-R5-XxY" secondAttribute="top" constant="62" id="JYK-Pu-Dt7"/>
+                            <constraint firstItem="hjf-b6-wtq" firstAttribute="leading" secondItem="Xr0-R5-XxY" secondAttribute="leading" id="VNG-JR-1oi"/>
+                            <constraint firstItem="hjf-b6-wtq" firstAttribute="trailing" secondItem="Xr0-R5-XxY" secondAttribute="trailing" id="XXj-OM-eRn"/>
+                            <constraint firstItem="iSC-Pd-Spx" firstAttribute="leading" secondItem="Xr0-R5-XxY" secondAttribute="leading" constant="34" id="ijA-nL-8mQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rk2-oK-Ukh"/>
                 </viewController>
@@ -901,7 +1040,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="gSi-03-VxZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="aromaterapia y musicoterapia"/>
                                                 <connections>
                                                     <segue destination="3ai-Aj-e4A" kind="show" id="F7R-fL-chj"/>
                                                 </connections>
@@ -913,7 +1052,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="z5b-rh-avn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="cristales"/>
                                                 <connections>
                                                     <segue destination="qnk-YI-n8q" kind="show" id="k8L-Jy-5F6"/>
                                                 </connections>
@@ -955,7 +1094,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="tVd-jc-gMt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Reiki"/>
                                                 <connections>
                                                     <segue destination="Z1b-R9-oxY" kind="show" id="rGu-uB-nnp"/>
                                                 </connections>
@@ -967,7 +1106,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="V9K-3q-4Jf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="biomagnetismo"/>
                                                 <connections>
                                                     <segue destination="UuU-sx-Vfi" kind="show" id="9nN-sn-EF5"/>
                                                 </connections>
@@ -1009,7 +1148,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="qE8-Pe-R2t"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="angeloterapia"/>
                                                 <connections>
                                                     <segue destination="zeb-2i-ioB" kind="show" id="IeE-sT-ATt"/>
                                                 </connections>
@@ -1021,7 +1160,7 @@
                                                     <constraint firstAttribute="height" constant="130" id="TUv-EZ-Q9J"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                                <state key="normal" title="Button" backgroundImage="Cama Térmica"/>
                                                 <connections>
                                                     <segue destination="tK9-AG-r2R" kind="show" id="4au-2X-otz"/>
                                                 </connections>
@@ -1071,7 +1210,7 @@
                                             <constraint firstAttribute="height" constant="150" id="ksc-6f-lZX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="Flores de Bach"/>
                                         <connections>
                                             <segue destination="6aN-Mr-2zE" kind="show" id="CnV-bb-UhO"/>
                                         </connections>
@@ -1090,7 +1229,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="YyT-jK-ZBu"/>
                                         </constraints>
-                                        <state key="normal" title="Button" backgroundImage="CETAC"/>
+                                        <state key="normal" title="Button" backgroundImage="reanimante_fondo_naranja"/>
                                         <connections>
                                             <segue destination="oYQ-Cb-0TU" kind="show" id="2ab-tE-SLr"/>
                                         </connections>
@@ -1121,10 +1260,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanatología" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jW6-zd-DzT">
-                                <rect key="frame" x="2" y="194" width="414" height="52"/>
+                                <rect key="frame" x="2" y="194" width="410" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="X7f-XK-vON"/>
-                                    <constraint firstAttribute="width" constant="414" id="yqa-Vc-YYD"/>
+                                    <constraint firstAttribute="height" constant="52" id="WLp-YG-WGJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <color key="textColor" red="0.40109216659262592" green="0.76165803108808294" blue="0.095783929290924705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1132,51 +1270,45 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-VV-vso">
+                                <rect key="frame" x="20" y="254" width="374" height="10"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tanatologia" translatesAutoresizingMaskIntoConstraints="NO" id="CgK-DX-bsr">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="2ui-eV-2h8"/>
+                                    <constraint firstAttribute="width" constant="308" id="xXg-EZ-q9y"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDo-FT-LJW">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
+                                <rect key="frame" x="54" y="527" width="307" height="301"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="90u-yO-tyg"/>
-                                    <constraint firstAttribute="width" constant="307" id="iPY-sk-q3r"/>
+                                    <constraint firstAttribute="height" constant="301" id="Ffy-t2-ufI"/>
+                                    <constraint firstAttribute="width" constant="307" id="ve3-9D-aPT"/>
                                 </constraints>
                                 <string key="text">Proceso  de  encuentro  personal  en  donde  a  través  de  un  diálogo  con  la  ayuda  de técnicas  y  herramientas  tanatológicas  la  persona  identifica  y  reconoce  sus  emociones  ante  una pérdida.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-VV-vso">
-                                <rect key="frame" x="20" y="254" width="374" height="10"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="FDw-fg-ATa"/>
-                                    <constraint firstAttribute="height" constant="10" id="PiD-Mc-BOC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgK-DX-bsr">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="zWw-kY-sDO"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LId-fE-FZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4PL-VV-vso" firstAttribute="top" secondItem="jW6-zd-DzT" secondAttribute="bottom" constant="8" id="0Uo-Jd-bAQ"/>
-                            <constraint firstItem="jW6-zd-DzT" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="2" id="0vS-Gl-P6e"/>
-                            <constraint firstItem="LId-fE-FZv" firstAttribute="trailing" secondItem="CgK-DX-bsr" secondAttribute="trailing" constant="53" id="1cF-0W-G88"/>
-                            <constraint firstItem="CgK-DX-bsr" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="53" id="1i9-xE-xq2"/>
-                            <constraint firstItem="LId-fE-FZv" firstAttribute="trailing" secondItem="HDo-FT-LJW" secondAttribute="trailing" constant="54" id="2E7-ae-6Xp"/>
-                            <constraint firstItem="HDo-FT-LJW" firstAttribute="top" secondItem="4PL-VV-vso" secondAttribute="bottom" constant="45" id="6EP-V4-0Hc"/>
-                            <constraint firstItem="LId-fE-FZv" firstAttribute="trailing" secondItem="4PL-VV-vso" secondAttribute="trailing" constant="20" id="O3P-jg-pOW"/>
-                            <constraint firstItem="CgK-DX-bsr" firstAttribute="top" secondItem="HDo-FT-LJW" secondAttribute="bottom" constant="32" id="P5T-LH-Jt7"/>
-                            <constraint firstItem="jW6-zd-DzT" firstAttribute="top" secondItem="LId-fE-FZv" secondAttribute="top" constant="106" id="TGK-Q0-T30"/>
-                            <constraint firstItem="jW6-zd-DzT" firstAttribute="trailing" secondItem="LId-fE-FZv" secondAttribute="trailing" constant="2" id="bBw-h8-BG4"/>
-                            <constraint firstItem="HDo-FT-LJW" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="53" id="c3z-5m-Jd9"/>
-                            <constraint firstItem="4PL-VV-vso" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="20" id="yRP-MN-SCm"/>
+                            <constraint firstItem="HDo-FT-LJW" firstAttribute="top" secondItem="CgK-DX-bsr" secondAttribute="bottom" constant="25" id="28i-RR-E8K"/>
+                            <constraint firstItem="CgK-DX-bsr" firstAttribute="top" secondItem="jW6-zd-DzT" secondAttribute="bottom" constant="63" id="2nt-wh-gGc"/>
+                            <constraint firstItem="4PL-VV-vso" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="20" id="3Eu-fo-I0C"/>
+                            <constraint firstItem="LId-fE-FZv" firstAttribute="trailing" secondItem="4PL-VV-vso" secondAttribute="trailing" constant="20" id="Hos-An-auq"/>
+                            <constraint firstItem="jW6-zd-DzT" firstAttribute="top" secondItem="LId-fE-FZv" secondAttribute="top" constant="106" id="XQF-7e-Pfd"/>
+                            <constraint firstItem="HDo-FT-LJW" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="54" id="ZVr-J0-k2g"/>
+                            <constraint firstAttribute="trailing" secondItem="jW6-zd-DzT" secondAttribute="trailing" constant="2" id="mku-oy-VAo"/>
+                            <constraint firstItem="jW6-zd-DzT" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="2" id="rEl-Ol-Udb"/>
+                            <constraint firstItem="CgK-DX-bsr" firstAttribute="leading" secondItem="LId-fE-FZv" secondAttribute="leading" constant="52" id="wjy-fa-lF1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5yC-AX-V0Y"/>
@@ -1205,18 +1337,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXh-Z3-cFt">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="59d-25-gdo"/>
-                                    <constraint firstAttribute="height" constant="301" id="o33-b4-dTn"/>
-                                </constraints>
-                                <string key="text">Proceso individual en donde se crea un vínculo de afecto y confianza, la persona se siente escuchada, comprendida, respetada y aceptada. Se busca resignificar su propia vida  de  alguna  situación  que  está  viviendo  o  vivió  (miedos,  violencia,  dudas,  inseguridades, bloqueos, vicios, etc.) con el fin de ayudarlos a desarrollar soluciones en su propio beneficio y vivir el aquí y el ahora.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-AV-1gN">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1228,28 +1348,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bp3-br-DxP">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acompañamiento individual" translatesAutoresizingMaskIntoConstraints="NO" id="bp3-br-DxP">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="x30-GP-6kX"/>
+                                    <constraint firstAttribute="width" constant="308" id="cbd-sY-jI3"/>
+                                    <constraint firstAttribute="height" constant="193" id="iXd-d9-Glb"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXh-Z3-cFt">
+                                <rect key="frame" x="52" y="527" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="38c-ae-FJ0"/>
+                                    <constraint firstAttribute="height" constant="301" id="w5b-8S-dJz"/>
+                                </constraints>
+                                <string key="text">Proceso individual en donde se crea un vínculo de afecto y confianza, la persona se siente escuchada, comprendida, respetada y aceptada. Se busca resignificar su propia vida  de  alguna  situación  que  está  viviendo  o  vivió  (miedos,  violencia,  dudas,  inseguridades, bloqueos, vicios, etc.) con el fin de ayudarlos a desarrollar soluciones en su propio beneficio y vivir el aquí y el ahora.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NSr-F9-y3V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ICO-CF-NlW" firstAttribute="top" secondItem="NSr-F9-y3V" secondAttribute="top" constant="106" id="13L-lc-MLq"/>
-                            <constraint firstItem="NSr-F9-y3V" firstAttribute="trailing" secondItem="bp3-br-DxP" secondAttribute="trailing" constant="53" id="EYa-rN-DnB"/>
-                            <constraint firstItem="xXh-Z3-cFt" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="53" id="GkP-RU-tpT"/>
+                            <constraint firstItem="bp3-br-DxP" firstAttribute="top" secondItem="ICO-CF-NlW" secondAttribute="bottom" constant="63" id="7yo-14-o7K"/>
                             <constraint firstItem="NSr-F9-y3V" firstAttribute="trailing" secondItem="mrS-AV-1gN" secondAttribute="trailing" constant="20" id="LEH-SM-adT"/>
-                            <constraint firstItem="NSr-F9-y3V" firstAttribute="trailing" secondItem="xXh-Z3-cFt" secondAttribute="trailing" constant="54" id="NdC-Zi-0bb"/>
                             <constraint firstItem="ICO-CF-NlW" firstAttribute="trailing" secondItem="NSr-F9-y3V" secondAttribute="trailing" constant="2" id="UAA-sj-VNa"/>
                             <constraint firstItem="ICO-CF-NlW" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="2" id="V1B-TO-m6B"/>
-                            <constraint firstItem="xXh-Z3-cFt" firstAttribute="top" secondItem="mrS-AV-1gN" secondAttribute="bottom" constant="45" id="XRh-bi-vt2"/>
                             <constraint firstItem="mrS-AV-1gN" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="20" id="ZKd-dR-Wl6"/>
-                            <constraint firstItem="bp3-br-DxP" firstAttribute="top" secondItem="xXh-Z3-cFt" secondAttribute="bottom" constant="32" id="bSQ-y5-ua7"/>
                             <constraint firstItem="mrS-AV-1gN" firstAttribute="top" secondItem="ICO-CF-NlW" secondAttribute="bottom" constant="8" id="gwI-3A-4xb"/>
-                            <constraint firstItem="bp3-br-DxP" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="53" id="ice-q1-GAf"/>
+                            <constraint firstItem="xXh-Z3-cFt" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="52" id="jGx-zO-Uro"/>
+                            <constraint firstItem="xXh-Z3-cFt" firstAttribute="top" secondItem="bp3-br-DxP" secondAttribute="bottom" constant="25" id="oSp-ja-sPH"/>
+                            <constraint firstItem="bp3-br-DxP" firstAttribute="leading" secondItem="NSr-F9-y3V" secondAttribute="leading" constant="52" id="wxK-By-3M2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3dB-fc-c5p"/>
@@ -1278,18 +1409,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6P-f4-kkr">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="Cc4-3b-ZfC"/>
-                                    <constraint firstAttribute="width" constant="307" id="vBK-ck-hEm"/>
-                                </constraints>
-                                <string key="text">Proceso  en  donde  las  personas  no  se  enjuician,  se  comparten  las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de  confianza,  compasión,  empatía  y  aceptación  en  un  espacio  seguro  en  donde  se  es  libre  de comunicar y dar solución ante una situación.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-sA-H0d">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1301,28 +1420,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W76-ZB-q7b">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acompañamiento grupal" translatesAutoresizingMaskIntoConstraints="NO" id="W76-ZB-q7b">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="WsW-ca-eGg"/>
+                                    <constraint firstAttribute="height" constant="193" id="0bg-cp-EFf"/>
+                                    <constraint firstAttribute="width" constant="308" id="doi-xi-m4N"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6P-f4-kkr">
+                                <rect key="frame" x="56" y="535" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="8hu-jv-N2g"/>
+                                    <constraint firstAttribute="height" constant="301" id="eU7-np-Srb"/>
+                                </constraints>
+                                <string key="text">Proceso  en  donde  las  personas  no  se  enjuician,  se  comparten  las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de  confianza,  compasión,  empatía  y  aceptación  en  un  espacio  seguro  en  donde  se  es  libre  de comunicar y dar solución ante una situación.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lby-Na-G5F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PTb-fW-pBZ" firstAttribute="top" secondItem="lby-Na-G5F" secondAttribute="top" constant="106" id="9Y0-7g-cSK"/>
+                            <constraint firstItem="m6P-f4-kkr" firstAttribute="top" secondItem="W76-ZB-q7b" secondAttribute="bottom" constant="33" id="BcQ-cb-tv1"/>
                             <constraint firstItem="lby-Na-G5F" firstAttribute="trailing" secondItem="2Nr-sA-H0d" secondAttribute="trailing" constant="20" id="CAm-Tm-CFC"/>
-                            <constraint firstItem="lby-Na-G5F" firstAttribute="trailing" secondItem="W76-ZB-q7b" secondAttribute="trailing" constant="53" id="MaJ-fC-tfh"/>
                             <constraint firstItem="PTb-fW-pBZ" firstAttribute="trailing" secondItem="lby-Na-G5F" secondAttribute="trailing" constant="2" id="PBk-3D-Pnt"/>
+                            <constraint firstItem="m6P-f4-kkr" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="56" id="Q0Y-QD-r9S"/>
                             <constraint firstItem="2Nr-sA-H0d" firstAttribute="top" secondItem="PTb-fW-pBZ" secondAttribute="bottom" constant="8" id="U6e-Om-12x"/>
-                            <constraint firstItem="m6P-f4-kkr" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="53" id="Yfr-7H-wdZ"/>
-                            <constraint firstItem="lby-Na-G5F" firstAttribute="trailing" secondItem="m6P-f4-kkr" secondAttribute="trailing" constant="54" id="ZnB-lj-rmD"/>
-                            <constraint firstItem="m6P-f4-kkr" firstAttribute="top" secondItem="2Nr-sA-H0d" secondAttribute="bottom" constant="45" id="dee-Oc-huc"/>
+                            <constraint firstItem="W76-ZB-q7b" firstAttribute="top" secondItem="PTb-fW-pBZ" secondAttribute="bottom" constant="63" id="bIW-NU-Ic9"/>
                             <constraint firstItem="PTb-fW-pBZ" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="2" id="juh-fn-bxR"/>
                             <constraint firstItem="2Nr-sA-H0d" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="20" id="k0E-Mq-nXo"/>
-                            <constraint firstItem="W76-ZB-q7b" firstAttribute="top" secondItem="m6P-f4-kkr" secondAttribute="bottom" constant="32" id="yNh-Hu-zuq"/>
-                            <constraint firstItem="W76-ZB-q7b" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="53" id="znl-t9-dGH"/>
+                            <constraint firstItem="W76-ZB-q7b" firstAttribute="leading" secondItem="lby-Na-G5F" secondAttribute="leading" constant="52" id="qq8-ia-679"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T3Y-Nk-ptm"/>
@@ -1351,18 +1481,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-q2-blr">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="SA3-3x-tTE"/>
-                                    <constraint firstAttribute="width" constant="307" id="TEY-Yt-SFm"/>
-                                </constraints>
-                                <string key="text">Proceso para guiar a la persona en su búsqueda del sentido de vida y permite descubrir la  capacidad  que  tienen  los  humanos  para  superar  los  condicionamientos  más  difíciles  “sanar  a través del sentido”. Sanar, cuidar, acompañar lo que implica buscar sentido y esencia para vivir en plenitud.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5i-Ry-58P">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1374,28 +1492,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SFl-nl-7c1">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logoterapia" translatesAutoresizingMaskIntoConstraints="NO" id="SFl-nl-7c1">
+                                <rect key="frame" x="55" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="z6n-R2-mxo"/>
+                                    <constraint firstAttribute="height" constant="193" id="aLB-ig-rQY"/>
+                                    <constraint firstAttribute="width" constant="308" id="lXW-hH-l0b"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-q2-blr">
+                                <rect key="frame" x="54" y="531" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="5SI-SO-HLu"/>
+                                    <constraint firstAttribute="width" constant="307" id="FoS-LI-1qd"/>
+                                </constraints>
+                                <string key="text">Proceso para guiar a la persona en su búsqueda del sentido de vida y permite descubrir la  capacidad  que  tienen  los  humanos  para  superar  los  condicionamientos  más  difíciles  “sanar  a través del sentido”. Sanar, cuidar, acompañar lo que implica buscar sentido y esencia para vivir en plenitud.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b1d-Da-hHL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="j5i-Ry-58P" firstAttribute="top" secondItem="0Gr-3t-q28" secondAttribute="bottom" constant="8" id="10G-MZ-sOY"/>
-                            <constraint firstItem="SFl-nl-7c1" firstAttribute="top" secondItem="R9C-q2-blr" secondAttribute="bottom" constant="32" id="2Oz-gU-AJV"/>
-                            <constraint firstItem="b1d-Da-hHL" firstAttribute="trailing" secondItem="R9C-q2-blr" secondAttribute="trailing" constant="54" id="Aas-bR-C4x"/>
-                            <constraint firstItem="R9C-q2-blr" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="53" id="Eit-1l-LeE"/>
+                            <constraint firstItem="SFl-nl-7c1" firstAttribute="top" secondItem="j5i-Ry-58P" secondAttribute="bottom" constant="45" id="J0J-ad-EV5"/>
+                            <constraint firstItem="SFl-nl-7c1" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="55" id="JYB-CZ-MU4"/>
+                            <constraint firstItem="R9C-q2-blr" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="54" id="OaW-va-SVb"/>
                             <constraint firstItem="0Gr-3t-q28" firstAttribute="trailing" secondItem="b1d-Da-hHL" secondAttribute="trailing" constant="2" id="UBD-ca-y7V"/>
-                            <constraint firstItem="b1d-Da-hHL" firstAttribute="trailing" secondItem="SFl-nl-7c1" secondAttribute="trailing" constant="53" id="ZnW-S6-pFr"/>
                             <constraint firstItem="j5i-Ry-58P" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="20" id="fqR-Oj-afz"/>
-                            <constraint firstItem="R9C-q2-blr" firstAttribute="top" secondItem="j5i-Ry-58P" secondAttribute="bottom" constant="45" id="hYH-z5-dIH"/>
+                            <constraint firstItem="R9C-q2-blr" firstAttribute="top" secondItem="SFl-nl-7c1" secondAttribute="bottom" constant="29" id="khH-ax-eFD"/>
                             <constraint firstItem="b1d-Da-hHL" firstAttribute="trailing" secondItem="j5i-Ry-58P" secondAttribute="trailing" constant="20" id="m5h-67-Pvy"/>
                             <constraint firstItem="0Gr-3t-q28" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="2" id="qiZ-fo-yyQ"/>
                             <constraint firstItem="0Gr-3t-q28" firstAttribute="top" secondItem="b1d-Da-hHL" secondAttribute="top" constant="106" id="z9j-84-QPm"/>
-                            <constraint firstItem="SFl-nl-7c1" firstAttribute="leading" secondItem="b1d-Da-hHL" secondAttribute="leading" constant="53" id="zZ2-JI-Ujg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SkX-Vm-eIX"/>
@@ -1424,18 +1553,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgZ-V7-mxc">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="SA3-mI-ajm"/>
-                                    <constraint firstAttribute="width" constant="307" id="a3I-DR-um7"/>
-                                </constraints>
-                                <string key="text">Es una práctica que ayuda a la persona a enfocarse en el presente reconociendo que puede pasar por momentos de estrés, momentos de crisis laboral y personal, de baja autoestima y depresión.  A  través  de  herramientas  de  autoconocimiento,  autoreconocimiento  y  autocontrol podemos entrenar la mente para tener una actitud de apertura, aceptación y solución en cualquier situación de nuestra vida para un balance y dominio emocional.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6Q-UB-5jQ">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1447,26 +1564,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-oM-VYZ">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mindfulness" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-oM-VYZ">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="UMM-9c-Zd4"/>
+                                    <constraint firstAttribute="height" constant="193" id="Q3J-tC-cnA"/>
+                                    <constraint firstAttribute="width" constant="308" id="a7a-QY-X93"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgZ-V7-mxc">
+                                <rect key="frame" x="52" y="535" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="bh0-kT-8GT"/>
+                                    <constraint firstAttribute="width" constant="307" id="tGh-ea-ZRS"/>
+                                </constraints>
+                                <string key="text">Es una práctica que ayuda a la persona a enfocarse en el presente reconociendo que puede pasar por momentos de estrés, momentos de crisis laboral y personal, de baja autoestima y depresión.  A  través  de  herramientas  de  autoconocimiento,  autoreconocimiento  y  autocontrol podemos entrenar la mente para tener una actitud de apertura, aceptación y solución en cualquier situación de nuestra vida para un balance y dominio emocional.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TdO-Yz-ADS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="U6Q-UB-5jQ" firstAttribute="top" secondItem="yVr-Qy-EZC" secondAttribute="bottom" constant="8" id="0AW-hb-eRH"/>
-                            <constraint firstItem="GoH-oM-VYZ" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="53" id="0w1-Pb-9IY"/>
+                            <constraint firstItem="GoH-oM-VYZ" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="52" id="15M-Fq-Ubv"/>
                             <constraint firstItem="yVr-Qy-EZC" firstAttribute="top" secondItem="TdO-Yz-ADS" secondAttribute="top" constant="106" id="E30-6h-J5E"/>
                             <constraint firstItem="yVr-Qy-EZC" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="2" id="NtV-7X-cYm"/>
-                            <constraint firstItem="TdO-Yz-ADS" firstAttribute="trailing" secondItem="GoH-oM-VYZ" secondAttribute="trailing" constant="53" id="RgC-cY-F1f"/>
-                            <constraint firstItem="TdO-Yz-ADS" firstAttribute="trailing" secondItem="QgZ-V7-mxc" secondAttribute="trailing" constant="54" id="hbR-uv-2gg"/>
+                            <constraint firstItem="GoH-oM-VYZ" firstAttribute="top" secondItem="U6Q-UB-5jQ" secondAttribute="bottom" constant="45" id="aZo-uO-FTL"/>
+                            <constraint firstItem="QgZ-V7-mxc" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="52" id="g3i-io-MGL"/>
                             <constraint firstItem="U6Q-UB-5jQ" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="20" id="iWJ-ej-iGq"/>
-                            <constraint firstItem="QgZ-V7-mxc" firstAttribute="leading" secondItem="TdO-Yz-ADS" secondAttribute="leading" constant="53" id="nFo-KL-qy7"/>
-                            <constraint firstItem="GoH-oM-VYZ" firstAttribute="top" secondItem="QgZ-V7-mxc" secondAttribute="bottom" constant="32" id="oiG-h3-pqG"/>
-                            <constraint firstItem="QgZ-V7-mxc" firstAttribute="top" secondItem="U6Q-UB-5jQ" secondAttribute="bottom" constant="45" id="riV-bJ-xkk"/>
+                            <constraint firstItem="QgZ-V7-mxc" firstAttribute="top" secondItem="GoH-oM-VYZ" secondAttribute="bottom" constant="33" id="rFl-Jh-AuA"/>
                             <constraint firstItem="yVr-Qy-EZC" firstAttribute="trailing" secondItem="TdO-Yz-ADS" secondAttribute="trailing" constant="2" id="uxi-AV-Tce"/>
                             <constraint firstItem="TdO-Yz-ADS" firstAttribute="trailing" secondItem="U6Q-UB-5jQ" secondAttribute="trailing" constant="20" id="xvk-ml-ikO"/>
                         </constraints>
@@ -1497,18 +1625,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-DW-cxm">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="kDV-xJ-j3H"/>
-                                    <constraint firstAttribute="width" constant="307" id="nHH-j0-h92"/>
-                                </constraints>
-                                <string key="text">En un espacio y ambiente de tranquilidad la persona vive un estado de  bienestar  físico,  emocional  y  mental  mediante  el  uso  controlado  de  los  aromas  de  nuestras esencias  combinado  con  musicoterapia  transportando  al  individuo  a  un  ambiente  de  armonía  y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-vE-Rea">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1520,27 +1636,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rick" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-wy-Ocp">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aromaterapia y musicoterapia" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-wy-Ocp">
+                                <rect key="frame" x="53" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="9mD-uO-OE9"/>
+                                    <constraint firstAttribute="width" constant="308" id="Gc3-xf-AzX"/>
+                                    <constraint firstAttribute="height" constant="193" id="eGY-Qk-QED"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-DW-cxm">
+                                <rect key="frame" x="53" y="539" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="68Z-jd-JTE"/>
+                                    <constraint firstAttribute="width" constant="307" id="xyw-LB-hGm"/>
+                                </constraints>
+                                <string key="text">En un espacio y ambiente de tranquilidad la persona vive un estado de  bienestar  físico,  emocional  y  mental  mediante  el  uso  controlado  de  los  aromas  de  nuestras esencias  combinado  con  musicoterapia  transportando  al  individuo  a  un  ambiente  de  armonía  y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ONy-BZ-Zi2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ONy-BZ-Zi2" firstAttribute="trailing" secondItem="qlx-DW-cxm" secondAttribute="trailing" constant="54" id="2Uy-oV-aZ6"/>
-                            <constraint firstItem="cP0-wy-Ocp" firstAttribute="top" secondItem="qlx-DW-cxm" secondAttribute="bottom" constant="32" id="HJC-Js-PDd"/>
-                            <constraint firstItem="ONy-BZ-Zi2" firstAttribute="trailing" secondItem="cP0-wy-Ocp" secondAttribute="trailing" constant="53" id="I95-Wm-JDY"/>
+                            <constraint firstItem="cP0-wy-Ocp" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="53" id="0Ss-ka-psY"/>
                             <constraint firstItem="ONy-BZ-Zi2" firstAttribute="trailing" secondItem="5aB-vE-Rea" secondAttribute="trailing" constant="20" id="OGe-e9-Ewc"/>
-                            <constraint firstItem="qlx-DW-cxm" firstAttribute="top" secondItem="5aB-vE-Rea" secondAttribute="bottom" constant="45" id="WrX-Y4-9yT"/>
+                            <constraint firstItem="cP0-wy-Ocp" firstAttribute="top" secondItem="5aB-vE-Rea" secondAttribute="bottom" constant="45" id="P27-Ka-8sI"/>
                             <constraint firstItem="5aB-vE-Rea" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="20" id="e57-g6-YX7"/>
                             <constraint firstItem="XRc-uf-c7u" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="2" id="fl8-aI-4BO"/>
-                            <constraint firstItem="qlx-DW-cxm" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="53" id="ld5-sW-YB9"/>
+                            <constraint firstItem="qlx-DW-cxm" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="53" id="jUe-JG-pEg"/>
                             <constraint firstItem="XRc-uf-c7u" firstAttribute="trailing" secondItem="ONy-BZ-Zi2" secondAttribute="trailing" constant="2" id="pKK-r0-aot"/>
                             <constraint firstItem="5aB-vE-Rea" firstAttribute="top" secondItem="XRc-uf-c7u" secondAttribute="bottom" constant="8" id="pQF-zr-5tU"/>
-                            <constraint firstItem="cP0-wy-Ocp" firstAttribute="leading" secondItem="ONy-BZ-Zi2" secondAttribute="leading" constant="53" id="rBf-u0-W8m"/>
+                            <constraint firstItem="qlx-DW-cxm" firstAttribute="top" secondItem="cP0-wy-Ocp" secondAttribute="bottom" constant="37" id="t7D-fw-M36"/>
                             <constraint firstItem="XRc-uf-c7u" firstAttribute="top" secondItem="ONy-BZ-Zi2" secondAttribute="top" constant="106" id="vNA-n5-RY5"/>
                         </constraints>
                     </view>
@@ -1570,18 +1697,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ci-4l-pqU">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="6GD-9e-8yk"/>
-                                    <constraint firstAttribute="width" constant="307" id="Wvr-W4-sNP"/>
-                                </constraints>
-                                <string key="text">Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro.  Esta  energía  circula  a  través  de  la  persona  y  representa  el  conjunto  de  experiencias  de distintos  niveles  y  se  almacena  a  lo  largo  de  su  vida  y  en  ocasiones  se  encuentra  bloqueada. Ayudamos  a  que  esa  energía  fluya  en  el  individuo  para  restablecer  la  armonía  y  conexión  con  su mente, sus emociones, su cuerpo y su espíritu.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eK-Qo-xJx">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1593,28 +1708,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Feo-7L-Cec">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cristales" translatesAutoresizingMaskIntoConstraints="NO" id="Feo-7L-Cec">
+                                <rect key="frame" x="53" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="50j-S3-IwF"/>
+                                    <constraint firstAttribute="width" constant="308" id="kdb-Fx-EKP"/>
+                                    <constraint firstAttribute="height" constant="193" id="oDe-bo-7j3"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ci-4l-pqU">
+                                <rect key="frame" x="53" y="537" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="SUC-Rs-ABe"/>
+                                    <constraint firstAttribute="width" constant="307" id="uHz-kq-qad"/>
+                                </constraints>
+                                <string key="text">Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro.  Esta  energía  circula  a  través  de  la  persona  y  representa  el  conjunto  de  experiencias  de distintos  niveles  y  se  almacena  a  lo  largo  de  su  vida  y  en  ocasiones  se  encuentra  bloqueada. Ayudamos  a  que  esa  energía  fluya  en  el  individuo  para  restablecer  la  armonía  y  conexión  con  su mente, sus emociones, su cuerpo y su espíritu.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wQR-Qs-xpU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Feo-7L-Cec" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="53" id="6UD-oB-SXG"/>
-                            <constraint firstItem="wQR-Qs-xpU" firstAttribute="trailing" secondItem="1Ci-4l-pqU" secondAttribute="trailing" constant="54" id="8F8-Z2-XFQ"/>
+                            <constraint firstItem="Feo-7L-Cec" firstAttribute="top" secondItem="q8m-sC-JEm" secondAttribute="bottom" constant="63" id="6rD-gj-nMB"/>
                             <constraint firstItem="3eK-Qo-xJx" firstAttribute="top" secondItem="q8m-sC-JEm" secondAttribute="bottom" constant="8" id="8ia-5K-rHQ"/>
-                            <constraint firstItem="Feo-7L-Cec" firstAttribute="top" secondItem="1Ci-4l-pqU" secondAttribute="bottom" constant="32" id="GK0-fe-DDZ"/>
+                            <constraint firstItem="Feo-7L-Cec" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="53" id="MUH-gH-Por"/>
                             <constraint firstItem="3eK-Qo-xJx" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="20" id="Qxb-L6-Rlt"/>
                             <constraint firstItem="q8m-sC-JEm" firstAttribute="trailing" secondItem="wQR-Qs-xpU" secondAttribute="trailing" constant="2" id="SdO-Nf-MQr"/>
-                            <constraint firstItem="1Ci-4l-pqU" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="53" id="XZx-gA-QJP"/>
-                            <constraint firstItem="wQR-Qs-xpU" firstAttribute="trailing" secondItem="Feo-7L-Cec" secondAttribute="trailing" constant="53" id="cwY-un-9rf"/>
                             <constraint firstItem="q8m-sC-JEm" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="2" id="eDU-ha-kKL"/>
+                            <constraint firstItem="1Ci-4l-pqU" firstAttribute="top" secondItem="Feo-7L-Cec" secondAttribute="bottom" constant="35" id="h5t-yh-gTg"/>
                             <constraint firstItem="q8m-sC-JEm" firstAttribute="top" secondItem="wQR-Qs-xpU" secondAttribute="top" constant="106" id="jfk-dq-BuK"/>
                             <constraint firstItem="wQR-Qs-xpU" firstAttribute="trailing" secondItem="3eK-Qo-xJx" secondAttribute="trailing" constant="20" id="kPb-eI-Mzv"/>
-                            <constraint firstItem="1Ci-4l-pqU" firstAttribute="top" secondItem="3eK-Qo-xJx" secondAttribute="bottom" constant="45" id="mMV-29-qyh"/>
+                            <constraint firstItem="1Ci-4l-pqU" firstAttribute="leading" secondItem="wQR-Qs-xpU" secondAttribute="leading" constant="53" id="uhy-Z4-in0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="89J-ql-GqE"/>
@@ -1643,18 +1769,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-Xm-AMg">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="clC-aV-YLA"/>
-                                    <constraint firstAttribute="width" constant="307" id="sXc-2c-LN8"/>
-                                </constraints>
-                                <string key="text">Es un método de canalización y transmisión de energía vital para que la persona obtenga paz y equilibrio físico, mental, emocional y espiritual.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-If-Mhq">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1666,28 +1780,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3X-GD-NgX">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reiki" translatesAutoresizingMaskIntoConstraints="NO" id="h3X-GD-NgX">
+                                <rect key="frame" x="53" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="XnL-H6-DF4"/>
+                                    <constraint firstAttribute="height" constant="193" id="ZTt-Va-9af"/>
+                                    <constraint firstAttribute="width" constant="308" id="nuH-Lx-IGe"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-Xm-AMg">
+                                <rect key="frame" x="56" y="541" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="Jrw-be-Rn4"/>
+                                    <constraint firstAttribute="width" constant="307" id="wZa-MO-qVn"/>
+                                </constraints>
+                                <string key="text">Es un método de canalización y transmisión de energía vital para que la persona obtenga paz y equilibrio físico, mental, emocional y espiritual.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X2B-38-8HC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h3X-GD-NgX" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="53" id="32X-U2-c6X"/>
-                            <constraint firstItem="cbO-Xm-AMg" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="53" id="3Z5-Rj-WZW"/>
+                            <constraint firstItem="h3X-GD-NgX" firstAttribute="top" secondItem="GEZ-If-Mhq" secondAttribute="bottom" constant="45" id="GeP-8F-5eZ"/>
                             <constraint firstItem="X2B-38-8HC" firstAttribute="trailing" secondItem="GEZ-If-Mhq" secondAttribute="trailing" constant="20" id="Gws-dl-mRd"/>
-                            <constraint firstItem="X2B-38-8HC" firstAttribute="trailing" secondItem="cbO-Xm-AMg" secondAttribute="trailing" constant="54" id="Hv2-XB-tWa"/>
                             <constraint firstItem="GEZ-If-Mhq" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="20" id="KJR-mY-x9i"/>
+                            <constraint firstItem="cbO-Xm-AMg" firstAttribute="top" secondItem="h3X-GD-NgX" secondAttribute="bottom" constant="39" id="M4k-re-bWz"/>
                             <constraint firstItem="hV1-I2-Ma0" firstAttribute="top" secondItem="X2B-38-8HC" secondAttribute="top" constant="106" id="WRL-7a-upT"/>
+                            <constraint firstItem="cbO-Xm-AMg" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="56" id="aiy-uA-D7e"/>
                             <constraint firstItem="GEZ-If-Mhq" firstAttribute="top" secondItem="hV1-I2-Ma0" secondAttribute="bottom" constant="8" id="kGG-Fw-c0d"/>
                             <constraint firstItem="hV1-I2-Ma0" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="2" id="p1W-bc-3Z4"/>
-                            <constraint firstItem="h3X-GD-NgX" firstAttribute="top" secondItem="cbO-Xm-AMg" secondAttribute="bottom" constant="32" id="uWY-nX-8Fw"/>
-                            <constraint firstItem="cbO-Xm-AMg" firstAttribute="top" secondItem="GEZ-If-Mhq" secondAttribute="bottom" constant="45" id="w8h-wn-pCU"/>
+                            <constraint firstItem="h3X-GD-NgX" firstAttribute="leading" secondItem="X2B-38-8HC" secondAttribute="leading" constant="53" id="r1g-um-Zww"/>
                             <constraint firstItem="hV1-I2-Ma0" firstAttribute="trailing" secondItem="X2B-38-8HC" secondAttribute="trailing" constant="2" id="zYv-9i-i7P"/>
-                            <constraint firstItem="X2B-38-8HC" firstAttribute="trailing" secondItem="h3X-GD-NgX" secondAttribute="trailing" constant="53" id="zlW-KO-v8u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CKZ-4D-OuP"/>
@@ -1716,18 +1841,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbP-GA-QXk">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="Krn-gV-zNg"/>
-                                    <constraint firstAttribute="height" constant="301" id="niT-4z-cbI"/>
-                                </constraints>
-                                <string key="text">Es un método que busca el equilibrio en emociones, mente y energía a través de colocación de imanes en posiciones estratégicas en el cuerpo para lograr una vida más próspera y saludable.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46F-ZZ-gxL">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1739,28 +1852,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-aW-iJz">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biomagnetismo" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-aW-iJz">
+                                <rect key="frame" x="55" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="wlx-vx-v6G"/>
+                                    <constraint firstAttribute="height" constant="193" id="ohS-Bb-Vdf"/>
+                                    <constraint firstAttribute="width" constant="308" id="r3Y-PW-uco"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbP-GA-QXk">
+                                <rect key="frame" x="54" y="535" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="cLq-2Y-bhp"/>
+                                    <constraint firstAttribute="height" constant="301" id="zwK-SH-hGU"/>
+                                </constraints>
+                                <string key="text">Es un método que busca el equilibrio en emociones, mente y energía a través de colocación de imanes en posiciones estratégicas en el cuerpo para lograr una vida más próspera y saludable.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9vk-31-5TH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xdz-zg-jXD" firstAttribute="top" secondItem="9vk-31-5TH" secondAttribute="top" constant="106" id="79H-4G-zS4"/>
                             <constraint firstItem="9vk-31-5TH" firstAttribute="trailing" secondItem="46F-ZZ-gxL" secondAttribute="trailing" constant="20" id="BfK-u2-pqt"/>
-                            <constraint firstItem="Kic-aW-iJz" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="53" id="LrL-yf-FDG"/>
                             <constraint firstItem="Xdz-zg-jXD" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="2" id="PHf-AI-ivZ"/>
+                            <constraint firstItem="Kic-aW-iJz" firstAttribute="top" secondItem="46F-ZZ-gxL" secondAttribute="bottom" constant="45" id="Rmx-M8-D63"/>
+                            <constraint firstItem="wbP-GA-QXk" firstAttribute="top" secondItem="Kic-aW-iJz" secondAttribute="bottom" constant="33" id="Uoq-pJ-QM2"/>
                             <constraint firstItem="Xdz-zg-jXD" firstAttribute="trailing" secondItem="9vk-31-5TH" secondAttribute="trailing" constant="2" id="ViX-gf-dvV"/>
-                            <constraint firstItem="wbP-GA-QXk" firstAttribute="top" secondItem="46F-ZZ-gxL" secondAttribute="bottom" constant="45" id="XwB-Sd-f1o"/>
-                            <constraint firstItem="Kic-aW-iJz" firstAttribute="top" secondItem="wbP-GA-QXk" secondAttribute="bottom" constant="32" id="bND-qq-w4x"/>
-                            <constraint firstItem="9vk-31-5TH" firstAttribute="trailing" secondItem="wbP-GA-QXk" secondAttribute="trailing" constant="54" id="dVS-dx-w8u"/>
+                            <constraint firstItem="Kic-aW-iJz" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="55" id="drR-vX-ajs"/>
                             <constraint firstItem="46F-ZZ-gxL" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="20" id="eCy-xP-Ihg"/>
-                            <constraint firstItem="9vk-31-5TH" firstAttribute="trailing" secondItem="Kic-aW-iJz" secondAttribute="trailing" constant="53" id="hBc-is-bgV"/>
                             <constraint firstItem="46F-ZZ-gxL" firstAttribute="top" secondItem="Xdz-zg-jXD" secondAttribute="bottom" constant="8" id="hVW-zM-hIf"/>
-                            <constraint firstItem="wbP-GA-QXk" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="53" id="qzm-lt-q96"/>
+                            <constraint firstItem="wbP-GA-QXk" firstAttribute="leading" secondItem="9vk-31-5TH" secondAttribute="leading" constant="54" id="sbE-5n-oPK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ItM-81-his"/>
@@ -1789,18 +1913,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OG-ii-liQ">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="fRA-eh-OzK"/>
-                                    <constraint firstAttribute="width" constant="307" id="ogp-Ag-yOb"/>
-                                </constraints>
-                                <string key="text">Es una herramienta que te ayuda a trabajar tu autoestima, a darte cuenta de todo tu potencial; te ayuda a ver lo maravilloso y perfecto ser humano que eres y que no hay obstáculos que no puedas superar enfocándonos en una visión siempre positiva y optimista.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-FE-mo8">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1812,27 +1924,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-kx-T3Q">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angeloterapia" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-kx-T3Q">
+                                <rect key="frame" x="55" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="Fqf-SQ-N0R"/>
+                                    <constraint firstAttribute="height" constant="193" id="YX7-G9-8wP"/>
+                                    <constraint firstAttribute="width" constant="308" id="u6U-Eo-DlH"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OG-ii-liQ">
+                                <rect key="frame" x="54" y="535" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="KdF-ua-zl1"/>
+                                    <constraint firstAttribute="height" constant="301" id="Nas-P6-MYt"/>
+                                </constraints>
+                                <string key="text">Es una herramienta que te ayuda a trabajar tu autoestima, a darte cuenta de todo tu potencial; te ayuda a ver lo maravilloso y perfecto ser humano que eres y que no hay obstáculos que no puedas superar enfocándonos en una visión siempre positiva y optimista.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="las-Gc-IUf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NRW-kx-T3Q" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="55" id="8Iu-AP-5jd"/>
                             <constraint firstItem="las-Gc-IUf" firstAttribute="trailing" secondItem="NhA-FE-mo8" secondAttribute="trailing" constant="20" id="Cac-jj-1Lq"/>
                             <constraint firstItem="NhA-FE-mo8" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="20" id="DhZ-tr-Vjy"/>
                             <constraint firstItem="nHE-zO-Ud9" firstAttribute="trailing" secondItem="las-Gc-IUf" secondAttribute="trailing" constant="2" id="FRb-Qz-WDY"/>
                             <constraint firstItem="NhA-FE-mo8" firstAttribute="top" secondItem="nHE-zO-Ud9" secondAttribute="bottom" constant="8" id="Glr-Yb-eay"/>
                             <constraint firstItem="nHE-zO-Ud9" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="2" id="HSF-fp-Sy6"/>
-                            <constraint firstItem="1OG-ii-liQ" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="53" id="QuZ-Q2-LJh"/>
-                            <constraint firstItem="1OG-ii-liQ" firstAttribute="top" secondItem="NhA-FE-mo8" secondAttribute="bottom" constant="45" id="Tnz-B6-iCJ"/>
-                            <constraint firstItem="las-Gc-IUf" firstAttribute="trailing" secondItem="NRW-kx-T3Q" secondAttribute="trailing" constant="53" id="ddt-Wz-8MQ"/>
-                            <constraint firstItem="las-Gc-IUf" firstAttribute="trailing" secondItem="1OG-ii-liQ" secondAttribute="trailing" constant="54" id="f9K-aX-qWA"/>
-                            <constraint firstItem="NRW-kx-T3Q" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="53" id="fp2-bA-F8y"/>
-                            <constraint firstItem="NRW-kx-T3Q" firstAttribute="top" secondItem="1OG-ii-liQ" secondAttribute="bottom" constant="32" id="jxh-xX-UIr"/>
+                            <constraint firstItem="1OG-ii-liQ" firstAttribute="top" secondItem="NRW-kx-T3Q" secondAttribute="bottom" constant="33" id="bpR-8V-YT0"/>
+                            <constraint firstItem="1OG-ii-liQ" firstAttribute="leading" secondItem="las-Gc-IUf" secondAttribute="leading" constant="54" id="kmG-Mi-Chs"/>
+                            <constraint firstItem="NRW-kx-T3Q" firstAttribute="top" secondItem="NhA-FE-mo8" secondAttribute="bottom" constant="45" id="r4p-wV-YYv"/>
                             <constraint firstItem="nHE-zO-Ud9" firstAttribute="top" secondItem="las-Gc-IUf" secondAttribute="top" constant="106" id="tqS-Dk-P9z"/>
                         </constraints>
                     </view>
@@ -1862,18 +1985,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-fq-7aa">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="F1x-B9-aC7"/>
-                                    <constraint firstAttribute="width" constant="307" id="Y4W-83-96Z"/>
-                                </constraints>
-                                <string key="text">El  calor  que  expide  la  cama  térmica  con  regulación  de  temperatura  y  la musicoterapia en conjunto, la persona es transportada a un ambiente de armonía y sensación de calma y relajación de los diferentes músculos de cuerpo con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsz-O4-hfk">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1885,28 +1996,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Xi-Gf-Yni">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cama Térmica" translatesAutoresizingMaskIntoConstraints="NO" id="5Xi-Gf-Yni">
+                                <rect key="frame" x="55" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="7ai-S6-c6v"/>
+                                    <constraint firstAttribute="width" constant="308" id="MLX-LK-UYt"/>
+                                    <constraint firstAttribute="height" constant="193" id="mVZ-cg-B6P"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-fq-7aa">
+                                <rect key="frame" x="56" y="531" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="eVK-3k-KcV"/>
+                                    <constraint firstAttribute="height" constant="301" id="iaJ-Ib-VmR"/>
+                                </constraints>
+                                <string key="text">El  calor  que  expide  la  cama  térmica  con  regulación  de  temperatura  y  la musicoterapia en conjunto, la persona es transportada a un ambiente de armonía y sensación de calma y relajación de los diferentes músculos de cuerpo con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EDV-IJ-Xa5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fsz-O4-hfk" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="20" id="2HD-pa-480"/>
                             <constraint firstItem="7cQ-YC-hn7" firstAttribute="trailing" secondItem="EDV-IJ-Xa5" secondAttribute="trailing" constant="2" id="AUa-f0-tkR"/>
-                            <constraint firstItem="31p-fq-7aa" firstAttribute="top" secondItem="fsz-O4-hfk" secondAttribute="bottom" constant="45" id="IDb-M1-pTY"/>
-                            <constraint firstItem="5Xi-Gf-Yni" firstAttribute="top" secondItem="31p-fq-7aa" secondAttribute="bottom" constant="32" id="QJL-SV-oRz"/>
-                            <constraint firstItem="5Xi-Gf-Yni" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="53" id="Uia-eJ-HXm"/>
-                            <constraint firstItem="EDV-IJ-Xa5" firstAttribute="trailing" secondItem="5Xi-Gf-Yni" secondAttribute="trailing" constant="53" id="VlX-2j-SY9"/>
+                            <constraint firstItem="31p-fq-7aa" firstAttribute="top" secondItem="5Xi-Gf-Yni" secondAttribute="bottom" constant="29" id="EJv-bE-T8a"/>
                             <constraint firstItem="7cQ-YC-hn7" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="2" id="aH4-Jz-VWK"/>
                             <constraint firstItem="fsz-O4-hfk" firstAttribute="top" secondItem="7cQ-YC-hn7" secondAttribute="bottom" constant="8" id="bz2-nq-KsD"/>
+                            <constraint firstItem="5Xi-Gf-Yni" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="55" id="cB3-P7-Zha"/>
                             <constraint firstItem="EDV-IJ-Xa5" firstAttribute="trailing" secondItem="fsz-O4-hfk" secondAttribute="trailing" constant="20" id="eFZ-or-2en"/>
-                            <constraint firstItem="EDV-IJ-Xa5" firstAttribute="trailing" secondItem="31p-fq-7aa" secondAttribute="trailing" constant="54" id="h8D-75-TFg"/>
-                            <constraint firstItem="31p-fq-7aa" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="53" id="kMb-Dc-AjA"/>
+                            <constraint firstItem="5Xi-Gf-Yni" firstAttribute="top" secondItem="fsz-O4-hfk" secondAttribute="bottom" constant="45" id="fnO-zU-asc"/>
                             <constraint firstItem="7cQ-YC-hn7" firstAttribute="top" secondItem="EDV-IJ-Xa5" secondAttribute="top" constant="106" id="qNk-aS-lxZ"/>
+                            <constraint firstItem="31p-fq-7aa" firstAttribute="leading" secondItem="EDV-IJ-Xa5" secondAttribute="leading" constant="56" id="zwy-JK-hNR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XoX-tu-HdO"/>
@@ -1935,18 +2057,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-KP-VpN">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="AKo-aw-oA2"/>
-                                    <constraint firstAttribute="width" constant="307" id="MJx-b1-UGk"/>
-                                </constraints>
-                                <string key="text">Ayuda  a  reestablecer  el  equilibrio  emocional  y  energético  mediante  extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad,  miedos,  stress,  entre  otros.  No  tienen  efectos  secundarios  y  sin  problema  se  pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dd-n7-cA0">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -1958,12 +2068,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnS-Ph-FkR">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flores de Bach" translatesAutoresizingMaskIntoConstraints="NO" id="SnS-Ph-FkR">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="aVr-dS-VKD"/>
+                                    <constraint firstAttribute="height" constant="193" id="OC1-qN-ueq"/>
+                                    <constraint firstAttribute="width" constant="308" id="ZoY-A4-gBI"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-KP-VpN">
+                                <rect key="frame" x="52" y="543" width="307" height="301"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="NdU-Ad-VJD"/>
+                                    <constraint firstAttribute="width" constant="307" id="ZQm-EN-iuz"/>
+                                </constraints>
+                                <string key="text">Ayuda  a  reestablecer  el  equilibrio  emocional  y  energético  mediante  extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad,  miedos,  stress,  entre  otros.  No  tienen  efectos  secundarios  y  sin  problema  se  pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YfD-PG-kaX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1971,15 +2094,13 @@
                             <constraint firstItem="8Dd-n7-cA0" firstAttribute="top" secondItem="roI-Pc-w9I" secondAttribute="bottom" constant="8" id="2BY-JS-M1c"/>
                             <constraint firstItem="YfD-PG-kaX" firstAttribute="trailing" secondItem="8Dd-n7-cA0" secondAttribute="trailing" constant="20" id="40X-Ld-zpy"/>
                             <constraint firstItem="roI-Pc-w9I" firstAttribute="trailing" secondItem="YfD-PG-kaX" secondAttribute="trailing" constant="2" id="4am-jJ-AeI"/>
-                            <constraint firstItem="SnS-Ph-FkR" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="53" id="7hQ-DN-Obn"/>
+                            <constraint firstItem="S7V-KP-VpN" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="52" id="CGy-aj-LCP"/>
                             <constraint firstItem="roI-Pc-w9I" firstAttribute="top" secondItem="YfD-PG-kaX" secondAttribute="top" constant="106" id="Jqc-9d-y1c"/>
+                            <constraint firstItem="S7V-KP-VpN" firstAttribute="top" secondItem="SnS-Ph-FkR" secondAttribute="bottom" constant="41" id="YtA-GV-JnU"/>
                             <constraint firstItem="8Dd-n7-cA0" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="20" id="ekk-Bm-lDl"/>
-                            <constraint firstItem="S7V-KP-VpN" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="53" id="ijn-DD-nut"/>
-                            <constraint firstItem="YfD-PG-kaX" firstAttribute="trailing" secondItem="SnS-Ph-FkR" secondAttribute="trailing" constant="53" id="mcm-QA-m1c"/>
-                            <constraint firstItem="SnS-Ph-FkR" firstAttribute="top" secondItem="S7V-KP-VpN" secondAttribute="bottom" constant="32" id="qB3-38-i6p"/>
-                            <constraint firstItem="S7V-KP-VpN" firstAttribute="top" secondItem="8Dd-n7-cA0" secondAttribute="bottom" constant="45" id="tsD-H4-FTO"/>
+                            <constraint firstItem="SnS-Ph-FkR" firstAttribute="top" secondItem="8Dd-n7-cA0" secondAttribute="bottom" constant="45" id="pvF-Q1-7XW"/>
                             <constraint firstItem="roI-Pc-w9I" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="2" id="vez-aV-8Uv"/>
-                            <constraint firstItem="YfD-PG-kaX" firstAttribute="trailing" secondItem="S7V-KP-VpN" secondAttribute="trailing" constant="54" id="vx8-4N-w33"/>
+                            <constraint firstItem="SnS-Ph-FkR" firstAttribute="leading" secondItem="YfD-PG-kaX" secondAttribute="leading" constant="52" id="vuh-Ob-hQM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JPB-JT-LF0"/>
@@ -2008,18 +2129,6 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4y-Cz-iOB">
-                                <rect key="frame" x="53" y="309" width="307" height="301"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="PBI-Ym-ljg"/>
-                                    <constraint firstAttribute="height" constant="301" id="ohj-Op-VoA"/>
-                                </constraints>
-                                <string key="text">Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato,  estimula  el  sistema  nervioso  central  ofreciendo  resultados  positivos  en  el  manejo  de  las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JB0-qF-d8c">
                                 <rect key="frame" x="20" y="254" width="374" height="10"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -2031,28 +2140,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-pV-MZc">
-                                <rect key="frame" x="53" y="642" width="308" height="193"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reanimante_fondo_naranja" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-pV-MZc">
+                                <rect key="frame" x="52" y="309" width="308" height="193"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="vcz-Er-Pla"/>
+                                    <constraint firstAttribute="width" constant="308" id="1dr-Fl-kQl"/>
+                                    <constraint firstAttribute="height" constant="193" id="3Kt-87-oIK"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4y-Cz-iOB">
+                                <rect key="frame" x="52" y="529" width="307" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato,  estimula  el  sistema  nervioso  central  ofreciendo  resultados  positivos  en  el  manejo  de  las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qb6-DQ-vqv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4YA-pV-MZc" firstAttribute="leading" secondItem="qb6-DQ-vqv" secondAttribute="leading" constant="52" id="2xF-Vd-wta"/>
                             <constraint firstItem="JB0-qF-d8c" firstAttribute="top" secondItem="BF1-cX-4kb" secondAttribute="bottom" constant="8" id="9vG-mx-Quu"/>
                             <constraint firstItem="BF1-cX-4kb" firstAttribute="trailing" secondItem="qb6-DQ-vqv" secondAttribute="trailing" constant="2" id="EXP-ax-TFE"/>
-                            <constraint firstItem="k4y-Cz-iOB" firstAttribute="top" secondItem="JB0-qF-d8c" secondAttribute="bottom" constant="45" id="Foj-ch-V2V"/>
-                            <constraint firstItem="qb6-DQ-vqv" firstAttribute="trailing" secondItem="k4y-Cz-iOB" secondAttribute="trailing" constant="54" id="GcJ-qf-Jcs"/>
                             <constraint firstItem="JB0-qF-d8c" firstAttribute="leading" secondItem="qb6-DQ-vqv" secondAttribute="leading" constant="20" id="LTE-FU-O6h"/>
                             <constraint firstItem="BF1-cX-4kb" firstAttribute="leading" secondItem="qb6-DQ-vqv" secondAttribute="leading" constant="2" id="OqT-v0-UQx"/>
-                            <constraint firstItem="k4y-Cz-iOB" firstAttribute="leading" secondItem="qb6-DQ-vqv" secondAttribute="leading" constant="53" id="Q8x-a4-NeG"/>
-                            <constraint firstItem="qb6-DQ-vqv" firstAttribute="trailing" secondItem="4YA-pV-MZc" secondAttribute="trailing" constant="53" id="bLg-gd-uik"/>
-                            <constraint firstItem="4YA-pV-MZc" firstAttribute="leading" secondItem="qb6-DQ-vqv" secondAttribute="leading" constant="53" id="cnA-IO-Igf"/>
+                            <constraint firstItem="4YA-pV-MZc" firstAttribute="top" secondItem="BF1-cX-4kb" secondAttribute="bottom" constant="63" id="aRS-Cb-Xvt"/>
                             <constraint firstItem="BF1-cX-4kb" firstAttribute="top" secondItem="qb6-DQ-vqv" secondAttribute="top" constant="106" id="cnV-fC-q9i"/>
                             <constraint firstItem="qb6-DQ-vqv" firstAttribute="trailing" secondItem="JB0-qF-d8c" secondAttribute="trailing" constant="20" id="nJH-ag-t7H"/>
-                            <constraint firstItem="4YA-pV-MZc" firstAttribute="top" secondItem="k4y-Cz-iOB" secondAttribute="bottom" constant="32" id="qkX-XW-G69"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3S4-sS-Dcb"/>
@@ -2137,8 +2252,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CETAC" width="51.5" height="29"/>
-        <image name="rick" width="150" height="84"/>
+        <image name="Acompañamiento grupal" width="960" height="540"/>
+        <image name="Acompañamiento individual" width="960" height="540"/>
+        <image name="Cama Térmica" width="2045.5" height="872.5"/>
+        <image name="Flores de Bach" width="960" height="786"/>
+        <image name="LogoCETAC" width="683" height="384"/>
+        <image name="Logoterapia" width="960" height="540"/>
+        <image name="Mindfulness" width="960" height="540"/>
+        <image name="Reiki" width="960" height="739"/>
+        <image name="Tanatologia" width="960" height="637.5"/>
+        <image name="angeloterapia" width="960" height="640"/>
+        <image name="aromaterapia y musicoterapia" width="960" height="640"/>
+        <image name="biomagnetismo" width="960" height="640"/>
+        <image name="cristales" width="960" height="540"/>
+        <image name="mision" width="120" height="105"/>
+        <image name="objetivos" width="655" height="470"/>
+        <image name="reanimante_fondo_naranja" width="540" height="540"/>
+        <image name="relajante_fondoverde" width="540" height="540"/>
+        <image name="valores" width="142" height="88.5"/>
+        <image name="vision" width="150" height="84"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
