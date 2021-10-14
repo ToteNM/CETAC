@@ -11,5 +11,6 @@ target 'CETAC_Servicios' do
 
   pod 'Firebase/Auth'
   # Pods for CETAC_Servicios
-
+pod 'Charts', '~> 3.6'
+pod 'TinyConstraints'
 end
