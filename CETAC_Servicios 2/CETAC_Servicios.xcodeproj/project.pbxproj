@@ -22,6 +22,28 @@
 		35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
 		9C607046270C0316000C5A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C607045270C0315000C5A5F /* GoogleService-Info.plist */; };
+		9CF167992717BA6E00ED0025 /* ExpedientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */; };
+		9CF1679E2717BB1600ED0025 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1679D2717BB1600ED0025 /* Sesion.swift */; };
+		9CF167A02717BB3300ED0025 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1679F2717BB3300ED0025 /* Fetcher.swift */; };
+		9CF167A22717BB5C00ED0025 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167A12717BB5C00ED0025 /* Paciente.swift */; };
+		9CF167A42717BB8700ED0025 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167A32717BB8700ED0025 /* Usuario.swift */; };
+		9CF167A62717BB9500ED0025 /* Indicadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167A52717BB9500ED0025 /* Indicadores.swift */; };
+		9CF167A82717BBD400ED0025 /* ExpedientesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167A72717BBD400ED0025 /* ExpedientesTableViewCell.swift */; };
+		9CF167AB2717C12700ED0025 /* PacientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167AA2717C12700ED0025 /* PacientesTableViewController.swift */; };
+		9CF167AD2717C16700ED0025 /* PacientesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167AC2717C16700ED0025 /* PacientesTableViewCell.swift */; };
+		9CF167B02717C2FF00ED0025 /* NuevaSesionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167AF2717C2FF00ED0025 /* NuevaSesionTableViewController.swift */; };
+		9CF167B22717C37400ED0025 /* HerramientaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167B12717C37400ED0025 /* HerramientaTableViewController.swift */; };
+		9CF167B42717C3D200ED0025 /* IntervencionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167B32717C3D200ED0025 /* IntervencionTableViewController.swift */; };
+		9CF167B62717C3FB00ED0025 /* MotivoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167B52717C3FB00ED0025 /* MotivoTableViewController.swift */; };
+		9CF167B82717C58F00ED0025 /* TipoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167B72717C58F00ED0025 /* TipoTableViewController.swift */; };
+		9CF167BB2717E46300ED0025 /* NuevoPacienteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167BA2717E46300ED0025 /* NuevoPacienteTableViewController.swift */; };
+		9CF167BD2717E4AD00ED0025 /* ReligionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167BC2717E4AD00ED0025 /* ReligionTableViewController.swift */; };
+		9CF167BF2717E4D100ED0025 /* SexoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167BE2717E4D100ED0025 /* SexoTableViewController.swift */; };
+		9CF167C12717E54F00ED0025 /* ProcedenciaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C02717E54F00ED0025 /* ProcedenciaTableViewController.swift */; };
+		9CF167C32717E56F00ED0025 /* EstadoCivilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C22717E56F00ED0025 /* EstadoCivilTableViewController.swift */; };
+		9CF167C62717E5DB00ED0025 /* AddHijosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C52717E5DB00ED0025 /* AddHijosTableViewController.swift */; };
+		9CF167C82717E60800ED0025 /* AddHijoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C72717E60800ED0025 /* AddHijoTableViewCell.swift */; };
+		9CF167CA2717F28800ED0025 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C92717F28800ED0025 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +66,28 @@
 		358FA91D270E2B8F0031A542 /* UsersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedientesTableViewController.swift; sourceTree = "<group>"; };
+		9CF1679D2717BB1600ED0025 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
+		9CF1679F2717BB3300ED0025 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		9CF167A12717BB5C00ED0025 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
+		9CF167A32717BB8700ED0025 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		9CF167A52717BB9500ED0025 /* Indicadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicadores.swift; sourceTree = "<group>"; };
+		9CF167A72717BBD400ED0025 /* ExpedientesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedientesTableViewCell.swift; sourceTree = "<group>"; };
+		9CF167AA2717C12700ED0025 /* PacientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientesTableViewController.swift; sourceTree = "<group>"; };
+		9CF167AC2717C16700ED0025 /* PacientesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientesTableViewCell.swift; sourceTree = "<group>"; };
+		9CF167AF2717C2FF00ED0025 /* NuevaSesionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaSesionTableViewController.swift; sourceTree = "<group>"; };
+		9CF167B12717C37400ED0025 /* HerramientaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerramientaTableViewController.swift; sourceTree = "<group>"; };
+		9CF167B32717C3D200ED0025 /* IntervencionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervencionTableViewController.swift; sourceTree = "<group>"; };
+		9CF167B52717C3FB00ED0025 /* MotivoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivoTableViewController.swift; sourceTree = "<group>"; };
+		9CF167B72717C58F00ED0025 /* TipoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoTableViewController.swift; sourceTree = "<group>"; };
+		9CF167BA2717E46300ED0025 /* NuevoPacienteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoPacienteTableViewController.swift; sourceTree = "<group>"; };
+		9CF167BC2717E4AD00ED0025 /* ReligionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligionTableViewController.swift; sourceTree = "<group>"; };
+		9CF167BE2717E4D100ED0025 /* SexoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoTableViewController.swift; sourceTree = "<group>"; };
+		9CF167C02717E54F00ED0025 /* ProcedenciaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedenciaTableViewController.swift; sourceTree = "<group>"; };
+		9CF167C22717E56F00ED0025 /* EstadoCivilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoCivilTableViewController.swift; sourceTree = "<group>"; };
+		9CF167C52717E5DB00ED0025 /* AddHijosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHijosTableViewController.swift; sourceTree = "<group>"; };
+		9CF167C72717E60800ED0025 /* AddHijoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHijoTableViewCell.swift; sourceTree = "<group>"; };
+		9CF167C92717F28800ED0025 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +132,8 @@
 		351E3FAF2702B6CD00C09617 /* CETAC_Servicios */ = {
 			isa = PBXGroup;
 			children = (
+				9CF1679C2717BAFA00ED0025 /* Models */,
+				9CF167972717BA4800ED0025 /* Controllers */,
 				3550C3BB270CFA2100FE6844 /* Helpers */,
 				351E3FB02702B6CD00C09617 /* AppDelegate.swift */,
 				351E3FB22702B6CD00C09617 /* SceneDelegate.swift */,
@@ -129,6 +175,82 @@
 				1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CF167972717BA4800ED0025 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167C42717E5C800ED0025 /* Hijos */,
+				9CF167B92717E3BB00ED0025 /* Usuario */,
+				9CF167AE2717C2CF00ED0025 /* Sesion */,
+				9CF167A92717C10C00ED0025 /* Pacientes */,
+				9CF1679B2717BAA000ED0025 /* Expediente */,
+				9CF167C92717F28800ED0025 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9CF1679B2717BAA000ED0025 /* Expediente */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */,
+				9CF167A72717BBD400ED0025 /* ExpedientesTableViewCell.swift */,
+			);
+			path = Expediente;
+			sourceTree = "<group>";
+		};
+		9CF1679C2717BAFA00ED0025 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CF1679D2717BB1600ED0025 /* Sesion.swift */,
+				9CF1679F2717BB3300ED0025 /* Fetcher.swift */,
+				9CF167A12717BB5C00ED0025 /* Paciente.swift */,
+				9CF167A32717BB8700ED0025 /* Usuario.swift */,
+				9CF167A52717BB9500ED0025 /* Indicadores.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CF167A92717C10C00ED0025 /* Pacientes */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167AA2717C12700ED0025 /* PacientesTableViewController.swift */,
+				9CF167AC2717C16700ED0025 /* PacientesTableViewCell.swift */,
+			);
+			path = Pacientes;
+			sourceTree = "<group>";
+		};
+		9CF167AE2717C2CF00ED0025 /* Sesion */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167AF2717C2FF00ED0025 /* NuevaSesionTableViewController.swift */,
+				9CF167B12717C37400ED0025 /* HerramientaTableViewController.swift */,
+				9CF167B32717C3D200ED0025 /* IntervencionTableViewController.swift */,
+				9CF167B52717C3FB00ED0025 /* MotivoTableViewController.swift */,
+				9CF167B72717C58F00ED0025 /* TipoTableViewController.swift */,
+			);
+			path = Sesion;
+			sourceTree = "<group>";
+		};
+		9CF167B92717E3BB00ED0025 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167BA2717E46300ED0025 /* NuevoPacienteTableViewController.swift */,
+				9CF167BC2717E4AD00ED0025 /* ReligionTableViewController.swift */,
+				9CF167BE2717E4D100ED0025 /* SexoTableViewController.swift */,
+				9CF167C02717E54F00ED0025 /* ProcedenciaTableViewController.swift */,
+				9CF167C22717E56F00ED0025 /* EstadoCivilTableViewController.swift */,
+			);
+			path = Usuario;
+			sourceTree = "<group>";
+		};
+		9CF167C42717E5C800ED0025 /* Hijos */ = {
+			isa = PBXGroup;
+			children = (
+				9CF167C52717E5DB00ED0025 /* AddHijosTableViewController.swift */,
+				9CF167C72717E60800ED0025 /* AddHijoTableViewCell.swift */,
+			);
+			path = Hijos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,15 +369,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				3550C3D3270CFDAA00FE6844 /* InicioUsuarioViewController.swift in Sources */,
+				9CF167A62717BB9500ED0025 /* Indicadores.swift in Sources */,
 				351E3FB52702B6CD00C09617 /* ViewController.swift in Sources */,
+				9CF167B82717C58F00ED0025 /* TipoTableViewController.swift in Sources */,
 				351E3FB12702B6CD00C09617 /* AppDelegate.swift in Sources */,
+				9CF167A82717BBD400ED0025 /* ExpedientesTableViewCell.swift in Sources */,
 				3550C3B1270CEBF300FE6844 /* LogInViewController.swift in Sources */,
+				9CF167A22717BB5C00ED0025 /* Paciente.swift in Sources */,
+				9CF1679E2717BB1600ED0025 /* Sesion.swift in Sources */,
 				35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */,
 				358E7EA1270D49CB00242DB2 /* Constants.swift in Sources */,
+				9CF167C12717E54F00ED0025 /* ProcedenciaTableViewController.swift in Sources */,
+				9CF167A42717BB8700ED0025 /* Usuario.swift in Sources */,
 				351E3FB32702B6CD00C09617 /* SceneDelegate.swift in Sources */,
 				358FA91E270E2B8F0031A542 /* UsersController.swift in Sources */,
+				9CF167BD2717E4AD00ED0025 /* ReligionTableViewController.swift in Sources */,
+				9CF167B42717C3D200ED0025 /* IntervencionTableViewController.swift in Sources */,
+				9CF167C82717E60800ED0025 /* AddHijoTableViewCell.swift in Sources */,
+				9CF167AD2717C16700ED0025 /* PacientesTableViewCell.swift in Sources */,
+				9CF167C32717E56F00ED0025 /* EstadoCivilTableViewController.swift in Sources */,
 				3550C3BD270CFA3800FE6844 /* Utilities.swift in Sources */,
+				9CF167BB2717E46300ED0025 /* NuevoPacienteTableViewController.swift in Sources */,
+				9CF167992717BA6E00ED0025 /* ExpedientesTableViewController.swift in Sources */,
+				9CF167CA2717F28800ED0025 /* MainViewController.swift in Sources */,
+				9CF167A02717BB3300ED0025 /* Fetcher.swift in Sources */,
+				9CF167B62717C3FB00ED0025 /* MotivoTableViewController.swift in Sources */,
+				9CF167BF2717E4D100ED0025 /* SexoTableViewController.swift in Sources */,
+				9CF167AB2717C12700ED0025 /* PacientesTableViewController.swift in Sources */,
+				9CF167B02717C2FF00ED0025 /* NuevaSesionTableViewController.swift in Sources */,
 				3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */,
+				9CF167B22717C37400ED0025 /* HerramientaTableViewController.swift in Sources */,
+				9CF167C62717E5DB00ED0025 /* AddHijosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
