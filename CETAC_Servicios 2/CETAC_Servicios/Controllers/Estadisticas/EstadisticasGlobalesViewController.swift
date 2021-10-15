@@ -45,7 +45,7 @@ class EstadisticasGlobalesViewController: UIViewController {
     func updateUI(with datos: [Int]){
             DispatchQueue.main.async {
                 self.datos = datos
-                self.view.setNeedsLayout()
+                self.usuariosgeneroChartUpdate()
 
             }
         }
