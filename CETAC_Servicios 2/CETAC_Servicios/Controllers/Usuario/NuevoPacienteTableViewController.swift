@@ -186,10 +186,10 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
     }
     
     func updateContinuarButton() {
-        let nombre = nombre.text ?? ""
-        let numCasa = Int(numCasa.text!) ?? -1
-        let telCelular = Int(telCelular.text!) ?? 0
-        let domicilio = domicilio.text ?? ""
+        let nombre = self.nombre.text ?? ""
+        let numCasa = Int(self.numCasa.text!) ?? -1
+        let telCelular = Int(self.telCelular.text!) ?? 0
+        let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         //let hijos = Int(hijosStepper.value)
         let procedencia = procedenciaDetailLabel.text
@@ -204,10 +204,10 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
     }
 
     @IBAction func continuarButtonTapped(_ sender: Any) {
-        let nombre = nombre.text ?? ""
-        let numCasa = Int(numCasa.text!) ?? -1
-        let telCelular = Int(telCelular.text!) ?? 0
-        let domicilio = domicilio.text ?? ""
+        let nombre = self.nombre.text ?? ""
+        let numCasa = Int(self.numCasa.text!) ?? -1
+        let telCelular = Int(self.telCelular.text!) ?? 0
+        let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         let hijos = Int(hijosStepper.value)
         let procedencia = procedenciaDetailLabel.text ?? ""

@@ -44,6 +44,30 @@ class fetcherController {
         }
     }
     
+    func fetchPacientesporGenero(completion: @escaping (Result<[Int], Error>)-> Void){
+        var datos = [0,0,0]
+        db.collection("paciente").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Paciente(aDoc: document)
+                    if p.sexo == "Hombre" {
+                        datos[0] += 1
+                    }
+                    else if p.sexo == "Mujer"{
+                        datos[1] += 1
+                    }
+                    else {
+                        datos[2] += 1
+                    }
+                }
+                completion(.success(datos))
+            }
+        }
+    }
+    
     func fetchNumSesionesPorNombreDePaciente(paciente: String, completion: @escaping (Result<Int, Error>)-> Void){
         var numero = 0
         db.collection("sesion").whereField("paciente", isEqualTo: paciente).getDocuments{ (querySnapshot, err) in
