@@ -68,6 +68,38 @@ class fetcherController {
         }
     }
     
+    func fetchTopServicios(completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("servicios").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
+    func fetchTopMotivos(completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("servicios").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
     func fetchNumSesionesPorNombreDePaciente(paciente: String, completion: @escaping (Result<Int, Error>)-> Void){
         var numero = 0
         db.collection("sesion").whereField("paciente", isEqualTo: paciente).getDocuments{ (querySnapshot, err) in

@@ -18,11 +18,18 @@ class EstadisticasGlobalesViewController: UIViewController {
     
     let fetcher = fetcherController()
     var datos = [0,0,0]
+    var tops = [Top]()
     
     lazy var pieChart: PieChartView = {
         let pieChartView = PieChartView()
         return pieChartView
     }()
+    
+    lazy var barChart: BarChartView = {
+        let barChartView = BarChartView()
+        return barChartView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +40,14 @@ class EstadisticasGlobalesViewController: UIViewController {
                     case .failure(let error):self.displayError(error, title: "No se pudo acceder a Usuarios por Genero")
                     }
                 }
+        
+        fetcher.fetchTopServicios{ (result) in
+                    switch result{
+                    //Funciona
+                    case .success(let tops):self.updateUI2(with: tops)
+                    case .failure(let error):self.displayError(error, title: "No se pudo acceder a Usuarios por Genero")
+                    }
+                }
 
         graficausuarios.addSubview(pieChart)
         pieChart.center(in: graficausuarios)
@@ -40,12 +55,25 @@ class EstadisticasGlobalesViewController: UIViewController {
         pieChart.heightToWidth(of: graficausuarios)
         usuariosgeneroChartUpdate()
         
+        graficaservicios.addSubview(barChart)
+        barChart.center(in: graficaservicios)
+        barChart.width(to: graficaservicios)
+        barChart.heightToWidth(of: graficaservicios)
+        //serviciosChartUpdate()
+        
         
     }
     func updateUI(with datos: [Int]){
             DispatchQueue.main.async {
                 self.datos = datos
                 self.usuariosgeneroChartUpdate()
+
+            }
+        }
+    func updateUI2(with tops: [Top]){
+            DispatchQueue.main.async {
+                self.tops = tops
+                self.serviciosChartUpdate()
 
             }
         }
@@ -85,6 +113,32 @@ class EstadisticasGlobalesViewController: UIViewController {
         
         //This must stay at end of function
         pieChart.notifyDataSetChanged()
+    }
+    
+    func serviciosChartUpdate() {
+        let entry1 = BarChartDataEntry(x: 1, y:  Double(tops[0].num))
+        print(tops[0].num)
+        print(tops[1].num)
+        print(tops[2].num)
+        let entry2 = BarChartDataEntry(x: 2, y:  Double(tops[1].num))
+        let entry3 = BarChartDataEntry(x: 3, y:  Double(tops[2].num))
+        let dataSet = BarChartDataSet(entries: [entry1, entry2, entry3], label: "Top 3 Servicios")
+        print(tops[0].nombre)
+        print(tops[1].nombre)
+        print(tops[2].nombre)
+        let data = BarChartData(dataSet: dataSet)
+        barChart.data = data
+        barChart.chartDescription?.text = "Top 3 de Servicios"
+        
+        let servicios = ["", tops[0].nombre, tops[1].nombre, tops[2].nombre]
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: servicios)
+//        barChart.xAxis.granularity = 0
+
+        //All other additions to this function will go here
+        
+
+        //This must stay at end of function
+        barChart.notifyDataSetChanged()
     }
 
 }
