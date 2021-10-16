@@ -28,6 +28,7 @@ class fetcherController {
         }
     }
     
+    
     func fetchPacientes(completion: @escaping (Result<Pacientes, Error>)-> Void){
         var pacientes = [Paciente]()
         db.collection("paciente").order(by: "nombre").getDocuments{ (querySnapshot, err) in

@@ -17,11 +17,12 @@
 		3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */; };
 		3550C3B1270CEBF300FE6844 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3B0270CEBF300FE6844 /* LogInViewController.swift */; };
 		3550C3BD270CFA3800FE6844 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3BC270CFA3800FE6844 /* Utilities.swift */; };
-		3550C3D3270CFDAA00FE6844 /* InicioUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */; };
 		357A87D2271A2211001BEB34 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A87D1271A2211001BEB34 /* Top.swift */; };
 		358E7EA1270D49CB00242DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358E7EA0270D49CB00242DB2 /* Constants.swift */; };
 		358FA91E270E2B8F0031A542 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358FA91D270E2B8F0031A542 /* UsersController.swift */; };
 		35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */; };
+		359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C2988271B73240068DD2B /* ReportesTableViewController.swift */; };
+		359C298D271B78140068DD2B /* ExpedienteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
 		9C607046270C0316000C5A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C607045270C0315000C5A5F /* GoogleService-Info.plist */; };
 		9CF167992717BA6E00ED0025 /* ExpedientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */; };
@@ -64,11 +65,12 @@
 		3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3550C3B0270CEBF300FE6844 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3550C3BC270CFA3800FE6844 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioUsuarioViewController.swift; sourceTree = "<group>"; };
 		357A87D1271A2211001BEB34 /* Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top.swift; sourceTree = "<group>"; };
 		358E7EA0270D49CB00242DB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		358FA91D270E2B8F0031A542 /* UsersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
+		359C2988271B73240068DD2B /* ReportesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesTableViewController.swift; sourceTree = "<group>"; };
+		359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedienteTableViewCell.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedientesTableViewController.swift; sourceTree = "<group>"; };
 		9CF1679D2717BB1600ED0025 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
@@ -148,9 +150,6 @@
 				351E3FBE2702B6D600C09617 /* Info.plist */,
 				35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */,
 				9C607045270C0315000C5A5F /* GoogleService-Info.plist */,
-				3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */,
-				3550C3B0270CEBF300FE6844 /* LogInViewController.swift */,
-				3550C3D2270CFDAA00FE6844 /* InicioUsuarioViewController.swift */,
 				3550C3AC270CEB1100FE6844 /* View Controllers */,
 				358FA91D270E2B8F0031A542 /* UsersController.swift */,
 			);
@@ -181,6 +180,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		359C2985271B6DA60068DD2B /* IniciarSesion */ = {
+			isa = PBXGroup;
+			children = (
+				3550C3AD270CEBDA00FE6844 /* SignUpViewController.swift */,
+				3550C3B0270CEBF300FE6844 /* LogInViewController.swift */,
+			);
+			path = IniciarSesion;
+			sourceTree = "<group>";
+		};
+		359C2987271B72EB0068DD2B /* Soporte */ = {
+			isa = PBXGroup;
+			children = (
+				359C2988271B73240068DD2B /* ReportesTableViewController.swift */,
+				359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */,
+			);
+			path = Soporte;
+			sourceTree = "<group>";
+		};
 		42EA7F06CC9DEC5AAE2A23EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +209,8 @@
 		9CF167972717BA4800ED0025 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				359C2987271B72EB0068DD2B /* Soporte */,
+				359C2985271B6DA60068DD2B /* IniciarSesion */,
 				354E52902718F57000FC877F /* Estadisticas */,
 				9CF167C42717E5C800ED0025 /* Hijos */,
 				9CF167B92717E3BB00ED0025 /* Usuario */,
@@ -382,7 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3550C3D3270CFDAA00FE6844 /* InicioUsuarioViewController.swift in Sources */,
 				9CF167A62717BB9500ED0025 /* Indicadores.swift in Sources */,
 				351E3FB52702B6CD00C09617 /* ViewController.swift in Sources */,
 				9CF167B82717C58F00ED0025 /* TipoTableViewController.swift in Sources */,
@@ -395,6 +413,7 @@
 				358E7EA1270D49CB00242DB2 /* Constants.swift in Sources */,
 				9CF167C12717E54F00ED0025 /* ProcedenciaTableViewController.swift in Sources */,
 				9CF167A42717BB8700ED0025 /* Usuario.swift in Sources */,
+				359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */,
 				357A87D2271A2211001BEB34 /* Top.swift in Sources */,
 				354E52922718F5A800FC877F /* EstadisticasGlobalesViewController.swift in Sources */,
 				351E3FB32702B6CD00C09617 /* SceneDelegate.swift in Sources */,
@@ -412,6 +431,7 @@
 				9CF167B62717C3FB00ED0025 /* MotivoTableViewController.swift in Sources */,
 				9CF167BF2717E4D100ED0025 /* SexoTableViewController.swift in Sources */,
 				9CF167AB2717C12700ED0025 /* PacientesTableViewController.swift in Sources */,
+				359C298D271B78140068DD2B /* ExpedienteTableViewCell.swift in Sources */,
 				9CF167B02717C2FF00ED0025 /* NuevaSesionTableViewController.swift in Sources */,
 				3550C3AE270CEBDA00FE6844 /* SignUpViewController.swift in Sources */,
 				9CF167B22717C37400ED0025 /* HerramientaTableViewController.swift in Sources */,
