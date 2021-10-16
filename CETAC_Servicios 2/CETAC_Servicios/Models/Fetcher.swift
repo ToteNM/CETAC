@@ -85,17 +85,33 @@ class fetcherController {
     }
     
     func fetchTopMotivos(completion: @escaping (Result<Tops, Error>)-> Void){
-        var tops = [Top]()
-        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("servicios").getDocuments{ (querySnapshot, err) in
+        var motivos = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("motivos").order(by: "valor", descending: true).limit(to: 5).getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting document: \(err)")
                 completion(.failure(err))
             } else {
                 for document in querySnapshot!.documents {
                     var p = Top(aDoc: document)
-                    tops.append(p)
+                    motivos.append(p)
                 }
-                completion(.success(tops))
+                completion(.success(motivos))
+            }
+        }
+    }
+    
+    func fetchTopIntervenciones(completion: @escaping (Result<Tops, Error>)-> Void){
+        var intervenciones = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("intervencion").order(by: "valor", descending: true).limit(to: 5).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    intervenciones.append(p)
+                }
+                completion(.success(intervenciones))
             }
         }
     }
