@@ -205,7 +205,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         let motiv = motivoDetail.text ?? ""
         let tipo = tipoDetail.text ?? ""
         let eval = evaluacionText.text ?? ""
-        let cuota = Double(cuota.text!) ?? -1
+        let cuota = Double(self.cuota.text!) ?? -1
         aceptarButton.isEnabled = herr != "Not set" && inter != "Not set" && motiv != "Not set" && tipo != "Not set" && !eval.isEmpty && cuota > 0.0
     }
     
@@ -233,7 +233,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         let eval = evaluacionText.text ?? ""
         let cierre = cierreSwitch.isOn
         let nombre = nombreUsuario.text ?? ""
-        let cuota = Double(cuota.text!) ?? -1
+        let cuota = Double(self.cuota.text!) ?? -1
         let db = Firestore.firestore()
         let today = Date()
         dateFormatter.dateFormat = "yyyy/MM/dd"

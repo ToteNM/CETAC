@@ -14,14 +14,15 @@ class ReportesTableViewController: UITableViewController {
     var selectedid: String = "id"
     var selecteddoctor : String = "doctor"
     var selectedpaciente : String = "paciente"
-    var selectednumSesion: Int?
-    var selectedfecha: String?
-    var selectedevaluacion: String?
+    var selectednumSesion: Int = 0
+    var selectedfecha: String = ""
+    var selectedevaluacion: String = ""
     var selectedcierre: Bool?
-    var selectedherramienta : String?
-    var selectedmotivo : String?
-    var selectedtipo : String?
-    var selectedintervencion : String?
+    var selectedherramienta : String = ""
+    var selectedmotivo : String = ""
+    var selectedtipo : String = ""
+    var selectedintervencion : String = ""
+    //var selectedcuota : Int?
     @IBOutlet weak var continuar: UIBarButtonItem!
     @IBAction func tapContinuar(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "irUsuario", sender: continuar )

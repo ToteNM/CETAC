@@ -148,6 +148,22 @@ class fetcherController {
         }
     }
     
+    func fetchTanatologos(completion: @escaping (Result<Usuarios, Error>)-> Void){
+        var pacientes = [Usuario]()
+        db.collection("users").whereField("rol", isEqualTo: 2).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Usuario(aDoc: document)
+                    pacientes.append(p)
+                }
+                completion(.success(pacientes))
+            }
+        }
+    }
+    
     func fetchIndicadores(completion: @escaping (Result<Indicadores, Error>)-> Void){
         var indicadores = [Indicador]()
         db.collection("indicadores").getDocuments{ (querySnapshot, err) in

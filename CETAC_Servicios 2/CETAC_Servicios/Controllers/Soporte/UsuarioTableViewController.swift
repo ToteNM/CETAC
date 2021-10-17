@@ -10,22 +10,40 @@ import UIKit
 class UsuarioTableViewController: UITableViewController {
     var sesiones: Sesion?
     @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var num_expediente: UILabel!
+    @IBOutlet weak var num_sesion: UILabel!
+    @IBOutlet weak var motivo: UILabel!
+    @IBOutlet weak var servicio: UILabel!
+    @IBOutlet weak var intervencion: UILabel!
+    @IBOutlet weak var herramienta: UILabel!
+    @IBOutlet weak var doctor: UILabel!
+    @IBOutlet weak var fecha: UILabel!
+    @IBOutlet weak var cuota: UILabel!
+    @IBOutlet weak var evaluacion: UITextView!
     
     var selectedid: String = "idd"
     var selecteddoctor : String = "doc"
     var selectedpaciente : String = "pac"
-    var selectednumSesion: Int?
-    var selectedfecha: String?
-    var selectedevaluacion: String?
+    var selectednumSesion: Int = 0
+    var selectedfecha: String = "fecha"
+    var selectedevaluacion: String = "eva"
     var selectedcierre: Bool?
-    var selectedherramienta : String?
-    var selectedmotivo : String?
-    var selectedtipo : String?
-    var selectedintervencion : String?
+    var selectedherramienta : String = "herr"
+    var selectedmotivo : String = "motivo"
+    var selectedtipo : String = "tipo"
+    var selectedintervencion : String = "inter"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre.text = selectedpaciente
+        num_sesion.text = String(selectednumSesion)
+        motivo.text = selectedmotivo
+        servicio.text = selectedherramienta
+        intervencion.text = selectedintervencion
+        herramienta.text = selectedherramienta
+        doctor.text = selecteddoctor
+        fecha.text = selectedfecha
+        evaluacion.text = selectedevaluacion
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

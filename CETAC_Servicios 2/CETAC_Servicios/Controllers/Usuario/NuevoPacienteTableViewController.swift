@@ -171,7 +171,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
         let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         //let hijos = Int(hijosStepper.value)
-        let procedencia = procedencia.text
+        let procedencia = self.procedencia.text
         let religion = religionDetailLabel.text
         let sexo = sexoDetailLabel.text
         let estadoCivil = estadoCivilDetailLabel.text
@@ -189,7 +189,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
         let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         let hijos = Int(hijosStepper.value)
-        let procedencia = procedencia.text ?? ""
+        let procedencia = self.procedencia.text ?? ""
         let religion = religionDetailLabel.text ?? ""
         let sexo = sexoDetailLabel.text ?? ""
         let ocupacion = ocupacionLabel.text ?? ""

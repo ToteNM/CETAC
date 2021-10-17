@@ -9,6 +9,11 @@ import UIKit
 
 class TanatologoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var num: UILabel!
+    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var servicio: UILabel!
+    var numero: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +24,13 @@ class TanatologoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func update(with usuario: Usuario){
+        num.text = String(numero + 1)
+        nombre.text = usuario.nombre + " " + usuario.apellidos
+        servicio.text = usuario.intervencion
+        /*num.text = String(tanatologo.num)
+        nombre.text = tanatologo.nombre
+        servicio.text = tanatologo.servicio*/
+    }
 }

@@ -19,7 +19,7 @@ class TanatologosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        usuarioControlador.fetchUsuarios{ (result) in
+        usuarioControlador.fetchTanatologos{ (result) in
             switch result{
             case .success(let usuarios):self.updateUI(with: usuarios)
             case .failure(let error):self.displayError(error, title: "No se pudo acceder a los tanatologos")
@@ -35,7 +35,7 @@ class TanatologosTableViewController: UITableViewController {
     }
     func updateUI(){
         
-        usuarioControlador.fetchUsuarios{ (result) in
+        usuarioControlador.fetchTanatologos{ (result) in
             switch result{
             case .success(let usuarios):self.updateUI(with: usuarios)
             case .failure(let error):self.displayError(error, title: "No se pudo acceder a los tanatologos")
@@ -65,19 +65,18 @@ class TanatologosTableViewController: UITableViewController {
         return datos.count
     }
 
-    
-    /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath) as! TanatologoTableViewCell
 
         // Configure the cell...
-        let usuarios = datos[indexPath.row]
+        let usuario = datos[indexPath.row]
         
-        //cell.update(with: usuarios)
+        cell.update(with: usuario)
         // Configure the cell...
 
         return cell
         
-    }*/
+    }
     
 
     /*
@@ -119,14 +118,15 @@ class TanatologosTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let siguiente = segue.destination as! IndicadoresTanatologoViewController
+        /*let siguiente = segue.destination as! IndicadoresTanatologoViewController
         let indice = self.tableView.indexPathForSelectedRow?.row
-        siguiente.tanatologo = datos[indice!]
-    }*/
+        siguiente.tanatologo = datos[indice!]*/
+    }
     
 
 
 }
+
