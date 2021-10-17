@@ -26,6 +26,7 @@
 		359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C2988271B73240068DD2B /* ReportesTableViewController.swift */; };
 		359C298D271B78140068DD2B /* ExpedienteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
+		9C496D56271CA37900DA3F4B /* Globales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C496D55271CA37900DA3F4B /* Globales.swift */; };
 		9C607046270C0316000C5A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C607045270C0315000C5A5F /* GoogleService-Info.plist */; };
 		9CF167992717BA6E00ED0025 /* ExpedientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */; };
 		9CF1679E2717BB1600ED0025 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1679D2717BB1600ED0025 /* Sesion.swift */; };
@@ -75,6 +76,7 @@
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		359C2988271B73240068DD2B /* ReportesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesTableViewController.swift; sourceTree = "<group>"; };
 		359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedienteTableViewCell.swift; sourceTree = "<group>"; };
+		9C496D55271CA37900DA3F4B /* Globales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globales.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9CF167982717BA6D00ED0025 /* ExpedientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedientesTableViewController.swift; sourceTree = "<group>"; };
 		9CF1679D2717BB1600ED0025 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				9CF167A32717BB8700ED0025 /* Usuario.swift */,
 				9CF167A52717BB9500ED0025 /* Indicadores.swift */,
 				357A87D1271A2211001BEB34 /* Top.swift */,
+				9C496D55271CA37900DA3F4B /* Globales.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				9CF1679E2717BB1600ED0025 /* Sesion.swift in Sources */,
 				35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */,
 				9CF167C12717E54F00ED0025 /* ProcedenciaTableViewController.swift in Sources */,
+				9C496D56271CA37900DA3F4B /* Globales.swift in Sources */,
 				9CF167A42717BB8700ED0025 /* Usuario.swift in Sources */,
 				359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */,
 				357A87D2271A2211001BEB34 /* Top.swift in Sources */,

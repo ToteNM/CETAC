@@ -163,6 +163,22 @@ class fetcherController {
             }
         }
     }
+    
+    func fetchGlobales(completion: @escaping (Result<[Globales], Error>)-> Void){
+        var globales = [Globales]()
+        db.collection("globales").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Globales(aDoc: document)
+                    globales.append(p)
+                }
+                completion(.success(globales))
+            }
+        }
+    }
     /*
     func fetchPacientes(completion: @escaping (Result<Pacientes, Error>)-> Void) {
         var pacientes = [Paciente]()

@@ -9,17 +9,11 @@ import UIKit
 import Firebase
 import grpc
 
-class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableViewControllerDelegate, ReligionTableViewControllerDelegate, SexoTableViewControllerDelegate, EstadoCivilTableViewControllerDelegate, UITextFieldDelegate {
+class NuevoPacienteTableViewController: UITableViewController, ReligionTableViewControllerDelegate, SexoTableViewControllerDelegate, EstadoCivilTableViewControllerDelegate, UITextFieldDelegate {
     
     func estadoCivilTableViewController(_ controller: EstadoCivilTableViewController, didSelect estadoCivil: String) {
         self.estadoCivil = estadoCivil
         updateEstadoCivil()
-        updateContinuarButton()
-    }
-    
-    func procedenciaTableViewController(_ controller: ProcedenciaTableViewController, didSelect estado: String) {
-        self.estado = estado
-        updateProcedencia()
         updateContinuarButton()
     }
     
@@ -45,7 +39,6 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
     @IBOutlet weak var estadoCivilDetailLabel: UILabel!
     @IBOutlet weak var sexoDetailLabel: UILabel!
     @IBOutlet weak var religionDetailLabel: UILabel!
-    @IBOutlet weak var procedenciaDetailLabel: UILabel!
     @IBOutlet weak var fechaLabel: UILabel!
     @IBOutlet weak var fechaPicker: UIDatePicker!
     @IBOutlet weak var nombre: UITextField!
@@ -55,14 +48,9 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
     @IBOutlet weak var hijosStepperLabel: UILabel!
     @IBOutlet weak var hijosStepper: UIStepper!
     @IBOutlet weak var ocupacionLabel: UITextField!
+    @IBOutlet weak var procedencia: UITextField!
     
-    @IBSegueAction func selectProcedencia(_ coder: NSCoder) -> ProcedenciaTableViewController? {
-        let procedenciaController = ProcedenciaTableViewController(coder: coder)
-        procedenciaController?.delegate = self
-        procedenciaController?.estadoSelect = estado
-        
-        return procedenciaController
-    }
+    
     @IBSegueAction func selectReligion(_ coder: NSCoder) -> ReligionTableViewController? {
         let religionController = ReligionTableViewController(coder: coder)
         religionController?.delegate = self
@@ -121,7 +109,6 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
         fechaPicker.date = midnightToday
         updateDateViews()
         updateHijos()
-        updateProcedencia()
         updateReligion()
         updateSexo()
         updateEstadoCivil()
@@ -144,14 +131,6 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
         
         return dateFormatter
     }()
-    
-    func updateProcedencia() {
-        if let estado = estado {
-            procedenciaDetailLabel.text = estado
-        } else {
-            procedenciaDetailLabel.text = "Not set"
-        }
-    }
     
     func updateReligion() {
         if let religion = religion {
@@ -192,7 +171,7 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
         let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         //let hijos = Int(hijosStepper.value)
-        let procedencia = procedenciaDetailLabel.text
+        let procedencia = procedencia.text
         let religion = religionDetailLabel.text
         let sexo = sexoDetailLabel.text
         let estadoCivil = estadoCivilDetailLabel.text
@@ -210,7 +189,7 @@ class NuevoPacienteTableViewController: UITableViewController, ProcedenciaTableV
         let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         let hijos = Int(hijosStepper.value)
-        let procedencia = procedenciaDetailLabel.text ?? ""
+        let procedencia = procedencia.text ?? ""
         let religion = religionDetailLabel.text ?? ""
         let sexo = sexoDetailLabel.text ?? ""
         let ocupacion = ocupacionLabel.text ?? ""

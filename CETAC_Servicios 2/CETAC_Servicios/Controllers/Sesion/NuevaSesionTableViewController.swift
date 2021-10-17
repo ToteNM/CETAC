@@ -42,6 +42,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
     var cierre = true
     var fetcher = fetcherController()
     var numSesiones = 0
+    var cuotaGlobal = 0.0
     var patientId : String?
     
     @IBOutlet weak var nombreUsuario: UILabel!
@@ -52,6 +53,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
     @IBOutlet weak var herramientaDetail: UILabel!
     @IBOutlet weak var cierreSwitch: UISwitch!
     @IBOutlet weak var evaluacionText: UITextView!
+    @IBOutlet weak var cuota: UITextField!
     
     
     @IBSegueAction func selectHerramienta(_ coder: NSCoder) -> UITableViewController? {
@@ -103,6 +105,14 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
             }
         }
         
+        fetcher.fetchGlobales { (result) in
+            switch result{
+            //Funciona
+            case .success(let globales):self.updateUI2(with: globales)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
             //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -135,6 +145,13 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         DispatchQueue.main.async {
             self.numSesiones = sesiones
             print(self.numSesiones)
+        }
+    }
+    
+    func updateUI2(with globales: [Globales]){
+        DispatchQueue.main.async {
+            self.cuotaGlobal = globales[0].cuota
+            print(self.cuotaGlobal)
         }
     }
     
@@ -188,12 +205,18 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         let motiv = motivoDetail.text ?? ""
         let tipo = tipoDetail.text ?? ""
         let eval = evaluacionText.text ?? ""
-        aceptarButton.isEnabled = herr != "Not set" && inter != "Not set" && motiv != "Not set" && tipo != "Not set" && !eval.isEmpty
+        let cuota = Double(cuota.text!) ?? -1
+        aceptarButton.isEnabled = herr != "Not set" && inter != "Not set" && motiv != "Not set" && tipo != "Not set" && !eval.isEmpty && cuota > 0.0
     }
     
     func textViewDidChange(_ textView: UITextView) {
         updateAceptarButton()
     }
+    
+    @IBAction func textFieldDidChange(_ sender: UITextField) {
+        updateAceptarButton()
+    }
+    
     
     var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -210,9 +233,10 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         let eval = evaluacionText.text ?? ""
         let cierre = cierreSwitch.isOn
         let nombre = nombreUsuario.text ?? ""
+        let cuota = Double(cuota.text!) ?? -1
         let db = Firestore.firestore()
         let today = Date()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         let fecha = dateFormatter.string(from: today)
         var ref: DocumentReference? = nil
         ref = db.collection("sesion").addDocument(data: [
@@ -224,7 +248,8 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
             "motivo": motiv,
             "numSesion": numSesiones+1,
             "paciente": nombre,
-            "tipo": tipo
+            "tipo": tipo,
+            "cuota": cuota
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -238,7 +263,16 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
             if let err = err {
                 print("Error updating document: \(err)")
             } else {
-                print("Document updated")
+                print("Document paciente updated")
+            }
+        }
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").updateData([
+            "cuota": self.cuotaGlobal + cuota
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document globales updated")
             }
         }
         performSegue(withIdentifier: "unwind", sender: aceptarButton )
