@@ -14,13 +14,15 @@ class Usuario : Codable {
     var nombre: String
     var rol: Int
     var uid: String
+    var intervencion: String
     
-    init(apellidos: String, email: String, nombre: String, rol: Int, uid: String){
+    init(apellidos: String, email: String, nombre: String, rol: Int, uid: String, intervencion: String){
         self.apellidos = apellidos
         self.email = email
         self.nombre = nombre
         self.rol = rol
         self.uid = uid
+        self.intervencion = intervencion
     }
     
     init (aDoc: DocumentSnapshot) {
@@ -29,6 +31,7 @@ class Usuario : Codable {
         self.email = aDoc.get("email") as? String ?? ""
         self.nombre = aDoc.get("nombre") as? String ?? ""
         self.uid = aDoc.get("uid") as? String ?? ""
+        self.intervencion = aDoc.get("intervencion") as? String ?? ""
     }
 }
 

@@ -11,6 +11,21 @@ import Firebase
 class ReportesTableViewController: UITableViewController {
     var expedienteControlador = fetcherController()
     var datos = [Sesion]()
+    var selectedid: String = "id"
+    var selecteddoctor : String = "doctor"
+    var selectedpaciente : String = "paciente"
+    var selectednumSesion: Int?
+    var selectedfecha: String?
+    var selectedevaluacion: String?
+    var selectedcierre: Bool?
+    var selectedherramienta : String?
+    var selectedmotivo : String?
+    var selectedtipo : String?
+    var selectedintervencion : String?
+    @IBOutlet weak var continuar: UIBarButtonItem!
+    @IBAction func tapContinuar(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "irUsuario", sender: continuar )
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +41,8 @@ class ReportesTableViewController: UITableViewController {
             case .failure(let error):self.displayError(error, title: "No se pudo acceder a las sesiones")
             }
         }
+        
+
     }
     func updateUI(with sesiones:Sesiones){
         DispatchQueue.main.async {
@@ -72,13 +89,33 @@ class ReportesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! ExpedienteTableViewCell
 
         let sesiones = datos[indexPath.row]
-        
+        if sesiones.id == selectedid {
+                    cell.accessoryType = .checkmark
+                } else {
+                    cell.accessoryType = .none
+                }
+
         cell.update(with: sesiones)
         // Configure the cell...
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sesiones = datos[indexPath.row]
+        selectedid = sesiones.id
+        selecteddoctor = sesiones.doctor
+        selectedpaciente = sesiones.paciente
+        selectednumSesion = sesiones.numSesion
+        selectedfecha = sesiones.fecha
+        selectedevaluacion = sesiones.evaluacion
+        selectedcierre = sesiones.cierre
+        selectedherramienta = sesiones.herramienta
+        selectedmotivo = sesiones.motivo
+        selectedtipo = sesiones.tipo
+        selectedintervencion = sesiones.intervencion
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -119,13 +156,27 @@ class ReportesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let siguiente = segue.destination as! UsuarioViewController
-        let indice = self.tableView.indexPathForSelectedRow?.row
-        siguiente.expediente = datos[indice!]
-    }*/
+        if segue.identifier == "irUsuario" {
+        let siguiente = segue.destination as! UsuarioTableViewController
+            siguiente.selectedid = self.selectedid
+            siguiente.selecteddoctor = self.selecteddoctor
+            siguiente.selectedpaciente = self.selectedpaciente
+            siguiente.selectednumSesion = self.selectednumSesion
+            siguiente.selectedfecha = self.selectedfecha
+            siguiente.selectedevaluacion = self.selectedevaluacion
+            siguiente.selectedcierre = self.selectedcierre
+            siguiente.selectedherramienta = self.selectedherramienta
+            siguiente.selectedmotivo = self.selectedmotivo
+            siguiente.selectedtipo = self.selectedtipo
+            siguiente.selectedintervencion = self.selectedintervencion
+            print(self.selectedpaciente)
+        //let indice = self.tableView.indexPathForSelectedRow?.row
+        //siguiente.sesiones = datos[indice!]
+        }
+    }
     
 
 }

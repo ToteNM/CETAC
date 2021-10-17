@@ -14,9 +14,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var apellidosField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var intervencionField: UITextField!
     @IBOutlet weak var rolField: UITextField!
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBAction func intervencionTap(_ sender: UITextField) {
+    }
+    
     
     var pasarUID = ""
     override func viewDidLoad() {
@@ -32,6 +36,15 @@ class SignUpViewController: UIViewController {
 
         setUpElements()
     }
+    
+    func mostrarAlerta(_ error:String){
+        let alerta = UIAlertController(title: "Aviso", message: error, preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "Cerrar", style: .cancel, handler: { action in
+            print("Cerrar")
+        }))
+        present(alerta, animated: true)
+    }
+    
     @objc func dismissKeyboard() {
             //Causes the view (or one of its embedded text fields) to resign the first responder status.
             view.endEditing(true)
@@ -48,6 +61,7 @@ class SignUpViewController: UIViewController {
         Utilities.styleTextField(passwordField)
         Utilities.styleFilledButton(signup)
         Utilities.styleTextField(rolField)
+        Utilities.styleTextField(intervencionField)
     }
 
     /*
@@ -63,16 +77,15 @@ class SignUpViewController: UIViewController {
     func validateFields() -> String? {
         
         // Checar que los campos esten completos
-        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            rolField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-            return "Por favor, llena todos los campos"
+        if nombreField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || apellidosField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || intervencionField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || rolField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            mostrarAlerta("Por favor, llena todos los campos")
         }
         // checar si la contraseña es segura
         let cleanedPassword = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if Utilities.isPasswordValid(cleanedPassword) == false {
             //Contraseña no es segura
-            return "Por favor, asegurate de que tu contraseña contenga al menos 8 caracteres, contenga un caracter especial y un número"
+            mostrarAlerta("Por favor, asegurate de que tu contraseña contenga al menos 8 caracteres, contenga un caracter especial y un número")
         }
         
         return nil
@@ -84,7 +97,8 @@ class SignUpViewController: UIViewController {
         
         if error != nil {
             //Hay algo malo con los campos, muestra el mensaje de error
-            showError(error!)
+            //showError(error!)
+            mostrarAlerta(error!)
             
         }
         else {
@@ -93,32 +107,31 @@ class SignUpViewController: UIViewController {
             let apellidos = apellidosField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let intervencion = intervencionField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let rol = String(rolField.text!.trimmingCharacters(in: .whitespacesAndNewlines))
             let rolnum = Int(rol) ?? 0
             // Crear el usuario
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 // Checar errores
-                if err != nil {
-                    // Hay un error creado por el usuario
-                    self.showError("Error creating user")
+                
+                if err != nil{
+                    self.mostrarAlerta("Error creando usuario")
                 }
                 else {
-                    //Usuario creado exitoso, ahora se alamacena los datos
+                    
+                    //self.pasarUID = result!.user.uid
                     
                     let db = Firestore.firestore()
-                     db.collection("users").document(result!.user.uid).setData(["nombre":nombre, "apellidos":apellidos, "rol":rolnum, "email": email]) { (error) in
-                        
-                        if error != nil {
-                            // mostrar mensaje de error
-                            self.showError("Error al guardar datos")
-                        }
+                     db.collection("users").document(result!.user.uid).setData(["nombre":nombre, "apellidos":apellidos, "rol":rolnum, "intervencion":intervencion, "email": email]) { (error) in
+                        if error != nil{
+                            self.mostrarAlerta("Cuenta creada con exito!")
+                            //return
+                        } 
                         
                     }
-                    
-
-                    // Transicion a la pantalla
-                    self.showError("Usuario Creado")
+                   
+                    self.mostrarAlerta("Usuario Creado")
                 }
                 
             }
@@ -130,12 +143,6 @@ class SignUpViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    /*func transitionInicioUsuario () {
-        
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-    }*/
-    
+
+
 }
