@@ -376,7 +376,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-oX-2vi">
                                 <rect key="frame" x="79" y="368" width="256" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="TanatBoton"/>
+                                <state key="normal" backgroundImage="ExpedientesBoton"/>
                                 <connections>
                                     <segue destination="h9n-Fi-FLM" kind="show" id="645-B7-eEY"/>
                                 </connections>
