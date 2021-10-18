@@ -245,6 +245,27 @@ class fetcherController {
             }
         }
     }
+    
+    func fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: String, dateFinal: String, completion: @escaping (Result<Int, Error>)-> Void){
+            var numero = 0
+            var pacientes = [String]()
+            db.collection("sesion").order(by: "fecha").start(at: [dateInicio]).end(at: [dateFinal]).getDocuments{ (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting document: \(err)")
+                    completion(.failure(err))
+                } else {
+                    for document in querySnapshot!.documents {
+                        var p = Sesion(aDoc: document)
+                        if !pacientes.contains(p.paciente)  {
+                            numero += 1
+                            pacientes.append(p.paciente)
+                        }
+                    }
+                    completion(.success(numero))
+                }
+            }
+        }
+
     func updateExpediente(updateExpediente: Paciente, completion: @escaping (Result<String, Error>) -> Void){
         db.collection("paciente").document(updateExpediente.id).updateData([
             "domicilio": updateExpediente.domicilio, "edad":updateExpediente.edad, "estadoCivil":updateExpediente.estadoCivil, "nombre":updateExpediente.nombre, "numCasa":updateExpediente.numCasa,
