@@ -34,7 +34,9 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
     var religion: String?
     var sexo: String?
     var estadoCivil : String?
+    var numExpediente : Int?
     var patientId : String?
+    var fetcher = fetcherController()
 
     @IBOutlet weak var estadoCivilDetailLabel: UILabel!
     @IBOutlet weak var sexoDetailLabel: UILabel!
@@ -98,6 +100,14 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
        
         let midnightToday = Calendar.current.startOfDay(for: Date())
         
+        fetcher.fetchGlobales { (result) in
+            switch result{
+            //Funciona
+            case .success(let globales):self.updateUI2(with: globales)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
             //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -118,6 +128,21 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func updateUI2(with globales: [Globales]){
+        DispatchQueue.main.async {
+            self.numExpediente = globales[0].expedientesCount
+            print(self.numExpediente!)
+        }
+    }
+    
+    func displayError(_ error: Error, title: String){
+        DispatchQueue.main.async{
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -171,11 +196,11 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
         let domicilio = self.domicilio.text ?? ""
         let fecha = fechaLabel.text ?? ""
         //let hijos = Int(hijosStepper.value)
-        let procedencia = self.procedencia.text
+        let procedencia = self.procedencia.text ?? ""
         let religion = religionDetailLabel.text
         let sexo = sexoDetailLabel.text
         let estadoCivil = estadoCivilDetailLabel.text
-        continuarButton.isEnabled = !nombre.isEmpty && numCasa > -1 && telCelular > -1 && !domicilio.isEmpty && !fecha.isEmpty && procedencia != "Not set" && religion != "Not set" && sexo != "Not set" && estadoCivil != "Not set"
+        continuarButton.isEnabled = !nombre.isEmpty && numCasa > -1 && telCelular > -1 && !domicilio.isEmpty && !fecha.isEmpty && !procedencia.isEmpty && religion != "Not set" && sexo != "Not set" && estadoCivil != "Not set"
     }
     
     @IBAction func textEditingChanged(_ sender: UITextField){
@@ -231,7 +256,8 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
             "procedencia": procedencia,
             "religion": religion,
             "sexo": sexo,
-            "cierre": false
+            "cierre": false,
+            "numExpediente": self.numExpediente!
         ])
             { err in
             if let err = err {
@@ -242,6 +268,16 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
         }
         
         patientId = ref?.documentID
+        
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").updateData([
+            "expedientesCount": self.numExpediente! + 1
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document globales updated")
+            }
+        }
         
         if hijos > 0 {
             performSegue(withIdentifier: "addHijos", sender: continuarButton)
@@ -258,12 +294,14 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
             let siguienteVista = segue.destination as! NuevaSesionTableViewController
             siguienteVista.nombre = self.nombre.text!
             siguienteVista.patientId = self.patientId!
+            siguienteVista.numExpediente = self.numExpediente!
         }
         else if segue.identifier == "addHijos" {
             let siguienteVista = segue.destination as! AddHijosTableViewController
             siguienteVista.numHijos = Int(hijosStepper.value)
             siguienteVista.padre = nombre.text ?? ""
             siguienteVista.patientId = self.patientId!
+            siguienteVista.numExpediente = self.numExpediente!
         }
     }
     // MARK: - Table view data source

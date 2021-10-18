@@ -13,6 +13,7 @@ class AddHijosTableViewController: UITableViewController {
     var padre = "Padre"
     var numHijos = 0
     var patientId : String?
+    var numExpediente = 0
     
     @IBAction func ocultarTeclado(_ sender: Any) {
         
@@ -93,6 +94,7 @@ class AddHijosTableViewController: UITableViewController {
             let siguienteVista = segue.destination as! NuevaSesionTableViewController
             siguienteVista.nombre = self.padre
             siguienteVista.patientId = self.patientId!
+            siguienteVista.numExpediente = self.numExpediente
         }
     }
     /*

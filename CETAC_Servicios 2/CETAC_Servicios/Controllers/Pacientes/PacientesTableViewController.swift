@@ -13,11 +13,12 @@ class PacientesTableViewController: UITableViewController {
     var datos = [Paciente]()
     var selectedName = "Nombre de ejemplo"
     var selectedID = "ID"
+    var selectedNumExpediente = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetcher.fetchPacientes{ (result) in
+        fetcher.fetchPacientesOpen{ (result) in
             switch result{
             //Funciona
             case .success(let pacientes):self.updateUI(with: pacientes)
@@ -81,6 +82,7 @@ class PacientesTableViewController: UITableViewController {
         let paciente = datos[indexPath.row]
         selectedName = paciente.nombre
         selectedID = paciente.id
+        selectedNumExpediente = paciente.numExpediente
         tableView.reloadData()
     }
     
@@ -92,6 +94,7 @@ class PacientesTableViewController: UITableViewController {
             print(selectedName)
             siguienteVista.nombre = self.selectedName
             siguienteVista.patientId = self.selectedID
+            siguienteVista.numExpediente = self.selectedNumExpediente
         }
     }
 

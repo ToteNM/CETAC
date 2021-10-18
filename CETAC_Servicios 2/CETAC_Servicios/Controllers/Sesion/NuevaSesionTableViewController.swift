@@ -44,6 +44,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
     var numSesiones = 0
     var cuotaGlobal = 0.0
     var patientId : String?
+    var numExpediente : Int?
     
     @IBOutlet weak var nombreUsuario: UILabel!
     @IBOutlet weak var aceptarButton: UIBarButtonItem!
@@ -247,9 +248,11 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
             "intervencion": inter,
             "motivo": motiv,
             "numSesion": numSesiones+1,
+            "numExpediente": numExpediente!,
             "paciente": nombre,
             "tipo": tipo,
-            "cuota": cuota
+            "cuota": cuota,
+            "cierre": cierre
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")

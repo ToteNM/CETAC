@@ -15,7 +15,7 @@ class IntervencionTableViewController: UITableViewController {
 
     weak var delegate : IntervencionTableViewControllerDelegate?
     var intervencionSelect : String?
-    var intervencions = [["Tanatología", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfullness"], ["Aromaterapia y Musicoterapia", "Cristaloterapia", "Reiki", "Reiki", "Biomagnetismo", "Angeloterapia", "Cama Térmica de Jade"], ["Flores de Bach", "Brisas Ambientales"]]
+    var intervencions = [["Tanatología", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfullness"], ["Aromaterapia y Musicoterapia", "Cristaloterapia", "Reiki", "Biomagnetismo", "Angeloterapia", "Cama Térmica de Jade"], ["Flores de Bach", "Brisas Ambientales"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
