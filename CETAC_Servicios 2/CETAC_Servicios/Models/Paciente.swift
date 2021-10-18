@@ -17,13 +17,14 @@ class Paciente : Codable {
     var numCasa : Int
     var numCel : Int
     var numHijos : Int
+    var numExpediente : Int
     var ocupacion : String
     var procedencia : String
     var sexo : String
     var religion : String
     var cierre : Bool
     
-    init(id : String, domicilio : String, edad: Int, estadoCivil : String, nombre : String, numCasa : Int, numCel : Int, numHijos : Int, sexo : String, ocupacion : String, procedencia : String, religion : String){
+    init(id : String, domicilio : String, edad: Int, estadoCivil : String, nombre : String, numCasa : Int, numCel : Int, numHijos : Int, numExpediente : Int, sexo : String, ocupacion : String, procedencia : String, religion : String){
         self.id = id
         self.domicilio = domicilio
         self.edad = edad
@@ -32,6 +33,7 @@ class Paciente : Codable {
         self.numCasa = numCasa
         self.numCel = numCel
         self.numHijos = numHijos
+        self.numExpediente = numExpediente
         self.ocupacion = ocupacion
         self.procedencia = procedencia
         self.sexo = sexo
@@ -48,6 +50,7 @@ class Paciente : Codable {
         self.numCasa = aDoc.get("numCasa") as? Int ?? -1
         self.numCel = aDoc.get("numCel") as? Int ?? -1
         self.numHijos = aDoc.get("numHijos") as? Int ?? -1
+        self.numExpediente = aDoc.get("numExpediente") as? Int ?? -1
         self.ocupacion = aDoc.get("ocupacion") as? String ?? ""
         self.procedencia = aDoc.get("procedencia") as? String ?? ""
         self.sexo = aDoc.get("sexo") as? String ?? ""

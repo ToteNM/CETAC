@@ -42,8 +42,8 @@ class ExpedientesTableViewCell: UITableViewCell {
         day.text = dia
         let anio = String(sesion.fecha.suffix(4))
         year.text = anio
-        let start = sesion.fecha.index(sesion.fecha.startIndex, offsetBy: 3)
-        let end = sesion.fecha.index(sesion.fecha.endIndex, offsetBy: -5)
+        let start = sesion.fecha.index(sesion.fecha.startIndex, offsetBy: 5)
+        let end = sesion.fecha.index(sesion.fecha.endIndex, offsetBy: -3)
         let range = start..<end
         var mes = String(sesion.fecha[range])
         switch mes {

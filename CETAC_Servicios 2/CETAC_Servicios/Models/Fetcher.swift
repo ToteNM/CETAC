@@ -14,7 +14,7 @@ class fetcherController {
     
     func fetchServicios(completion: @escaping (Result<Sesiones, Error>)-> Void){
         var sesiones = [Sesion]()
-        db.collection("sesion").getDocuments{ (querySnapshot, err) in
+        db.collection("sesion").order(by: "paciente").getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 completion(.failure(err))
@@ -39,6 +39,24 @@ class fetcherController {
                 for document in querySnapshot!.documents {
                     var p = Paciente(aDoc: document)
                     pacientes.append(p)
+                }
+                completion(.success(pacientes))
+            }
+        }
+    }
+    
+    func fetchPacientesOpen(completion: @escaping (Result<Pacientes, Error>)-> Void){
+        var pacientes = [Paciente]()
+        db.collection("paciente").order(by: "nombre").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Paciente(aDoc: document)
+                    if p.cierre == false {
+                        pacientes.append(p)
+                    }
                 }
                 completion(.success(pacientes))
             }
