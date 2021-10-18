@@ -185,18 +185,37 @@ class EstadisticasGlobalesViewController: UIViewController {
         let entry2 = BarChartDataEntry(x: 2, y:  Double(tops[1].num))
         let entry3 = BarChartDataEntry(x: 3, y:  Double(tops[2].num))
         let dataSet = BarChartDataSet(entries: [entry1, entry2, entry3], label: "Top 3 Servicios")
+        dataSet.colors = [
+            NSUIColor(cgColor: UIColor.systemBlue.cgColor),
+            NSUIColor(cgColor: UIColor.systemRed.cgColor),
+            NSUIColor(cgColor: UIColor.systemGreen.cgColor)
+        ]
         let data = BarChartData(dataSet: dataSet)
+        let test = LegendEntry()
+        test.label = tops[0].nombre
+        test.form = Legend.Form.square
+        test.formSize = 10.0
+        test.formColor = NSUIColor(cgColor: UIColor.systemBlue.cgColor)
+        let test1 = LegendEntry()
+        test1.label = tops[1].nombre
+        test1.form = Legend.Form.square
+        test1.formSize = 10.0
+        test1.formColor = NSUIColor(cgColor: UIColor.systemRed.cgColor)
+        let test2 = LegendEntry()
+        test2.label = tops[2].nombre
+        test2.form = Legend.Form.square
+        test2.formSize = 10.0
+        test2.formColor = NSUIColor(cgColor: UIColor.systemGreen.cgColor)
+        
+        let tests = [test, test1, test2]
+        barChart.legend.extraEntries = tests
         barChart.data = data
         barChart.chartDescription?.text = "Top 3 de Servicios"
         
         let servicios = ["", tops[0].nombre, tops[1].nombre, tops[2].nombre]
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: servicios)
-//        barChart.xAxis.granularity = 0
+        barChart.xAxis.centerAxisLabelsEnabled = false
 
-        //All other additions to this function will go here
-        
-
-        //This must stay at end of function
         barChart.notifyDataSetChanged()
     }
     
@@ -207,13 +226,49 @@ class EstadisticasGlobalesViewController: UIViewController {
         let entry4 = BarChartDataEntry(x: 4, y:  Double(motivos[3].num))
         let entry5 = BarChartDataEntry(x: 5, y:  Double(motivos[4].num))
         let dataSet = BarChartDataSet(entries: [entry1, entry2, entry3, entry4, entry5], label: "Top 5 Motivos")
+        dataSet.colors = [
+            NSUIColor(cgColor: UIColor.systemBlue.cgColor),
+            NSUIColor(cgColor: UIColor.systemRed.cgColor),
+            NSUIColor(cgColor: UIColor.systemGreen.cgColor),
+            NSUIColor(cgColor: UIColor.systemPink.cgColor),
+            NSUIColor(cgColor: UIColor.systemPurple.cgColor),
+        ]
         let data = BarChartData(dataSet: dataSet)
+        let test = LegendEntry()
+        test.label = motivos[0].nombre
+        test.form = Legend.Form.square
+        test.formSize = 10.0
+        test.formColor = NSUIColor(cgColor: UIColor.systemBlue.cgColor)
+        let test1 = LegendEntry()
+        test1.label = motivos[1].nombre
+        test1.form = Legend.Form.square
+        test1.formSize = 10.0
+        test1.formColor = NSUIColor(cgColor: UIColor.systemRed.cgColor)
+        let test2 = LegendEntry()
+        test2.label = motivos[2].nombre
+        test2.form = Legend.Form.square
+        test2.formSize = 10.0
+        test2.formColor = NSUIColor(cgColor: UIColor.systemGreen.cgColor)
+        let test3 = LegendEntry()
+        test3.label = motivos[2].nombre
+        test3.form = Legend.Form.square
+        test3.formSize = 10.0
+        test3.formColor = NSUIColor(cgColor: UIColor.systemPink.cgColor)
+        let test4 = LegendEntry()
+        test4.label = motivos[2].nombre
+        test4.form = Legend.Form.square
+        test4.formSize = 10.0
+        test4.formColor = NSUIColor(cgColor: UIColor.systemPurple.cgColor)
+        
+        let tests = [test, test1, test2, test3, test4]
+        barChart.legend.extraEntries = tests
         barChart1.data = data
         barChart1.chartDescription?.text = "Top 5 de Motivos"
         
         let motivoss = ["",motivos[0].nombre, motivos[1].nombre, motivos[2].nombre, motivos[3].nombre, motivos[4].nombre]
         barChart1.xAxis.valueFormatter = IndexAxisValueFormatter(values: motivoss)
-
+        barChart1.xAxis.centerAxisLabelsEnabled = false
+        
         barChart1.notifyDataSetChanged()
     }
     
