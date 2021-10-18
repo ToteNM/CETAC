@@ -14,6 +14,8 @@ class Sesion : Codable{
     var doctor : String
     var paciente : String
     var numSesion: Int
+    var numExpediente: Int
+    var cuota: Double
     var fecha: String
     var evaluacion: String
     var cierre: Bool
@@ -22,9 +24,11 @@ class Sesion : Codable{
     var tipo : String
     var intervencion : String
     
-    init(id: String, numSesion: Int, fecha: String, evaluacion: String, cierre: Bool, paciente_id: String, herramienta : String, motivo : String, tipo : String, intervencion : String, doctor : String, paciente : String){
+    init(id: String, numSesion: Int, numExpediente: Int, cuota: Double, fecha: String, evaluacion: String, cierre: Bool, paciente_id: String, herramienta : String, motivo : String, tipo : String, intervencion : String, doctor : String, paciente : String){
         self.id = id
         self.numSesion = numSesion
+        self.numExpediente = numExpediente
+        self.cuota = cuota
         self.fecha = fecha
         self.evaluacion = evaluacion
         self.cierre = cierre
@@ -39,6 +43,8 @@ class Sesion : Codable{
     init (aDoc: DocumentSnapshot) {
         self.id = aDoc.documentID
         self.numSesion = aDoc.get("numSesion") as? Int ?? -1
+        self.numExpediente = aDoc.get("numExpediente") as? Int ?? -1
+        self.cuota = aDoc.get("cuota") as? Double ?? 0.0
         self.fecha = aDoc.get("fecha") as? String ?? ""
         self.evaluacion = aDoc.get("evaluacion") as? String ?? ""
         self.cierre = aDoc.get("cierre") as? Bool ?? false

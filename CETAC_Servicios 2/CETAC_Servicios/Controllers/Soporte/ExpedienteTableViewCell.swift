@@ -35,13 +35,12 @@ class ExpedienteTableViewCell: UITableViewCell {
         doctor.text = expediente.doctor
         intervencion.text = expediente.intervencion
         numsesion.text = "#" + String(expediente.numSesion)
-        //01/02/2020
-        let diaFecha1 = String(expediente.fecha.prefix(2))
+        let diaFecha1 = String(expediente.fecha.suffix(2))
         diaFecha.text = diaFecha1
-        let añoFecha1 = String(expediente.fecha.suffix(4))
+        let añoFecha1 = String(expediente.fecha.prefix(4))
         añoFecha.text = añoFecha1
-        let start = expediente.fecha.index(expediente.fecha.startIndex, offsetBy: 3)
-        let end = expediente.fecha.index(expediente.fecha.endIndex, offsetBy: -5)
+        let start = expediente.fecha.index(expediente.fecha.startIndex, offsetBy: 5)
+        let end = expediente.fecha.index(expediente.fecha.endIndex, offsetBy: -3)
         let range = start..<end
         var mesFecha1 = String(expediente.fecha[range])
         switch mesFecha1 {

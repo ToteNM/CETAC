@@ -17,7 +17,9 @@ class ReportesTableViewController: UITableViewController {
     var selectednumSesion: Int = 0
     var selectedfecha: String = ""
     var selectedevaluacion: String = ""
-    var selectedcierre: Bool?
+    var selectednumExpediente : Int = 0
+    var selectedcouta : Double = 0.0
+    var selectedcierre: Bool = false
     var selectedherramienta : String = ""
     var selectedmotivo : String = ""
     var selectedtipo : String = ""
@@ -108,6 +110,8 @@ class ReportesTableViewController: UITableViewController {
         selecteddoctor = sesiones.doctor
         selectedpaciente = sesiones.paciente
         selectednumSesion = sesiones.numSesion
+        selectednumExpediente = sesiones.numExpediente
+        selectedcouta = sesiones.cuota
         selectedfecha = sesiones.fecha
         selectedevaluacion = sesiones.evaluacion
         selectedcierre = sesiones.cierre
@@ -166,6 +170,9 @@ class ReportesTableViewController: UITableViewController {
             siguiente.selecteddoctor = self.selecteddoctor
             siguiente.selectedpaciente = self.selectedpaciente
             siguiente.selectednumSesion = self.selectednumSesion
+            siguiente.selectednumExpediente = self.selectednumExpediente
+            siguiente.selectedcuota = self.selectedcouta
+            siguiente.selectednumSesion = self.selectednumSesion
             siguiente.selectedfecha = self.selectedfecha
             siguiente.selectedevaluacion = self.selectedevaluacion
             siguiente.selectedcierre = self.selectedcierre
@@ -173,7 +180,6 @@ class ReportesTableViewController: UITableViewController {
             siguiente.selectedmotivo = self.selectedmotivo
             siguiente.selectedtipo = self.selectedtipo
             siguiente.selectedintervencion = self.selectedintervencion
-            print(self.selectedpaciente)
         //let indice = self.tableView.indexPathForSelectedRow?.row
         //siguiente.sesiones = datos[indice!]
         }

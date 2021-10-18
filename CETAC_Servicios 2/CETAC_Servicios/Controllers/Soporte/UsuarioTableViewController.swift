@@ -19,15 +19,18 @@ class UsuarioTableViewController: UITableViewController {
     @IBOutlet weak var doctor: UILabel!
     @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var cuota: UILabel!
+    @IBOutlet weak var cierre: UILabel!
     @IBOutlet weak var evaluacion: UITextView!
     
     var selectedid: String = "idd"
     var selecteddoctor : String = "doc"
     var selectedpaciente : String = "pac"
     var selectednumSesion: Int = 0
+    var selectednumExpediente: Int = 0
+    var selectedcuota: Double = 0.0
     var selectedfecha: String = "fecha"
     var selectedevaluacion: String = "eva"
-    var selectedcierre: Bool?
+    var selectedcierre: Bool = false
     var selectedherramienta : String = "herr"
     var selectedmotivo : String = "motivo"
     var selectedtipo : String = "tipo"
@@ -37,6 +40,8 @@ class UsuarioTableViewController: UITableViewController {
         super.viewDidLoad()
         nombre.text = selectedpaciente
         num_sesion.text = String(selectednumSesion)
+        num_expediente.text = String(selectednumExpediente)
+        cuota.text = String(selectedcuota)
         motivo.text = selectedmotivo
         servicio.text = selectedherramienta
         intervencion.text = selectedintervencion
@@ -44,6 +49,11 @@ class UsuarioTableViewController: UITableViewController {
         doctor.text = selecteddoctor
         fecha.text = selectedfecha
         evaluacion.text = selectedevaluacion
+        if selectedcierre == false {
+            cierre.text = "Abierto"
+        } else {
+            cierre.text = "Cerrado"
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

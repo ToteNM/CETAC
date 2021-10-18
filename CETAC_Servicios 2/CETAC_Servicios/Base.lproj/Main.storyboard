@@ -4263,30 +4263,28 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Cierre" id="3R7-lR-9OF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BKD-oV-6iG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="C0x-eb-zYB" detailTextLabel="2S1-HK-OIP" style="IBUITableViewCellStyleValue1" id="BKD-oV-6iG">
                                         <rect key="frame" x="0.0" y="574.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BKD-oV-6iG" id="cWk-P1-PDP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-g8-diC">
-                                                    <rect key="frame" x="20" y="11" width="42" height="18.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="BaG-qK-cnM"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="Tc6-9u-y1y"/>
-                                                        <constraint firstAttribute="width" constant="42" id="Xvu-Yl-5Ge"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Cierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C0x-eb-zYB">
+                                                    <rect key="frame" x="20" y="12" width="46.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2S1-HK-OIP">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="VXF-g8-diC" firstAttribute="leading" secondItem="cWk-P1-PDP" secondAttribute="leadingMargin" id="3vN-KB-WKD"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="VXF-g8-diC" secondAttribute="bottom" constant="3.5" id="CFa-i6-gbe"/>
-                                                <constraint firstItem="VXF-g8-diC" firstAttribute="top" secondItem="cWk-P1-PDP" secondAttribute="topMargin" id="wPe-K9-jvo"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -4318,6 +4316,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="nMo-Ee-43l"/>
                     <connections>
+                        <outlet property="cierre" destination="2S1-HK-OIP" id="8dv-RC-DYV"/>
                         <outlet property="cuota" destination="GdN-RU-MQx" id="fEp-NW-HcF"/>
                         <outlet property="doctor" destination="Yc2-df-epo" id="hRl-Pd-Vh3"/>
                         <outlet property="evaluacion" destination="qYx-9b-F6f" id="8TF-z4-u9G"/>
