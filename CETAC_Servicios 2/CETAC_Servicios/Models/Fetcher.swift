@@ -213,39 +213,38 @@ class fetcherController {
             }
         }
     }
-    /*
-    func fetchPacientes(completion: @escaping (Result<Pacientes, Error>)-> Void) {
-        var pacientes = [Paciente]()
-        db.collection("usuario").document("5lY4J7phoNhoAfltbC0V").collection("tanatologo").document("WrPhouVWtNM7DbP20hQi").collection("paciente").getDocuments() { (querySnapshot, err) in
+    
+    func fetchCuotaGlobal(completion: @escaping (Result<Double, Error>)-> Void){
+        var cuota = 0.0
+        db.collection("globales").getDocuments{ (querySnapshot, err) in
             if let err = err {
-                print("Error getting documents: \(err)")
+                print("Error getting document: \(err)")
                 completion(.failure(err))
             } else {
                 for document in querySnapshot!.documents {
-                    var s = Paciente(aDoc: document)
-                    pacientes.append(s)
+                    var p = Globales(aDoc: document)
+                    cuota += p.cuota
                 }
-                completion(.success(pacientes))
+                completion(.success(cuota))
             }
         }
     }
     
-    func fetchTanatologos(completion: @escaping (Result<Tanatologos, Error>)-> Void) {
-        var tanatologos = [Tanatologo]()
-        db.collection("usuario").document("5lY4J7phoNhoAfltbC0V").collection("tanatologo").getDocuments() { (querySnapshot, err) in
+    func fetchCuotaporTanatologo(fechainicio: String, fechafinal: String, completion: @escaping (Result<Double, Error>)-> Void){
+        var cuota = 0.0
+        db.collection("sesion").whereField("doctor", isEqualTo: "Rita Alcalde").whereField("fecha", in: [fechainicio, fechafinal]).getDocuments{ (querySnapshot, err) in
             if let err = err {
-                print("Error getting documents: \(err)")
+                print("Error getting document: \(err)")
                 completion(.failure(err))
             } else {
                 for document in querySnapshot!.documents {
-                    var s = Tanatologo(aDoc: document)
-                    tanatologos.append(s)
+                    var p = Sesion(aDoc: document)
+                    cuota += p.cuota
                 }
-                completion(.success(tanatologos))
+                completion(.success(cuota))
             }
         }
     }
-     */
     
     
 }

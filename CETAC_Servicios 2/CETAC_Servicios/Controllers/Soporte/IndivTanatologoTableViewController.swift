@@ -1,49 +1,60 @@
 //
-//  TanatologosTableViewController.swift
+//  IndivTanatologoTableViewController.swift
 //  CETAC_Servicios
 //
-//  Created by user193304 on 10/16/21.
+//  Created by user193304 on 10/17/21.
 //
 
 import UIKit
 
-class TanatologosTableViewController: UITableViewController {
-    var usuarioControlador = fetcherController()
-    var datos = [Usuario]()
+class IndivTanatologoTableViewController: UITableViewController {
+    var individualControlador = fetcherController()
+    var cuotas = 0.0
+    var nombre = ""
+    var fechai = ""
+    var fechaf = ""
+    //@IBOutlet weak var individualtableView: UITableView!
+    @IBOutlet weak var cuota: UILabel!
+    @IBOutlet weak var usuarios: UILabel!
+    @IBOutlet weak var fechaInicio: UITextField!
+    @IBOutlet weak var fechaFin: UITextField!
+    @IBOutlet weak var aceptar: UIButton!
+    @IBAction func aceptarTapped(_ sender: UIButton) {
+        fechai = fechaInicio.text!
+        fechaf = fechaFin.text!
+        print("jala1")
+        //individualtableView.reloadData()
+        print("jala")
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        usuarioControlador.fetchTanatologos{ (result) in
+        //individualtableView.dataSource = self
+        //individualtableView.delegate = self
+        individualControlador.fetchCuotaporTanatologo(fechainicio: fechai, fechafinal: fechaf){ (result) in
             switch result{
-            case .success(let usuarios):self.updateUI(with: usuarios)
-            case .failure(let error):self.displayError(error, title: "No se pudo acceder a los tanatologos")
+            case .success(let cuota):self.updateUI(with: cuota)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a las sesiones")
             }
         }
+
     }
-    
-    func updateUI(with usuarios:Usuarios){
+    func updateUI(with cuota:Double){
         DispatchQueue.main.async {
-            self.datos = usuarios
+            print("cambio")
+            self.cuotas = cuota
+            self.cuota.text = String(cuota)
             self.tableView.reloadData()
         }
     }
-    func updateUI(){
-        
-        usuarioControlador.fetchTanatologos{ (result) in
-            switch result{
-            case .success(let usuarios):self.updateUI(with: usuarios)
-            case .failure(let error):self.displayError(error, title: "No se pudo acceder a los tanatologos")
-            }
-            
-        }
-        
-    }
+    
         
     func displayError(_ error: Error, title: String) {
                 DispatchQueue.main.async {
@@ -55,29 +66,16 @@ class TanatologosTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return datos.count
-    }
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath) as! TanatologoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-        let usuario = datos[indexPath.row]
-        
-        cell.update(with: usuario, cont: indexPath.row)
         // Configure the cell...
 
         return cell
-        
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,7 +93,7 @@ class TanatologosTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 
@@ -114,22 +112,14 @@ class TanatologosTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let siguiente = segue.destination as! IndivTanatologoTableViewController
-        siguiente.nombre = "Rita Alcalde"
-        siguiente.fechai = "2022/10/13"
-        siguiente.fechaf = "2022/12/19"
-        //let indice = self.tableView.indexPathForSelectedRow?.row
-        //siguiente.tanatologo = datos[indice!]
     }
-    
-
+    */
 
 }
-

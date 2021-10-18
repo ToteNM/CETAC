@@ -19,7 +19,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBAction func intervencionTap(_ sender: UITextField) {
+        mostrarAlerta("hola")
     }
+    
     
     
     var pasarUID = ""
