@@ -25,8 +25,8 @@ class TanatologoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(with usuario: Usuario){
-        num.text = String(numero + 1)
+    func update(with usuario: Usuario, cont: Int){
+        num.text = String(cont+1)
         nombre.text = usuario.nombre + " " + usuario.apellidos
         servicio.text = usuario.intervencion
         /*num.text = String(tanatologo.num)

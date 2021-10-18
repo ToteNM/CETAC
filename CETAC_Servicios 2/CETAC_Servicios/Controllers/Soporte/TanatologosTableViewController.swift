@@ -71,7 +71,7 @@ class TanatologosTableViewController: UITableViewController {
         // Configure the cell...
         let usuario = datos[indexPath.row]
         
-        cell.update(with: usuario)
+        cell.update(with: usuario, cont: indexPath.row)
         // Configure the cell...
 
         return cell
