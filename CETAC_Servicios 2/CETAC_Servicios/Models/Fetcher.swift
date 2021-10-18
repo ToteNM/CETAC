@@ -245,6 +245,28 @@ class fetcherController {
             }
         }
     }
+    func updateExpediente(updateExpediente: Paciente, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("paciente").document(updateExpediente.id).updateData([
+            "domicilio": updateExpediente.domicilio, "edad":updateExpediente.edad, "estadoCivil":updateExpediente.estadoCivil, "nombre":updateExpediente.nombre, "numCasa":updateExpediente.numCasa,
+            "numCel":updateExpediente.numCel,
+            "numHijos":updateExpediente.numHijos,
+            "numExpediente":updateExpediente.numExpediente,
+            "ocupacion":updateExpediente.ocupacion,
+            "procedencia":updateExpediente.procedencia,
+            "sexo":updateExpediente.sexo,
+            "religion":updateExpediente.religion,
+            "cierre":updateExpediente.cierre
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+                completion(.failure(err))
+            } else {
+                print("Document successfully updated")
+                completion(.success("Document successfully updated"))
+            }
+        }
+    }
+    
     
     
 }
