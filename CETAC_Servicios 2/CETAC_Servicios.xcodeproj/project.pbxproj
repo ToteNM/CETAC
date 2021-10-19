@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B84AF53271F181D00B40495 /* ControllerAdminExpedientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B84AF52271F181D00B40495 /* ControllerAdminExpedientes.swift */; };
 		350F9E7F271BA6480021A545 /* UsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F9E7E271BA6480021A545 /* UsuarioTableViewController.swift */; };
 		350F9E82271BADF90021A545 /* TanatologosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F9E81271BADF90021A545 /* TanatologosTableViewController.swift */; };
 		350F9E85271BB0550021A545 /* TanatologoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F9E84271BB0550021A545 /* TanatologoTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B84AF52271F181D00B40495 /* ControllerAdminExpedientes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAdminExpedientes.swift; sourceTree = "<group>"; };
 		1D0DD75A00805788904B6F8C /* Pods-CETAC_Servicios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_Servicios.debug.xcconfig"; path = "Target Support Files/Pods-CETAC_Servicios/Pods-CETAC_Servicios.debug.xcconfig"; sourceTree = "<group>"; };
 		1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CETAC_Servicios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC447AD2E77ED22FC4929B3 /* Pods-CETAC_Servicios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_Servicios.release.xcconfig"; path = "Target Support Files/Pods-CETAC_Servicios/Pods-CETAC_Servicios.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 				2EC447AD2E77ED22FC4929B3 /* Pods-CETAC_Servicios.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		0B84AF51271F17F800B40495 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				0B84AF52271F181D00B40495 /* ControllerAdminExpedientes.swift */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 		351E3FA42702B6CD00C09617 = {
@@ -228,6 +238,7 @@
 		9CF167972717BA4800ED0025 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B84AF51271F17F800B40495 /* Admin */,
 				359C2987271B72EB0068DD2B /* Soporte */,
 				359C2985271B6DA60068DD2B /* IniciarSesion */,
 				354E52902718F57000FC877F /* Estadisticas */,
@@ -451,6 +462,7 @@
 				35AC45B0271E6ED80008D399 /* Fechas1ViewController.swift in Sources */,
 				9CF167992717BA6E00ED0025 /* ExpedientesTableViewController.swift in Sources */,
 				9CF167CA2717F28800ED0025 /* MainViewController.swift in Sources */,
+				0B84AF53271F181D00B40495 /* ControllerAdminExpedientes.swift in Sources */,
 				350F9E82271BADF90021A545 /* TanatologosTableViewController.swift in Sources */,
 				35B8E0DE271D27AA00A56B89 /* IndivTanatologoTableViewController.swift in Sources */,
 				9CF167A02717BB3300ED0025 /* Fetcher.swift in Sources */,
