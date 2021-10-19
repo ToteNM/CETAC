@@ -17,37 +17,7 @@ class IndivTanatologoTableViewController: UITableViewController {
     //@IBOutlet weak var individualtableView: UITableView!
     @IBOutlet weak var cuota: UILabel!
     @IBOutlet weak var usuarios: UILabel!
-    @IBOutlet weak var fechaInicio: UITextField!
-    @IBOutlet weak var fechaFin: UITextField!
-    @IBOutlet weak var aceptar: UIButton!
-    @IBAction func aceptarTapped(_ sender: UIButton) {
-        fechai = fechaInicio.text!
-        fechaf = fechaFin.text!
-        print("jala1")
-        //individualtableView.reloadData()
-        print("jala")
-        
-    }
-    @IBAction func editarServicio(_ sender: UIButton) {
-        //editar = !editar
-        //botones(estado: editar)
-        //botones2(estado: editar)
-        print("mdmds")
-        
-       
-    }
     
-    @IBAction func guardarEdicion(_ sender: UIButton) {
-        
-        
-        editar = !editar
-        //botones(estado: editar)
-        //boton0.isEnabled = false
-        //boton0.isHidden = true
-        //let expedienteUpdated = Expediente(id: passDato!.id, nombreUsuario: usuario0.text!, nombreTanatologo: tanatologo0.text!, motivo: motivo0.text!, servicio: servicio0.text!, herramienta: herramienta0.text!, fecha: [0], numExpediente: Int(expedienteNum0.text!)!, numSesion: Int(sesionNum0.text!)!)
-        //miFetch.updateExpediente(updateExpediente: expedienteUpdated){ (result) in
-        //}
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
