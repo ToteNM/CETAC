@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import grpc
 //
 //  UsuarioTableViewController.swift
 //  CETAC_Servicios
@@ -43,6 +44,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
     @IBOutlet weak var modificar: UIButton!
     //#
     
+    @IBOutlet weak var switchw: UISwitch!
     @IBOutlet weak var nombre_: UITextField!
     @IBOutlet weak var num_expediente_: UILabel!
     @IBOutlet weak var num_sesion_: UILabel!
@@ -55,6 +57,9 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
     @IBOutlet weak var cuota_: UILabel!
     @IBOutlet weak var cierre_: UILabel!
     @IBOutlet weak var evaluacion_: UITextView!
+    @IBOutlet weak var editarDoctorNombre: UITextField!
+    @IBOutlet weak var editarCouta: UITextField!
+    
     
     var selectedid: String = "idd"
     var selecteddoctor : String = "doc"
@@ -78,6 +83,17 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
        
     }
     
+    @IBAction func changeDate(_ sender: Any) { fecha_.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    @IBOutlet weak var dateView: UITableViewCell!
+    @IBOutlet weak var doctorView: UITableViewCell!
+    @IBOutlet weak var tipoView: UITableViewCell!
+    @IBOutlet weak var motivoView: UITableViewCell!
+    @IBOutlet weak var herramientaView: UITableViewCell!
+    @IBOutlet weak var intervencionView: UITableViewCell!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var coutaView: UITableViewCell!
     @IBAction func guardarEdicion(_ sender: UIButton) {
         
         
@@ -102,6 +118,8 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         doctor_.text = selecteddoctor
         fecha_.text = selectedfecha
         evaluacion_.text = selectedevaluacion
+        switchw.isOn = false
+        
         if selectedcierre == false {
             cierre_.text = "Abierto"
         } else {
@@ -125,16 +143,51 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             nombre_.isUserInteractionEnabled = true
             nombre_.backgroundColor = UIColor.systemGray5
             let imgae = UIImage.init(systemName: "lock.open")
-            
+            switchw.isHidden = false
+            cierre_.isHidden=true
             modificar.setBackgroundImage(imgae, for: .normal)
+            fecha_.isHidden=true
+            dateView.isHidden = false
+            editarDoctorNombre.isHidden=false
+            editarDoctorNombre.isUserInteractionEnabled = true
+            editarDoctorNombre.backgroundColor = UIColor.systemGray5
+            editarCouta.isHidden=false
+            editarCouta.isUserInteractionEnabled = true
+            editarCouta.backgroundColor = UIColor.systemGray5
+            doctorView.isHidden = false
+            tipoView.backgroundColor = UIColor.systemGray5
+            intervencionView.backgroundColor = UIColor.systemGray5
+            motivoView.backgroundColor = UIColor.systemGray5
+            herramientaView.backgroundColor = UIColor.systemGray5
+            coutaView.isHidden = false
+            
+            
             
         }
         else{
             nombre_.isUserInteractionEnabled = false
             nombre_.backgroundColor = UIColor.clear
             let imgae = UIImage.init(systemName: "lock")
+            switchw.isHidden=true
+            cierre_.isHidden=false
+            fecha_.isHidden=false
             
             modificar.setBackgroundImage(imgae, for: .normal)
+            dateView.isHidden=true
+            
+            editarDoctorNombre.isHidden=true
+            editarDoctorNombre.isUserInteractionEnabled = false
+            editarDoctorNombre.backgroundColor = UIColor.clear
+            editarCouta.isHidden=true
+            editarCouta.isUserInteractionEnabled = false
+            editarCouta.backgroundColor = UIColor.clear
+            doctorView.isHidden = true
+            tipoView.backgroundColor = UIColor.clear
+            intervencionView.backgroundColor = UIColor.clear
+            motivoView.backgroundColor = UIColor.clear
+            herramientaView.backgroundColor = UIColor.clear
+            doctor_.text = editarDoctorNombre.text
+            cuota_.text = editarCouta.text
             
         }
     }
@@ -152,6 +205,12 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
     func updateTipo() {
         servicio_.text = selectedtipo
     }
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        return dateFormatter
+    }()
     @IBSegueAction func selectHerramienta(_ coder: NSCoder) -> UITableViewController? {
         let herramientaController = HerramientaTableViewController(coder: coder)
         herramientaController?.delegate = self
@@ -181,6 +240,17 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         tipoController?.tipoSelect = selectedtipo
         
         return tipoController
+    }
+    @IBAction func cierreSwitchChanged(_ sender: Any) {
+        //cierre_ = switchw.isOn
+        
+        selectedcierre = switchw.isOn
+        if selectedcierre == false {
+            cierre_.text = "Abierto"
+        } else {
+            cierre_.text = "Cerrado"
+        }
+        
     }
 
     // MARK: - Table view data source
