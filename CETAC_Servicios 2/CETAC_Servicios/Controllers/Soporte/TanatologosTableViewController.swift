@@ -10,6 +10,7 @@ import UIKit
 class TanatologosTableViewController: UITableViewController {
     var usuarioControlador = fetcherController()
     var datos = [Usuario]()
+    var selectedname = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +79,13 @@ class TanatologosTableViewController: UITableViewController {
         
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let usuario = datos[indexPath.row]
+        selectedname = usuario.nombre
+        tableView.reloadData()
 
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -121,10 +128,16 @@ class TanatologosTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let siguiente = segue.destination as! IndivTanatologoTableViewController
-        siguiente.nombre = "Rita Alcalde"
-        siguiente.fechai = "2022/10/13"
-        siguiente.fechaf = "2022/12/19"
+        /*if segue.identifier == "irFechas" {
+        let siguiente = segue.destination as! Fechas1ViewController
+        siguiente.nombre = self.selectedname
+        siguiente.fechai = ""
+        siguiente.fechaf = ""
+        }*/
+        let siguiente = segue.destination as! Fechas1ViewController
+        siguiente.nombre = self.selectedname
+        siguiente.fechai = ""
+        siguiente.fechaf = ""
         //let indice = self.tableView.indexPathForSelectedRow?.row
         //siguiente.tanatologo = datos[indice!]
     }

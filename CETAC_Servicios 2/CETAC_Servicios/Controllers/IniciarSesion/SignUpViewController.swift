@@ -17,10 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var intervencionField: UITextField!
     @IBOutlet weak var rolField: UITextField!
     @IBOutlet weak var signup: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
-    @IBAction func intervencionTap(_ sender: UITextField) {
-        mostrarAlerta("hola")
-    }
+    
     
     
     
@@ -37,6 +34,7 @@ class SignUpViewController: UIViewController {
                 view.addGestureRecognizer(tap)
 
         setUpElements()
+        mostrarAlerta("Si eres tanatologo escribe tu tipo de intervencion, si eres admin o soporte escribe nada")
     }
     
     func mostrarAlerta(_ error:String){
@@ -53,8 +51,7 @@ class SignUpViewController: UIViewController {
         }
 
     func setUpElements() {
-        //Esconder el error
-        errorLabel.alpha = 0
+        
         
         //Estilo a los elementos
         Utilities.styleTextField(nombreField)
@@ -141,10 +138,7 @@ class SignUpViewController: UIViewController {
         }
         
     }
-    func showError(_ message:String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
+    
 
 
 }

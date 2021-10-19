@@ -65,13 +65,26 @@ class IndivTanatologoTableViewController: UITableViewController {
             case .failure(let error):self.displayError(error, title: "No se pudo acceder a las sesiones")
             }
         }
+        individualControlador.fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: fechai, dateFinal: fechaf){
+            (result) in
+                switch result{
+                case .success(let numero):self.updateUI1(with: numero)
+                case .failure(let error):self.displayError(error, title: "No se pudo acceder a las sesiones")
+                }
+        }
 
     }
     func updateUI(with cuota:Double){
         DispatchQueue.main.async {
-            print("cambio")
             self.cuotas = cuota
             self.cuota.text = String(cuota)
+            self.tableView.reloadData()
+        }
+    }
+    func updateUI1(with numero:Int){
+        DispatchQueue.main.async {
+            print("cambio")
+            self.usuarios.text = String(numero)
             self.tableView.reloadData()
         }
     }
