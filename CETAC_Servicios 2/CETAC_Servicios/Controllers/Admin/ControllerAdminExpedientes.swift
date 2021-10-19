@@ -58,7 +58,9 @@ class ControllerAdminExpedientes: UITableViewController {
         nombre_.isUserInteractionEnabled = true
         nombre_.backgroundColor = UIColor.systemGray5
         //modificar.currentBackgroundImage = UIImage.init(systemName: "lock.open")
-        let image = UIImage.init(systemName: "lock.open") as UIImage?
+        let imgae = UIImage.init(systemName: "lock.open")
+        //modificar.currentBackgroundImage = imgae
+        modificar.setBackgroundImage(imgae, for: .normal)
         //modificar.setBackgroundImage(image: UIImage.init(), for: )
         
         
