@@ -3988,6 +3988,7 @@
                     <navigationItem key="navigationItem" title="Reportes" id="Phd-DQ-Chb">
                         <barButtonItem key="rightBarButtonItem" title="Continuar" id="D81-Pb-FNw" userLabel="Continuar">
                             <connections>
+                                <action selector="tapContinuar:" destination="h9n-Fi-FLM" id="uUx-4v-1MW"/>
                                 <segue destination="zuG-JT-Jg7" kind="show" identifier="irUsuario" id="yil-4i-i6a"/>
                             </connections>
                         </barButtonItem>
@@ -4917,7 +4918,6 @@
                                     <outlet property="motivo" destination="w1c-yh-bnu" id="RCB-Wb-5M7"/>
                                     <outlet property="numsesion" destination="3ty-0t-2xU" id="PK5-nX-KhE"/>
                                     <outlet property="usuario" destination="qqO-mc-thr" id="QIT-uc-sE2"/>
-                                    <segue destination="96j-ub-Mvd" kind="show" trigger="accessoryAction" id="rXW-sl-Kg0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -4927,7 +4927,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Reportes" id="hZD-Vb-s2q">
-                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="T38-sG-olq" userLabel="Continuar"/>
+                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="T38-sG-olq" userLabel="Continuar">
+                            <connections>
+                                <action selector="tapContinuar:" destination="AFb-gW-zcs" id="3Lt-qR-fkS"/>
+                                <segue destination="96j-ub-Mvd" kind="show" identifier="irUsuario_" id="LjM-4y-ZMF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="continuar" destination="T38-sG-olq" id="TLj-18-WkT"/>
@@ -4979,7 +4984,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9JM-W1-akB" userLabel="Title_">
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9JM-W1-akB" userLabel="Title_">
                                                     <rect key="frame" x="20" y="4" width="374" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -5063,6 +5068,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="v6j-ib-sDG" kind="show" destinationCreationSelector="selectMotivo:" id="N5W-8o-fNd"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="J7W-fe-lSz" detailTextLabel="kCz-vR-C9V" style="IBUITableViewCellStyleValue1" id="4XX-5t-Y7H">
                                         <rect key="frame" x="0.0" y="301.5" width="414" height="43.5"/>
@@ -5087,6 +5095,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="X9t-Jz-eZc" kind="show" destinationCreationSelector="selectTipo:" id="TyQ-xx-N1b"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="z0A-e9-bm2" detailTextLabel="5JG-BS-gxv" style="IBUITableViewCellStyleValue1" id="DKD-Sp-5NT">
                                         <rect key="frame" x="0.0" y="345" width="414" height="43.5"/>
@@ -5111,6 +5122,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2yn-Z5-Moj" kind="show" destinationCreationSelector="selectIntervencion:" id="BYY-gz-bb4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="hMD-77-P3t" detailTextLabel="001-vS-qYi" style="IBUITableViewCellStyleValue1" id="YL7-54-GLz">
                                         <rect key="frame" x="0.0" y="388.5" width="414" height="43.5"/>
@@ -5135,6 +5149,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Epi-IX-lDN" kind="show" destinationCreationSelector="selectHerramienta:" id="ulw-hF-OQO"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lyK-5d-tuc" detailTextLabel="FWE-dE-hoU" style="IBUITableViewCellStyleValue1" id="1cT-3T-Afq">
                                         <rect key="frame" x="0.0" y="432" width="414" height="43.5"/>
@@ -5265,19 +5282,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mse-j0-hI6"/>
                     <connections>
-                        <outlet property="cierre" destination="yHV-Mu-nWe" id="zwk-iZ-Y7U"/>
-                        <outlet property="cuota" destination="LKx-yS-fRB" id="8y4-5K-S7l"/>
-                        <outlet property="doctor" destination="FWE-dE-hoU" id="q68-uz-ZwM"/>
-                        <outlet property="evaluacion" destination="wxY-Kd-xFA" id="3Y7-OR-nDP"/>
-                        <outlet property="fecha" destination="O4c-ed-Yo3" id="m73-uT-ITW"/>
-                        <outlet property="herramienta" destination="001-vS-qYi" id="m54-2f-4LI"/>
-                        <outlet property="intervencion" destination="5JG-BS-gxv" id="zxH-Fu-v2A"/>
+                        <outlet property="cierre_" destination="yHV-Mu-nWe" id="UUE-ev-XYe"/>
+                        <outlet property="cuota_" destination="LKx-yS-fRB" id="4ss-1O-GP0"/>
+                        <outlet property="doctor_" destination="FWE-dE-hoU" id="c2b-6N-88E"/>
+                        <outlet property="evaluacion_" destination="wxY-Kd-xFA" id="SSh-qb-PDG"/>
+                        <outlet property="fecha_" destination="O4c-ed-Yo3" id="6aB-QI-k9V"/>
+                        <outlet property="herramienta_" destination="001-vS-qYi" id="Zhh-Ex-z1u"/>
+                        <outlet property="intervencion_" destination="5JG-BS-gxv" id="cig-gO-dNs"/>
                         <outlet property="modificar" destination="dgu-xO-Syp" id="Qg9-GZ-Ck4"/>
-                        <outlet property="motivo" destination="SdX-1z-k9d" id="P1r-Ud-ZUq"/>
+                        <outlet property="motivo_" destination="SdX-1z-k9d" id="77O-nf-lLX"/>
                         <outlet property="nombre_" destination="9JM-W1-akB" id="L3S-0c-ZMA"/>
-                        <outlet property="num_expediente" destination="ehi-eq-UnR" id="feC-fk-lGT"/>
-                        <outlet property="num_sesion" destination="ffd-Ui-kfe" id="sgp-Nj-PBW"/>
-                        <outlet property="servicio" destination="kCz-vR-C9V" id="cUp-00-sd9"/>
+                        <outlet property="num_expediente_" destination="ehi-eq-UnR" id="erA-qf-KM7"/>
+                        <outlet property="num_sesion_" destination="ffd-Ui-kfe" id="Av6-zc-5gy"/>
+                        <outlet property="servicio_" destination="kCz-vR-C9V" id="jRY-Nf-UFI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZI-PL-ld9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5343,7 +5360,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cEe-9I-bfH"/>
+        <segue reference="TyQ-xx-N1b"/>
+        <segue reference="BYY-gz-bb4"/>
+        <segue reference="N5W-8o-fNd"/>
+        <segue reference="ulw-hF-OQO"/>
+        <segue reference="WCD-uX-7EX"/>
         <segue reference="ALC-9e-nnB"/>
     </inferredMetricsTieBreakers>
     <resources>

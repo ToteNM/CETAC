@@ -15,7 +15,27 @@ import Foundation
 
 import UIKit
 
-class ControllerAdminExpedientes: UITableViewController {
+class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControllerDelegate,HerramientaTableViewControllerDelegate,IntervencionTableViewControllerDelegate,TipoTableViewControllerDelegate {
+    func herramientaTableViewController(_ controller: HerramientaTableViewController, didSelect herramienta: String) {
+        self.selectedherramienta = herramienta
+        updateHerramienta()
+    }
+    
+    func intervencionTableViewController(_ controller: IntervencionTableViewController, didSelect intervencion: String) {
+        self.selectedintervencion = intervencion
+        updateIntervencion()
+    }
+    
+    func tipoTableViewController(_ controller: TipoTableViewController, didSelect tipo: String) {
+        self.selectedtipo = tipo
+        updateTipo()
+    }
+    
+    func motivoTableViewController(_ controller: MotivoTableViewController, didSelect motivo: String) {
+        self.selectedmotivo = motivo
+        updateMotivo()
+    }
+    
     var sesiones: Sesion?
     var editar = false
     //button
@@ -24,17 +44,17 @@ class ControllerAdminExpedientes: UITableViewController {
     //#
     
     @IBOutlet weak var nombre_: UITextField!
-    @IBOutlet weak var num_expediente: UILabel!
-    @IBOutlet weak var num_sesion: UILabel!
-    @IBOutlet weak var motivo: UILabel!
-    @IBOutlet weak var servicio: UILabel!
-    @IBOutlet weak var intervencion: UILabel!
-    @IBOutlet weak var herramienta: UILabel!
-    @IBOutlet weak var doctor: UILabel!
-    @IBOutlet weak var fecha: UILabel!
-    @IBOutlet weak var cuota: UILabel!
-    @IBOutlet weak var cierre: UILabel!
-    @IBOutlet weak var evaluacion: UITextView!
+    @IBOutlet weak var num_expediente_: UILabel!
+    @IBOutlet weak var num_sesion_: UILabel!
+    @IBOutlet weak var motivo_: UILabel!
+    @IBOutlet weak var servicio_: UILabel!
+    @IBOutlet weak var intervencion_: UILabel!
+    @IBOutlet weak var herramienta_: UILabel!
+    @IBOutlet weak var doctor_: UILabel!
+    @IBOutlet weak var fecha_: UILabel!
+    @IBOutlet weak var cuota_: UILabel!
+    @IBOutlet weak var cierre_: UILabel!
+    @IBOutlet weak var evaluacion_: UITextView!
     
     var selectedid: String = "idd"
     var selecteddoctor : String = "doc"
@@ -51,25 +71,10 @@ class ControllerAdminExpedientes: UITableViewController {
     var selectedintervencion : String = "inter"
     
     @IBAction func editarServicio(_ sender: UIButton) {
-        //editar = !editar
-        //botones(estado: editar)
+        editar = !editar
+        botones(estado: editar)
         //botones2(estado: editar)
         print("mdmds")
-        nombre_.isUserInteractionEnabled = true
-        nombre_.backgroundColor = UIColor.systemGray5
-        //modificar.currentBackgroundImage = UIImage.init(systemName: "lock.open")
-        let imgae = UIImage.init(systemName: "lock.open")
-        //modificar.currentBackgroundImage = imgae
-        modificar.setBackgroundImage(imgae, for: .normal)
-        //modificar.setBackgroundImage(image: UIImage.init(), for: )
-        
-        
-        
-        
-        
-        
-        
-        
        
     }
     
@@ -87,20 +92,20 @@ class ControllerAdminExpedientes: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre_.text = selectedpaciente
-        num_sesion.text = String(selectednumSesion)
-        num_expediente.text = String(selectednumExpediente)
-        cuota.text = String(selectedcuota)
-        motivo.text = selectedmotivo
-        servicio.text = selectedherramienta
-        intervencion.text = selectedintervencion
-        herramienta.text = selectedherramienta
-        doctor.text = selecteddoctor
-        fecha.text = selectedfecha
-        evaluacion.text = selectedevaluacion
+        num_sesion_.text = String(selectednumSesion)
+        num_expediente_.text = String(selectednumExpediente)
+        cuota_.text = String(selectedcuota)
+        motivo_.text = selectedmotivo
+        servicio_.text = selectedherramienta
+        intervencion_.text = selectedintervencion
+        herramienta_.text = selectedherramienta
+        doctor_.text = selecteddoctor
+        fecha_.text = selectedfecha
+        evaluacion_.text = selectedevaluacion
         if selectedcierre == false {
-            cierre.text = "Abierto"
+            cierre_.text = "Abierto"
         } else {
-            cierre.text = "Cerrado"
+            cierre_.text = "Cerrado"
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -115,9 +120,71 @@ class ControllerAdminExpedientes: UITableViewController {
         }*/
     
     }
+    func botones(estado:Bool){
+        if estado{
+            nombre_.isUserInteractionEnabled = true
+            nombre_.backgroundColor = UIColor.systemGray5
+            let imgae = UIImage.init(systemName: "lock.open")
+            
+            modificar.setBackgroundImage(imgae, for: .normal)
+            
+        }
+        else{
+            nombre_.isUserInteractionEnabled = false
+            nombre_.backgroundColor = UIColor.clear
+            let imgae = UIImage.init(systemName: "lock")
+            
+            modificar.setBackgroundImage(imgae, for: .normal)
+            
+        }
+    }
+    func updateMotivo() {
+        motivo_.text = selectedmotivo
+        
+    }
+    func updateHerramienta() {
+        herramienta_.text = selectedherramienta
+    }
+    
+    func updateIntervencion() {
+        intervencion_.text = selectedintervencion
+    }
+    func updateTipo() {
+        servicio_.text = selectedtipo
+    }
+    @IBSegueAction func selectHerramienta(_ coder: NSCoder) -> UITableViewController? {
+        let herramientaController = HerramientaTableViewController(coder: coder)
+        herramientaController?.delegate = self
+        herramientaController?.herramientaSelect = selectedherramienta
+        
+        return herramientaController
+    }
+    
+    @IBSegueAction func selectIntervencion(_ coder: NSCoder) -> UITableViewController? {
+        let intervencionController = IntervencionTableViewController(coder: coder)
+        intervencionController?.delegate = self
+        intervencionController?.intervencionSelect = selectedintervencion
+        
+        return intervencionController
+    }
+    @IBSegueAction func selectMotivo(_ coder: NSCoder) -> UITableViewController? {
+        let motivoController = MotivoTableViewController(coder: coder)
+        motivoController?.delegate = self
+        motivoController?.motivoSelect = selectedmotivo
+        
+        return motivoController
+        
+    }
+    @IBSegueAction func selectTipo(_ coder: NSCoder) -> UITableViewController? {
+        let tipoController = TipoTableViewController(coder: coder)
+        tipoController?.delegate = self
+        tipoController?.tipoSelect = selectedtipo
+        
+        return tipoController
+    }
 
     // MARK: - Table view data source
-
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

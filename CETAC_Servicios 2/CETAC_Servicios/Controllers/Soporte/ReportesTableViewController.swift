@@ -182,6 +182,24 @@ class ReportesTableViewController: UITableViewController {
             siguiente.selectedintervencion = self.selectedintervencion
         //let indice = self.tableView.indexPathForSelectedRow?.row
         //siguiente.sesiones = datos[indice!]
+        }else if segue.identifier == "irUsuario_"{
+            
+            let siguiente = segue.destination as! ControllerAdminExpedientes
+                siguiente.selectedid = self.selectedid
+                siguiente.selecteddoctor = self.selecteddoctor
+                siguiente.selectedpaciente = self.selectedpaciente
+                siguiente.selectednumSesion = self.selectednumSesion
+                siguiente.selectednumExpediente = self.selectednumExpediente
+                siguiente.selectedcuota = self.selectedcouta
+                siguiente.selectednumSesion = self.selectednumSesion
+                siguiente.selectedfecha = self.selectedfecha
+                siguiente.selectedevaluacion = self.selectedevaluacion
+                siguiente.selectedcierre = self.selectedcierre
+                siguiente.selectedherramienta = self.selectedherramienta
+                siguiente.selectedmotivo = self.selectedmotivo
+                siguiente.selectedtipo = self.selectedtipo
+                siguiente.selectedintervencion = self.selectedintervencion
+            
         }
     }
     
