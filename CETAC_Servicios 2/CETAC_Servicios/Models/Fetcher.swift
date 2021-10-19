@@ -103,6 +103,86 @@ class fetcherController {
         }
     }
     
+    func fetchUsuarioPorCorreo(email : String, completion: @escaping (Result<String, Error>)-> Void){
+        var nombre = ""
+        db.collection("users").whereField("email", isEqualTo: email).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Usuario(aDoc: document)
+                    nombre = p.nombre
+                }
+                completion(.success(nombre))
+            }
+        }
+    }
+    
+    func fetchNombreHerramientaActual(herr : String, completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("herramienta").whereField("nombre", isEqualTo: herr).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
+    func fetchNombreIntervencionActual(herr : String, completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("intervencion").whereField("nombre", isEqualTo: herr).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
+    func fetchNombreServicioActual(herr : String, completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("servicios").whereField("nombre", isEqualTo: herr).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
+    func fetchNombreMotivoActual(herr : String, completion: @escaping (Result<Tops, Error>)-> Void){
+        var tops = [Top]()
+        db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("motivos").whereField("nombre", isEqualTo: herr).getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var p = Top(aDoc: document)
+                    tops.append(p)
+                }
+                completion(.success(tops))
+            }
+        }
+    }
+    
     func fetchTopMotivos(completion: @escaping (Result<Tops, Error>)-> Void){
         var motivos = [Top]()
         db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("motivos").order(by: "valor", descending: true).limit(to: 5).getDocuments{ (querySnapshot, err) in

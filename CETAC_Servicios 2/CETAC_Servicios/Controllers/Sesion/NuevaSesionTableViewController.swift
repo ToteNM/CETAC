@@ -39,6 +39,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
     var motivo: String?
     var tipo : String?
     var nombre = "Nombre vacío"
+    var doctor = ""
     var cierre = true
     var fetcher = fetcherController()
     var numSesiones = 0
@@ -156,6 +157,70 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         }
     }
     
+    func updateUI3(with tops: [Top]){
+        DispatchQueue.main.async {
+            let db = Firestore.firestore()
+            print("\(tops[0].id) \(tops[0].num)")
+            db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("herramienta").document(tops[0].id).updateData([
+                "valor" : tops[0].num+1,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document globales updated")
+                }
+            }
+        }
+    }
+    
+    func updateUI4(with tops: [Top]){
+        DispatchQueue.main.async {
+            let db = Firestore.firestore()
+            print("\(tops[0].id) \(tops[0].num)")
+            db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("intervencion").document(tops[0].id).updateData([
+                "valor" : tops[0].num+1,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document globales updated")
+                }
+            }
+        }
+    }
+    
+    func updateUI5(with tops: [Top]){
+        DispatchQueue.main.async {
+            let db = Firestore.firestore()
+            print("\(tops[0].id) \(tops[0].num)")
+            db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("motivos").document(tops[0].id).updateData([
+                "valor" : tops[0].num+1,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document globales updated")
+                }
+            }
+        }
+    }
+    
+    func updateUI6(with tops: [Top]){
+        DispatchQueue.main.async {
+            let db = Firestore.firestore()
+            print("\(tops[0].id) \(tops[0].num)")
+            db.collection("globales").document("YyvCoL37678hRbDu0Hu9").collection("servicios").document(tops[0].id).updateData([
+                "valor" : tops[0].num+1,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document globales updated")
+                }
+            }
+        }
+    }
+    
     func displayError(_ error: Error, title: String){
         DispatchQueue.main.async{
             let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
@@ -241,7 +306,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
         let fecha = dateFormatter.string(from: today)
         var ref: DocumentReference? = nil
         ref = db.collection("sesion").addDocument(data: [
-            "doctor": "Rita Alcalde",
+            "doctor": doctor,
             "evaluacion": eval,
             "fecha": fecha,
             "herramienta": herr,
@@ -249,7 +314,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
             "motivo": motiv,
             "numSesion": numSesiones+1,
             "numExpediente": numExpediente!,
-            "paciente": nombre,
+            "paciente": nombre, 
             "tipo": tipo,
             "cuota": cuota,
             "cierre": cierre
@@ -258,6 +323,40 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
+                let alerta = UIAlertController(title: "Aviso", message: "Sesión añadida con éxito", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Cerrar", style: .cancel, handler: { action in
+                    print("Cerrar")
+                }))
+                self.aceptarButton.isEnabled = false
+                self.present(alerta, animated: true)
+            }
+        }
+        fetcher.fetchNombreHerramientaActual(herr: herr){ (result) in
+            switch result{
+            //Funciona
+            case .success(let tops):self.updateUI3(with: tops)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder")
+            }
+        }
+        fetcher.fetchNombreMotivoActual(herr: motiv){ (result) in
+            switch result{
+            //Funciona
+            case .success(let tops):self.updateUI5(with: tops)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder")
+            }
+        }
+        fetcher.fetchNombreIntervencionActual(herr: inter){ (result) in
+            switch result{
+            //Funciona
+            case .success(let tops):self.updateUI4(with: tops)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder")
+            }
+        }
+        fetcher.fetchNombreServicioActual(herr: tipo){ (result) in
+            switch result{
+            //Funciona
+            case .success(let tops):self.updateUI6(with: tops)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder")
             }
         }
         db.collection("paciente").document(patientId!).updateData([
@@ -278,7 +377,7 @@ class NuevaSesionTableViewController: UITableViewController, HerramientaTableVie
                 print("Document globales updated")
             }
         }
-        performSegue(withIdentifier: "unwind", sender: aceptarButton )
+        performSegue(withIdentifier: "Unwind", sender: aceptarButton )
     }
 
     /*

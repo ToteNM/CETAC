@@ -17,6 +17,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var usuariosCuenta = UsersController()
     var pasarUID = ""
+    var email = ""
     var roles = 1
     
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             self.pasarUID = result!.user.uid
+            self.email = result!.user.email!
+            
             self.usuariosCuenta.leerUsuario(id: self.pasarUID) {(nombre, email, rol) in
                 self.roles = rol
                 if rol == 1 {
@@ -74,4 +77,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irTanatologos" {
+            let siguienteVista = segue.destination as! TanatologoMainViewController
+            siguienteVista.userID = self.email
+        }
+    }
 }

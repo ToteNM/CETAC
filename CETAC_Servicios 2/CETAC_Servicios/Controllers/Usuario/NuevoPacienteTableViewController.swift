@@ -36,6 +36,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
     var estadoCivil : String?
     var numExpediente : Int?
     var patientId : String?
+    var doctor = ""
     var fetcher = fetcherController()
 
     @IBOutlet weak var estadoCivilDetailLabel: UILabel!
@@ -97,7 +98,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        print(doctor)
         let midnightToday = Calendar.current.startOfDay(for: Date())
         
         fetcher.fetchGlobales { (result) in
@@ -295,6 +296,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
             siguienteVista.nombre = self.nombre.text!
             siguienteVista.patientId = self.patientId!
             siguienteVista.numExpediente = self.numExpediente!
+            siguienteVista.doctor = self.doctor
         }
         else if segue.identifier == "addHijos" {
             let siguienteVista = segue.destination as! AddHijosTableViewController
@@ -302,6 +304,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
             siguienteVista.padre = nombre.text ?? ""
             siguienteVista.patientId = self.patientId!
             siguienteVista.numExpediente = self.numExpediente!
+            siguienteVista.doctor = self.doctor
         }
     }
     // MARK: - Table view data source

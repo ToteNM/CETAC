@@ -13,6 +13,7 @@ class PacientesTableViewController: UITableViewController {
     var datos = [Paciente]()
     var selectedName = "Nombre de ejemplo"
     var selectedID = "ID"
+    var doctor = ""
     var selectedNumExpediente = 0
     
     override func viewDidLoad() {
@@ -95,6 +96,7 @@ class PacientesTableViewController: UITableViewController {
             siguienteVista.nombre = self.selectedName
             siguienteVista.patientId = self.selectedID
             siguienteVista.numExpediente = self.selectedNumExpediente
+            siguienteVista.doctor = self.doctor
         }
     }
 

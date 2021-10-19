@@ -11,6 +11,7 @@ import Firebase
 class AddHijosTableViewController: UITableViewController {
     
     var padre = "Padre"
+    var doctor = ""
     var numHijos = 0
     var patientId : String?
     var numExpediente = 0
@@ -95,6 +96,7 @@ class AddHijosTableViewController: UITableViewController {
             siguienteVista.nombre = self.padre
             siguienteVista.patientId = self.patientId!
             siguienteVista.numExpediente = self.numExpediente
+            siguienteVista.doctor = self.doctor
         }
     }
     /*
