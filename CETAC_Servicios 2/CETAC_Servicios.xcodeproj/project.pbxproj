@@ -26,7 +26,6 @@
 		35921DFB27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */; };
 		359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C2988271B73240068DD2B /* ReportesTableViewController.swift */; };
 		359C298D271B78140068DD2B /* ExpedienteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */; };
-		35AC45AD271E65880008D399 /* FechasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC45AC271E65880008D399 /* FechasViewController.swift */; };
 		35AC45B0271E6ED80008D399 /* Fechas1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AC45AF271E6ED80008D399 /* Fechas1ViewController.swift */; };
 		35B8E0DE271D27AA00A56B89 /* IndivTanatologoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8E0DD271D27AA00A56B89 /* IndivTanatologoTableViewController.swift */; };
 		998B61FB5ABE22AE711BD1B8 /* Pods_CETAC_Servicios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */; };
@@ -96,7 +95,6 @@
 		35921DFA27056E5600F7C5D4 /* NosotrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NosotrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		359C2988271B73240068DD2B /* ReportesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesTableViewController.swift; sourceTree = "<group>"; };
 		359C298C271B78140068DD2B /* ExpedienteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpedienteTableViewCell.swift; sourceTree = "<group>"; };
-		35AC45AC271E65880008D399 /* FechasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechasViewController.swift; sourceTree = "<group>"; };
 		35AC45AF271E6ED80008D399 /* Fechas1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fechas1ViewController.swift; sourceTree = "<group>"; };
 		35B8E0DD271D27AA00A56B89 /* IndivTanatologoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndivTanatologoTableViewController.swift; sourceTree = "<group>"; };
 		8D1CC92EF11F1C79FBBA2D31 /* Pods-CETAC_ServiciosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_ServiciosTests.debug.xcconfig"; path = "Target Support Files/Pods-CETAC_ServiciosTests/Pods-CETAC_ServiciosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 				350F9E81271BADF90021A545 /* TanatologosTableViewController.swift */,
 				350F9E84271BB0550021A545 /* TanatologoTableViewCell.swift */,
 				35B8E0DD271D27AA00A56B89 /* IndivTanatologoTableViewController.swift */,
-				35AC45AC271E65880008D399 /* FechasViewController.swift */,
 				35AC45AF271E6ED80008D399 /* Fechas1ViewController.swift */,
 			);
 			path = Soporte;
@@ -530,7 +527,6 @@
 				9CF167A42717BB8700ED0025 /* Usuario.swift in Sources */,
 				359C2989271B73240068DD2B /* ReportesTableViewController.swift in Sources */,
 				357A87D2271A2211001BEB34 /* Top.swift in Sources */,
-				35AC45AD271E65880008D399 /* FechasViewController.swift in Sources */,
 				354E52922718F5A800FC877F /* EstadisticasGlobalesViewController.swift in Sources */,
 				351E3FB32702B6CD00C09617 /* SceneDelegate.swift in Sources */,
 				9CF167BD2717E4AD00ED0025 /* ReligionTableViewController.swift in Sources */,
