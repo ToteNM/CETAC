@@ -347,7 +347,7 @@ class fetcherController {
         }
 
     func updateExpediente(updateExpediente: Sesion, completion: @escaping (Result<String, Error>) -> Void){
-        db.collection("usuario").document(updateExpediente.id).updateData([
+        db.collection("sesion").document(updateExpediente.id).updateData([
             "numSesion": updateExpediente.numSesion,
             "numExpediente": updateExpediente.numExpediente,
             "cuota": updateExpediente.cuota,

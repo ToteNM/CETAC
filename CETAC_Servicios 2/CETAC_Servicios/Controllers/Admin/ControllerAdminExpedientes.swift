@@ -79,7 +79,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         editar = !editar
         botones(estado: editar)
         //botones2(estado: editar)
-        print("mdmds")
+        
        
     }
     
@@ -160,14 +160,29 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             motivoView.backgroundColor = UIColor.systemGray5
             herramientaView.backgroundColor = UIColor.systemGray5
             coutaView.isHidden = false
+           print(selectedcuota)
+            print(selecteddoctor)
             
             
             
         }
         else{
+            if editarDoctorNombre.hasText{
+                doctor_.text = editarDoctorNombre.text
+            }
+            if editarCouta.hasText{
+                cuota_.text = editarCouta.text
+            }
+            
+            
             nombre_.isUserInteractionEnabled = false
             nombre_.backgroundColor = UIColor.clear
             let imgae = UIImage.init(systemName: "lock")
+            
+            
+            let expedienteUpdated = Sesion(id: selectedid, numSesion: selectednumSesion, numExpediente: selectednumExpediente, cuota: Double(cuota_.text!) ?? selectedcuota, fecha: fecha_.text!, evaluacion: evaluacion_.text!, cierre: switchw.isOn, paciente_id: selectedpaciente, herramienta: herramienta_.text! , motivo: motivo_.text!, tipo: servicio_.text!, intervencion: intervencion_.text!, doctor: doctor_.text ?? selecteddoctor, paciente: nombre_.text!)
+            expedienteControlador.updateExpediente(updateExpediente: expedienteUpdated){ (result) in
+            }
             switchw.isHidden=true
             cierre_.isHidden=false
             fecha_.isHidden=false
@@ -186,12 +201,6 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             intervencionView.backgroundColor = UIColor.clear
             motivoView.backgroundColor = UIColor.clear
             herramientaView.backgroundColor = UIColor.clear
-            doctor_.text = editarDoctorNombre.text
-            cuota_.text = editarCouta.text
-            //let expedienteUpdated = Sesion(id: sesiones.id!, numSesion: sesiones?.numSesion, numExpediente: sesiones?.numExpediente, cuota: Double(cuota_.text!)!, fecha: fecha_.text, evaluacion: evaluacion_.text, cierre: selectedcierre, herramienta: herramienta_.text , intervencion: intervencion_.text, motivo: motivo_.text, tipo: servicio_.text, doctor: doctor_.text, paciente: nombre_.text )
-            //fetcherController.updateExpedientes(updateExpediente: expedienteUpdated){ (result) in
-            //}
-            
         }
     }
     func updateMotivo() {
