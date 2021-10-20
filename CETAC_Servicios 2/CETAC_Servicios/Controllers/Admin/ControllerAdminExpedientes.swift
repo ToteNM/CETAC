@@ -36,7 +36,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         self.selectedmotivo = motivo
         updateMotivo()
     }
-    
+    var expedienteControlador = fetcherController()
     var sesiones: Sesion?
     var editar = false
     //button
@@ -188,6 +188,9 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             herramientaView.backgroundColor = UIColor.clear
             doctor_.text = editarDoctorNombre.text
             cuota_.text = editarCouta.text
+            //let expedienteUpdated = Sesion(id: sesiones.id!, numSesion: sesiones?.numSesion, numExpediente: sesiones?.numExpediente, cuota: Double(cuota_.text!)!, fecha: fecha_.text, evaluacion: evaluacion_.text, cierre: selectedcierre, herramienta: herramienta_.text , intervencion: intervencion_.text, motivo: motivo_.text, tipo: servicio_.text, doctor: doctor_.text, paciente: nombre_.text )
+            //fetcherController.updateExpedientes(updateExpediente: expedienteUpdated){ (result) in
+            //}
             
         }
     }

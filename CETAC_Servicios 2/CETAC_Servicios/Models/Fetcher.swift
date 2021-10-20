@@ -346,17 +346,20 @@ class fetcherController {
             }
         }
 
-    func updateExpediente(updateExpediente: Paciente, completion: @escaping (Result<String, Error>) -> Void){
-        db.collection("paciente").document(updateExpediente.id).updateData([
-            "domicilio": updateExpediente.domicilio, "edad":updateExpediente.edad, "estadoCivil":updateExpediente.estadoCivil, "nombre":updateExpediente.nombre, "numCasa":updateExpediente.numCasa,
-            "numCel":updateExpediente.numCel,
-            "numHijos":updateExpediente.numHijos,
-            "numExpediente":updateExpediente.numExpediente,
-            "ocupacion":updateExpediente.ocupacion,
-            "procedencia":updateExpediente.procedencia,
-            "sexo":updateExpediente.sexo,
-            "religion":updateExpediente.religion,
-            "cierre":updateExpediente.cierre
+    func updateExpediente(updateExpediente: Sesion, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("usuario").document(updateExpediente.id).updateData([
+            "numSesion": updateExpediente.numSesion,
+            "numExpediente": updateExpediente.numExpediente,
+            "cuota": updateExpediente.cuota,
+            "fecha": updateExpediente.fecha,
+            "evaluacion": updateExpediente.evaluacion,
+            "cierre": updateExpediente.cierre,
+            "herramienta": updateExpediente.herramienta,
+            "intervencion": updateExpediente.intervencion,
+            "motivo": updateExpediente.motivo,
+            "tipo": updateExpediente.tipo,
+            "doctor": updateExpediente.doctor,
+            "paciente": updateExpediente.paciente
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
