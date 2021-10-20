@@ -97,17 +97,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
     @IBOutlet weak var intervencionView: UITableViewCell!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var coutaView: UITableViewCell!
-    @IBAction func guardarEdicion(_ sender: UIButton) {
-        
-        
-        editar = !editar
-        //botones(estado: editar)
-        //boton0.isEnabled = false
-        //boton0.isHidden = true
-        //let expedienteUpdated = Expediente(id: passDato!.id, nombreUsuario: usuario0.text!, nombreTanatologo: tanatologo0.text!, motivo: motivo0.text!, servicio: servicio0.text!, herramienta: herramienta0.text!, fecha: [0], numExpediente: Int(expedienteNum0.text!)!, numSesion: Int(sesionNum0.text!)!)
-        //miFetch.updateExpediente(updateExpediente: expedienteUpdated){ (result) in
-        //}
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre_.text = selectedpaciente
@@ -121,7 +111,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         doctor_.text = selecteddoctor
         fecha_.text = selectedfecha
         evaluacion_.text = selectedevaluacion
-        switchw.isOn = false
+        
         
         if selectedcierre == false {
             cierre_.text = "Abierto"
@@ -168,6 +158,8 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             motivoView.isUserInteractionEnabled=true;
             herramientaView.isUserInteractionEnabled=true;
             intervencionView.isUserInteractionEnabled=true;
+            evaluacion_.isUserInteractionEnabled=true
+            evaluacion_.backgroundColor = UIColor.systemGray5
            
             
             
@@ -181,7 +173,8 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
                 cuota_.text = editarCouta.text
             }
             
-            
+            evaluacion_.isUserInteractionEnabled=false
+            evaluacion_.backgroundColor = UIColor.clear
             nombre_.isUserInteractionEnabled = false
             nombre_.backgroundColor = UIColor.clear
             let imgae = UIImage.init(systemName: "lock")
