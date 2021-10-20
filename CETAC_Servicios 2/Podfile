@@ -1,16 +1,1 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-target 'CETAC_Servicios' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-   
-  pod 'Firebase/Firestore'
-
-  pod 'FirebaseFirestoreSwift'
-
-  pod 'Firebase/Auth'
-  # Pods for CETAC_Servicios
-pod 'Charts', '~> 3.6'
-pod 'TinyConstraints'
-end
+target 'CETAC_Servicios' do  # Comment the next line if you don't want to use dynamic frameworks  # Pods for CETAC_Servicios  use_frameworks!     pod 'Firebase/Firestore'  pod 'FirebaseFirestoreSwift'  pod 'Firebase/Auth'  pod 'Charts', '~> 3.6'    pod 'TinyConstraints'    target 'CETAC_ServiciosTests' do    inherit!:search_paths    # Pods for testing  end  target 'CETAC_ServiciosUITests' do    # Pods for testing  endend
