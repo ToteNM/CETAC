@@ -35,6 +35,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
     var sexo: String?
     var estadoCivil : String?
     var numExpediente : Int?
+    var numUsuarios : Int?
     var patientId : String?
     var doctor = ""
     var fetcher = fetcherController()
@@ -134,6 +135,7 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
     func updateUI2(with globales: [Globales]){
         DispatchQueue.main.async {
             self.numExpediente = globales[0].expedientesCount
+            self.numUsuarios = globales[0].usuariosAtendidos
             print(self.numExpediente!)
         }
     }
@@ -271,7 +273,8 @@ class NuevoPacienteTableViewController: UITableViewController, ReligionTableView
         patientId = ref?.documentID
         
         db.collection("globales").document("YyvCoL37678hRbDu0Hu9").updateData([
-            "expedientesCount": self.numExpediente! + 1
+            "expedientesCount": self.numExpediente! + 1,
+            "usuariosAtendidos": self.numUsuarios! + 1
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")

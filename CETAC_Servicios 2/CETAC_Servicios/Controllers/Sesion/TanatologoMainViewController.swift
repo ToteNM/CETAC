@@ -61,6 +61,14 @@ class TanatologoMainViewController: UIViewController {
 
             receiverViewController.doctor = name
         }
+        
+        if segue.identifier == "toExpedientes"  {
+            let navigationContoller = segue.destination as! UINavigationController
+
+            let receiverViewController = navigationContoller.topViewController as! ExpedientesTableViewController
+
+            receiverViewController.doctor = name
+        }
     }
     
 

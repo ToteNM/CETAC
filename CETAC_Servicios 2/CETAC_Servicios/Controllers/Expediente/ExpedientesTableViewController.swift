@@ -11,8 +11,27 @@ class ExpedientesTableViewController: UITableViewController {
     
     var fetcher = fetcherController()
     var datos = [Sesion]()
+    var doctor = ""
+    var selectedid: String = "id"
+    var selecteddoctor : String = "doctor"
+    var selectedpaciente : String = "paciente"
+    var selectednumSesion: Int = 0
+    var selectedfecha: String = ""
+    var selectedevaluacion: String = ""
+    var selectednumExpediente : Int = 0
+    var selectedcouta : Double = 0.0
+    var selectedcierre: Bool = false
+    var selectedherramienta : String = ""
+    var selectedmotivo : String = ""
+    var selectedtipo : String = ""
+    var selectedintervencion : String = ""
+    
+    @IBOutlet weak var continuar: UIBarButtonItem!
+    @IBAction func toUsuario(_ sender: UIBarButtonItem) {
+         performSegue(withIdentifier: "irUsuario", sender: continuar )
+     }
     /*
-    var sessions = [Sesion]()
+     var sessions = [Sesion]()
     var patients = [Paciente]()
     var thanatologs = [Tanatologo]()
      */
@@ -87,10 +106,34 @@ class ExpedientesTableViewController: UITableViewController {
         
         let sesion = datos[indexPath.row]
         
+        if sesion.id == selectedid {
+                    cell.accessoryType = .checkmark
+                } else {
+                    cell.accessoryType = .none
+                }
+        
         cell.update(with: sesion)
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sesiones = datos[indexPath.row]
+        selectedid = sesiones.id
+        selecteddoctor = sesiones.doctor
+        selectedpaciente = sesiones.paciente
+        selectednumSesion = sesiones.numSesion
+        selectednumExpediente = sesiones.numExpediente
+        selectedcouta = sesiones.cuota
+        selectedfecha = sesiones.fecha
+        selectedevaluacion = sesiones.evaluacion
+        selectedcierre = sesiones.cierre
+        selectedherramienta = sesiones.herramienta
+        selectedmotivo = sesiones.motivo
+        selectedtipo = sesiones.tipo
+        selectedintervencion = sesiones.intervencion
+        tableView.reloadData()
     }
     
     /*
@@ -132,14 +175,33 @@ class ExpedientesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "irUsuario" {
+        let siguiente = segue.destination as! UsuarioTableViewController
+            siguiente.selectedid = self.selectedid
+            siguiente.selecteddoctor = self.selecteddoctor
+            siguiente.selectedpaciente = self.selectedpaciente
+            siguiente.selectednumSesion = self.selectednumSesion
+            siguiente.selectednumExpediente = self.selectednumExpediente
+            siguiente.selectedcuota = self.selectedcouta
+            siguiente.selectednumSesion = self.selectednumSesion
+            siguiente.selectedfecha = self.selectedfecha
+            siguiente.selectedevaluacion = self.selectedevaluacion
+            siguiente.selectedcierre = self.selectedcierre
+            siguiente.selectedherramienta = self.selectedherramienta
+            siguiente.selectedmotivo = self.selectedmotivo
+            siguiente.selectedtipo = self.selectedtipo
+            siguiente.selectedintervencion = self.selectedintervencion
+        //let indice = self.tableView.indexPathForSelectedRow?.row
+        //siguiente.sesiones = datos[indice!]
+        }
     }
-    */
+    
 
 }

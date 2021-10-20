@@ -14,7 +14,7 @@
 		<key>Charts.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>20</integer>
 		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>
@@ -86,6 +86,11 @@
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
+		<key>Pods-CETAC_ServiciosTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 		<key>PromisesObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -96,7 +101,7 @@
 		<key>TinyConstraints.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>19</integer>
 		</dict>
 		<key>abseil.xcscheme</key>
 		<dict>
