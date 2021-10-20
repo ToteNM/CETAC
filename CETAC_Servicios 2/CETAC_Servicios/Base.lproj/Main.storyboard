@@ -484,7 +484,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BJp-Of-Xh5"/>
                                         </constraints>
-                                        <state key="normal" title="Sign Up"/>
+                                        <state key="normal" title="Registrar Usuario"/>
                                         <connections>
                                             <action selector="signupTapped:" destination="zwO-Gg-RMr" eventType="touchUpInside" id="WKP-yl-uuI"/>
                                         </connections>
@@ -2392,7 +2392,7 @@
             </objects>
             <point key="canvasLocation" x="5006" y="1730"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Iniciar Sesión-->
         <scene sceneID="WJk-bB-njb">
             <objects>
                 <viewController id="w9V-0E-yFC" customClass="LogInViewController" customModule="CETAC_Servicios" customModuleProvider="target" sceneMemberID="viewController">
@@ -2424,7 +2424,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="f0Y-1B-xWv"/>
                                         </constraints>
-                                        <state key="normal" title="Log In"/>
+                                        <state key="normal" title="Iniciar Sesión"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="w9V-0E-yFC" eventType="touchUpInside" id="bmd-Vm-17f"/>
                                         </connections>
@@ -2449,7 +2449,7 @@
                             <constraint firstItem="oBc-GK-Z6B" firstAttribute="top" secondItem="w0B-Ia-kph" secondAttribute="top" constant="40" id="u3W-gb-f0y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Pvu-BT-4g2"/>
+                    <navigationItem key="navigationItem" title="Iniciar Sesión" id="Pvu-BT-4g2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailField" destination="Fhj-n0-blC" id="Rxb-eP-pmN"/>
@@ -3983,7 +3983,7 @@
             </objects>
             <point key="canvasLocation" x="-522" y="279"/>
         </scene>
-        <!--Usuario Table View Controller-->
+        <!--Información-->
         <scene sceneID="qXq-QD-W8J">
             <objects>
                 <tableViewController id="zuG-JT-Jg7" customClass="UsuarioTableViewController" customModule="CETAC_Servicios" customModuleProvider="target" sceneMemberID="viewController">
@@ -4287,7 +4287,7 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nMo-Ee-43l"/>
+                    <navigationItem key="navigationItem" title="Información" id="nMo-Ee-43l"/>
                     <connections>
                         <outlet property="cierre" destination="2S1-HK-OIP" id="8dv-RC-DYV"/>
                         <outlet property="cuota" destination="GdN-RU-MQx" id="fEp-NW-HcF"/>
@@ -4307,7 +4307,7 @@
             </objects>
             <point key="canvasLocation" x="-1465" y="301"/>
         </scene>
-        <!--Indiv Tanatologo Table View Controller-->
+        <!--Indicadores Tanatologo-->
         <scene sceneID="hMf-2d-AXy">
             <objects>
                 <tableViewController id="TjA-45-pbv" customClass="IndivTanatologoTableViewController" customModule="CETAC_Servicios" customModuleProvider="target" sceneMemberID="viewController">
@@ -4327,7 +4327,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPI-Nc-mbn">
                                                     <rect key="frame" x="30" y="11" width="354" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -4351,7 +4351,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPd-gx-tH1">
                                                     <rect key="frame" x="10" y="10.5" width="394" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -4370,7 +4370,7 @@
                             <outlet property="delegate" destination="TjA-45-pbv" id="XjC-8R-YUY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hhI-Uy-LTT"/>
+                    <navigationItem key="navigationItem" title="Indicadores Tanatologo" id="hhI-Uy-LTT"/>
                     <connections>
                         <outlet property="cuota" destination="SPI-Nc-mbn" id="9wH-hc-d5M"/>
                         <outlet property="tableView" destination="fvT-7b-I6B" id="nxF-vT-aPC"/>
@@ -4381,7 +4381,7 @@
             </objects>
             <point key="canvasLocation" x="-2170" y="1008"/>
         </scene>
-        <!--Fechas1 View Controller-->
+        <!--Seleccionar Fecha-->
         <scene sceneID="932-BO-Dec">
             <objects>
                 <viewController id="RgI-HK-qwv" customClass="Fechas1ViewController" customModule="CETAC_Servicios" customModuleProvider="target" sceneMemberID="viewController">
@@ -4389,7 +4389,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha Inicio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-UO-l6t">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha Inicio: AAAA/MM/DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-UO-l6t">
                                 <rect key="frame" x="10" y="246" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="N3U-ef-nFL"/>
@@ -4399,7 +4399,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha Fin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-CT-4XR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha Fin: AAAA/MM/DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-CT-4XR">
                                 <rect key="frame" x="10" y="370" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="BxB-Xb-wMT"/>
@@ -4439,7 +4439,7 @@
                             <constraint firstItem="cU3-CT-4XR" firstAttribute="top" secondItem="NPe-UO-l6t" secondAttribute="bottom" constant="74" id="vYc-89-QIG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m0h-dT-odY"/>
+                    <navigationItem key="navigationItem" title="Seleccionar Fecha" id="m0h-dT-odY"/>
                     <connections>
                         <outlet property="continuar" destination="zXq-Cs-qmv" id="8aG-zA-13u"/>
                         <outlet property="fechafin" destination="cU3-CT-4XR" id="npT-TA-SOI"/>

@@ -23,7 +23,11 @@ class Fechas1ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    func setUpElements() {
+        
+        Utilities.styleTextField(fechainicio)
+        Utilities.styleTextField(fechafin)
+    }
 
     
     // MARK: - Navigation
