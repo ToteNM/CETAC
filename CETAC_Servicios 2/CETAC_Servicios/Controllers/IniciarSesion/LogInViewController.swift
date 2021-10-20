@@ -15,7 +15,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var usuariosCuenta = UsersController()
+    var usuariosCuenta = fetcherController()
     var pasarUID = ""
     var email = ""
     var roles = 1

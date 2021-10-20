@@ -275,7 +275,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-MS-Awm">
-                                <rect key="frame" x="20" y="608" width="148" height="38"/>
+                                <rect key="frame" x="20" y="971" width="148" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="8W7-dV-fFf"/>
                                     <constraint firstAttribute="height" constant="38" id="A3u-oq-qzc"/>
@@ -287,7 +287,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GN-ZG-hOR">
-                                <rect key="frame" x="285" y="616" width="83" height="30"/>
+                                <rect key="frame" x="285" y="979" width="83" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6qv-8f-88D"/>
                                     <constraint firstAttribute="width" constant="83" id="Oo9-ZM-dnJ"/>
@@ -298,7 +298,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoCETAC" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JE-f2-ozS">
-                                <rect key="frame" x="114" y="132" width="186" height="114"/>
+                                <rect key="frame" x="114" y="132" width="186" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="A4Y-Bf-qHB"/>
                                     <constraint firstAttribute="width" constant="186" id="Rpn-24-qsl"/>
@@ -306,7 +306,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic9-NF-N41">
-                                <rect key="frame" x="78" y="336" width="256" height="71"/>
+                                <rect key="frame" x="78" y="606" width="256" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="FJ8-0x-OXj"/>
                                     <constraint firstAttribute="width" constant="256" id="Tgl-Ou-onr"/>
@@ -318,8 +318,8 @@
                                     <segue destination="AFb-gW-zcs" kind="show" id="g8V-zt-yQq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-cz-BAi">
-                                <rect key="frame" x="78" y="479" width="256" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-cz-BAi">
+                                <rect key="frame" x="78" y="842" width="256" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="2wb-gv-BYq"/>
                                     <constraint firstAttribute="width" constant="256" id="4hk-EL-MyD"/>
@@ -331,8 +331,8 @@
                                     <segue destination="9pu-9u-u4F" kind="show" id="iIX-Eb-EKg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-7v-7oH">
-                                <rect key="frame" x="79" y="364" width="256" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-7v-7oH">
+                                <rect key="frame" x="79" y="727" width="256" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Pji-Q7-ZIK"/>
                                     <constraint firstAttribute="width" constant="256" id="gTd-Zv-jNW"/>

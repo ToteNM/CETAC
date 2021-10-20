@@ -370,7 +370,24 @@ class fetcherController {
             }
         }
     }
-    
+    func leerUsuario (id:String, completion: @escaping (String, String, Int) -> Void){
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(id)
+        docRef.getDocument { (document, error) in
+            if let document = document{
+                /*let email = document.get("email") as? String ?? ""
+                let nombre = document.get("nombre") as? String ?? ""
+                let rol = document.get("rol") as? Int ?? 0*/
+                //let nombre = document.get("nombre") as! String
+                let nombre = document.get("nombre") as! String
+                
+                let email = document.get("email") as! String
+                
+                let rol = document.get("rol") as! Int
+                completion(nombre,email,rol)
+            }
+        }
+    }
     
     
 }
