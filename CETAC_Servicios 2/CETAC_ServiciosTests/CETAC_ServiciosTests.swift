@@ -104,6 +104,70 @@ class CETAC_ServiciosTests: XCTestCase {
         }
         XCTAssertTrue(encontrado)
     }
+    
+    func testVisualizarUsuarios() throws {
+            let fetcher = fetcherController()
+            var usuariosGot = false
+            fetcher.fetchUsuarios{ (result) in
+                switch result{
+                //Funciona
+                case .success(let sesiones): usuariosGot = true
+                case .failure(let error): usuariosGot = false
+                }
+            }
+            let seconds = 7.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                XCTAssertTrue(usuariosGot)
+            }
+      }
+    
+    func testCambiarValorDeCerradoAVerdadero() throws {
+            let fetcher = fetcherController()
+            let db = Firestore.firestore()
+            let patientId = "XtZLymaoobyluvwpZO4n"
+            var cambio = false
+            db.collection("paciente").document(patientId).updateData([
+                "cierre": true
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document updated")
+                    cambio = true
+                }
+            }
+            let seconds = 7.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                XCTAssertTrue(cambio)
+            }
+        }
+    
+    func testAnadirSesion() throws {
+        var added = false
+        let db = Firestore.firestore()
+        db.collection("indicadores").addDocument(data: [
+            "cuota" : 6000,
+            "doctor": "Jonathan",
+            "usuariosMes": 10,
+            "usuariosSem": 2,
+            "usuariosTres": 6,
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added")
+                added = true
+            }
+        }
+        let seconds = 7.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            XCTAssertTrue(added)
+        }
+    }
+
+
+    
+
 
     
 }
