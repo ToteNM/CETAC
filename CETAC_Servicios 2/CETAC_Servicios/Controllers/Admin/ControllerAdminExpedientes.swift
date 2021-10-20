@@ -160,8 +160,11 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             motivoView.backgroundColor = UIColor.systemGray5
             herramientaView.backgroundColor = UIColor.systemGray5
             coutaView.isHidden = false
-           print(selectedcuota)
-            print(selecteddoctor)
+            tipoView.isUserInteractionEnabled=true;
+            motivoView.isUserInteractionEnabled=true;
+            herramientaView.isUserInteractionEnabled=true;
+            intervencionView.isUserInteractionEnabled=true;
+           
             
             
             
@@ -201,6 +204,10 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
             intervencionView.backgroundColor = UIColor.clear
             motivoView.backgroundColor = UIColor.clear
             herramientaView.backgroundColor = UIColor.clear
+            tipoView.isUserInteractionEnabled=false;
+            motivoView.isUserInteractionEnabled=false;
+            herramientaView.isUserInteractionEnabled=false;
+            intervencionView.isUserInteractionEnabled=false;
         }
     }
     func updateMotivo() {
