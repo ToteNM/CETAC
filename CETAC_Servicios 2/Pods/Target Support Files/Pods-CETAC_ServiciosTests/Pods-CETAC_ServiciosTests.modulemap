@@ -1,0 +1,6 @@
+framework module Pods_CETAC_ServiciosTests {
+  umbrella header "Pods-CETAC_ServiciosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

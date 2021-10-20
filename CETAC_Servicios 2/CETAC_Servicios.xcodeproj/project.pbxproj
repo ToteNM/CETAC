@@ -55,6 +55,7 @@
 		9CF167C62717E5DB00ED0025 /* AddHijosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C52717E5DB00ED0025 /* AddHijosTableViewController.swift */; };
 		9CF167C82717E60800ED0025 /* AddHijoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C72717E60800ED0025 /* AddHijoTableViewCell.swift */; };
 		9CF167CA2717F28800ED0025 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF167C92717F28800ED0025 /* MainViewController.swift */; };
+		F2F36D1D4E5CB2D6A600CCE8 /* Pods_CETAC_ServiciosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78C642AC5DAEFDDD399A8DE /* Pods_CETAC_ServiciosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0502EC07E451EAB5E92B8AEF /* Pods-CETAC_ServiciosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_ServiciosTests.release.xcconfig"; path = "Target Support Files/Pods-CETAC_ServiciosTests/Pods-CETAC_ServiciosTests.release.xcconfig"; sourceTree = "<group>"; };
 		0B84AF52271F181D00B40495 /* ControllerAdminExpedientes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAdminExpedientes.swift; sourceTree = "<group>"; };
 		1D0DD75A00805788904B6F8C /* Pods-CETAC_Servicios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_Servicios.debug.xcconfig"; path = "Target Support Files/Pods-CETAC_Servicios/Pods-CETAC_Servicios.debug.xcconfig"; sourceTree = "<group>"; };
 		1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CETAC_Servicios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		35AC45AC271E65880008D399 /* FechasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechasViewController.swift; sourceTree = "<group>"; };
 		35AC45AF271E6ED80008D399 /* Fechas1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fechas1ViewController.swift; sourceTree = "<group>"; };
 		35B8E0DD271D27AA00A56B89 /* IndivTanatologoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndivTanatologoTableViewController.swift; sourceTree = "<group>"; };
+		8D1CC92EF11F1C79FBBA2D31 /* Pods-CETAC_ServiciosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CETAC_ServiciosTests.debug.xcconfig"; path = "Target Support Files/Pods-CETAC_ServiciosTests/Pods-CETAC_ServiciosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C496D55271CA37900DA3F4B /* Globales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globales.swift; sourceTree = "<group>"; };
 		9C496D57271E7D2D00DA3F4B /* TanatologoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanatologoMainViewController.swift; sourceTree = "<group>"; };
 		9C607045270C0315000C5A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 		9CF167C52717E5DB00ED0025 /* AddHijosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHijosTableViewController.swift; sourceTree = "<group>"; };
 		9CF167C72717E60800ED0025 /* AddHijoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHijoTableViewCell.swift; sourceTree = "<group>"; };
 		9CF167C92717F28800ED0025 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F78C642AC5DAEFDDD399A8DE /* Pods_CETAC_ServiciosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CETAC_ServiciosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F36D1D4E5CB2D6A600CCE8 /* Pods_CETAC_ServiciosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +153,8 @@
 			children = (
 				1D0DD75A00805788904B6F8C /* Pods-CETAC_Servicios.debug.xcconfig */,
 				2EC447AD2E77ED22FC4929B3 /* Pods-CETAC_Servicios.release.xcconfig */,
+				8D1CC92EF11F1C79FBBA2D31 /* Pods-CETAC_ServiciosTests.debug.xcconfig */,
+				0502EC07E451EAB5E92B8AEF /* Pods-CETAC_ServiciosTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1452C8B8BD5A555B09402C /* Pods_CETAC_Servicios.framework */,
+				F78C642AC5DAEFDDD399A8DE /* Pods_CETAC_ServiciosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,6 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3571BCDB271FC2CE008DEC0D /* Build configuration list for PBXNativeTarget "CETAC_ServiciosTests" */;
 			buildPhases = (
+				4065F29BC7AFB7CB14D479BD /* [CP] Check Pods Manifest.lock */,
 				3571BCD0271FC2CE008DEC0D /* Sources */,
 				3571BCD1271FC2CE008DEC0D /* Frameworks */,
 				3571BCD2271FC2CE008DEC0D /* Resources */,
@@ -453,6 +462,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CETAC_Servicios/Pods-CETAC_Servicios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4065F29BC7AFB7CB14D479BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CETAC_ServiciosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E6C363374D4FA033D6DA771A /* [CP] Check Pods Manifest.lock */ = {
@@ -723,6 +754,7 @@
 		};
 		3571BCDC271FC2CE008DEC0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1CC92EF11F1C79FBBA2D31 /* Pods-CETAC_ServiciosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -742,6 +774,7 @@
 		};
 		3571BCDD271FC2CE008DEC0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0502EC07E451EAB5E92B8AEF /* Pods-CETAC_ServiciosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
