@@ -75,6 +75,9 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
     var selectedtipo : String = "tipo"
     var selectedintervencion : String = "inter"
     
+    
+    
+    
     @IBAction func editarServicio(_ sender: UIButton) {
         editar = !editar
         botones(estado: editar)
@@ -138,6 +141,7 @@ class ControllerAdminExpedientes: UITableViewController,MotivoTableViewControlle
         }*/
     
     }
+    
     func botones(estado:Bool){
         if estado{
             nombre_.isUserInteractionEnabled = true

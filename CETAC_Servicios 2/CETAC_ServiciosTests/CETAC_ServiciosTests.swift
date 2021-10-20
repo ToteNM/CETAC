@@ -61,6 +61,17 @@ class CETAC_ServiciosTests: XCTestCase {
         XCTAssertTrue(encontrado)
     }
     
+    func testPacienteMal() throws {
+        let paciente = "Marinaz Gonzalez"
+        var encontrado = false
+        for pac in listaPacientes {
+            if pac.nombre == paciente {
+                encontrado = true
+            }
+        }
+        XCTAssertFalse(encontrado)
+    }
+    
     func testSesiones() throws {
         let sesion = "4VhhbT0rBFMFDmDMqQ1K"
         var encontrado = false
@@ -72,6 +83,17 @@ class CETAC_ServiciosTests: XCTestCase {
         XCTAssertTrue(encontrado)
     }
     
+    func testSesionMal() throws {
+        let sesion = "100"
+        var encontrado = false
+        for iid in listaSesiones {
+            if iid.id == sesion {
+                encontrado = true
+            }
+        }
+        XCTAssertFalse(encontrado)
+    }
+    
     func testUsuarios() throws {
         let email = "leo@hotmail.com"
         var encontrado = false
@@ -81,6 +103,17 @@ class CETAC_ServiciosTests: XCTestCase {
             }
         }
         XCTAssertTrue(encontrado)
+    }
+    
+    func testUsuarioMal() throws {
+        let email = "towerr@hotmail.com"
+        var encontrado = false
+        for ema in listaUsuarios {
+            if ema.email == email {
+                encontrado = true
+            }
+        }
+        XCTAssertFalse(encontrado)
     }
     
     func testIndicadores() throws {

@@ -24,7 +24,7 @@ class Paciente : Codable {
     var religion : String
     var cierre : Bool
     
-    init(id : String, domicilio : String, doctor : String, edad: Int, estadoCivil : String, nombre : String, numCasa : Int, numCel : Int, numHijos : Int, numExpediente : Int, sexo : String, ocupacion : String, procedencia : String, religion : String){
+    init(id : String, domicilio : String,  edad: Int, estadoCivil : String, nombre : String, numCasa : Int, numCel : Int, numHijos : Int, numExpediente : Int, sexo : String, ocupacion : String, procedencia : String, religion : String){
         self.id = id
         self.domicilio = domicilio
         self.edad = edad
