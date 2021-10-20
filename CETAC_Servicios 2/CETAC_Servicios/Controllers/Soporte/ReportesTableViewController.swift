@@ -30,6 +30,46 @@ class ReportesTableViewController: UITableViewController {
         performSegue(withIdentifier: "irUsuario", sender: continuar )
     }
     
+    @IBAction func orderPorFecha(_ sender: UIButton) {
+        expedienteControlador.fetchSeriviciosPorFecha{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorNombre(_ sender: UIButton) {
+        expedienteControlador.fetchSeriviciosPorNombre{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorDoctor(_ sender: UIButton) {
+        expedienteControlador.fetchSeriviciosPorDoctor{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorNum(_ sender: UIButton) {
+        expedienteControlador.fetchSeriviciosPorNum{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80

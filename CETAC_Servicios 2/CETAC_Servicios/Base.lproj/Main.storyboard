@@ -3898,9 +3898,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="l3T-iv-mFZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pr-hP-BP2">
+                                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Fecha"/>
+                                    <connections>
+                                        <action selector="orderPorFecha:" destination="h9n-Fi-FLM" eventType="touchUpInside" id="aKY-44-MPY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-Ts-P0k">
+                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Nombre"/>
+                                    <connections>
+                                        <action selector="orderPorNombre:" destination="h9n-Fi-FLM" eventType="touchUpInside" id="Fp9-WR-4YU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sym-74-WcY">
+                                    <rect key="frame" x="207" y="0.0" width="103.5" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Doctor"/>
+                                    <connections>
+                                        <action selector="orderPorDoctor:" destination="h9n-Fi-FLM" eventType="touchUpInside" id="z3p-MV-TzT"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-bY-GgV">
+                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Num. Sesión"/>
+                                    <connections>
+                                        <action selector="orderPorNum:" destination="h9n-Fi-FLM" eventType="touchUpInside" id="W7A-Ky-ckR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" rowHeight="89" id="fGv-B3-9IB" userLabel="celula" customClass="ExpedienteTableViewCell" customModule="CETAC_Servicios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="89"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fGv-B3-9IB" id="sdS-gI-rdN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
