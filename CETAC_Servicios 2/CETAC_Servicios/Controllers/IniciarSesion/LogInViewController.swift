@@ -30,15 +30,23 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     func setUpElements() {
         //Esconder el error
-        errorLabel.alpha = 0
-        
+        //errorLabel.alpha = 0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+                    //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+                    tap.cancelsTouchesInView = false
+
+                view.addGestureRecognizer(tap)
         //Estilo a los elementos
         Utilities.styleTextField(emailField)
         Utilities.styleTextField(passwordField)
         Utilities.styleFilledButton(login)
     }
     
-    
+    @objc func dismissKeyboard() {
+            //Causes the view (or one of its embedded text fields) to resign the first responder status.
+            view.endEditing(true)
+        }
     
     
     @IBAction func loginTapped(_ sender: Any) {
