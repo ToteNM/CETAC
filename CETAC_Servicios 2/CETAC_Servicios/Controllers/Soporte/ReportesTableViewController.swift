@@ -45,7 +45,7 @@ class ReportesTableViewController: UITableViewController {
             switch result{
             //Funciona
             case .success(let sesiones):self.updateUI(with: sesiones)
-            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesionn")
             }
         }
     }
