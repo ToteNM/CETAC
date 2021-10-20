@@ -20,6 +20,12 @@ class TanatologosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        /*self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: action)
+        if let tapGestureRecognizer = self.tapGestureRecognizer {
+          tapGestureRecognizer.cancelsTouchesInView = false
+          self.addGestureRecognizer(tapGestureRecognizer)
+        }*/
+
         usuarioControlador.fetchTanatologos{ (result) in
             switch result{
             case .success(let usuarios):self.updateUI(with: usuarios)
@@ -71,7 +77,13 @@ class TanatologosTableViewController: UITableViewController {
 
         // Configure the cell...
         let usuario = datos[indexPath.row]
-        
+        //cell.stackk.backgroundColor = UIColor(cgColor: UIColor.systemGray.cgColor)
+        if usuario.nombre == selectedname {
+                    cell.accessoryType = .checkmark
+                } else {
+                    cell.accessoryType = .none
+                }
+
         cell.update(with: usuario, cont: indexPath.row)
         // Configure the cell...
 
@@ -82,9 +94,16 @@ class TanatologosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let usuario = datos[indexPath.row]
+        /*let cell = tableView.cellForRow(at: indexPath) as! TanatologoTableViewCell
+        cell.stackk.backgroundColor = UIColor(cgColor: UIColor.systemGreen.cgColor)*/
         selectedname = usuario.nombre
         tableView.reloadData()
 
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TanatologoTableViewCell
+        cell.stackk.backgroundColor = UIColor(cgColor: UIColor.systemGray.cgColor)
     }
     /*
     // Override to support conditional editing of the table view.
@@ -134,10 +153,12 @@ class TanatologosTableViewController: UITableViewController {
         siguiente.fechai = ""
         siguiente.fechaf = ""
         }*/
+        if segue.identifier == "irFechas" {
         let siguiente = segue.destination as! Fechas1ViewController
         siguiente.nombre = self.selectedname
         siguiente.fechai = ""
         siguiente.fechaf = ""
+        }
         //let indice = self.tableView.indexPathForSelectedRow?.row
         //siguiente.tanatologo = datos[indice!]
     }

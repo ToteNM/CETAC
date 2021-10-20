@@ -310,33 +310,35 @@ class fetcherController {
         }
     }
     
-    func fetchCuotaporTanatologo(fechainicio: String, fechafinal: String, completion: @escaping (Result<Double, Error>)-> Void){
+    func fetchCuotaporTanatologo(fechainicio: String, fechafinal: String, doctor: String, completion: @escaping (Result<Double, Error>)-> Void){
         var cuota = 0.0
-        db.collection("sesion").whereField("doctor", isEqualTo: "Rita Alcalde").whereField("fecha", in: [fechainicio, fechafinal]).getDocuments{ (querySnapshot, err) in
+        db.collection("sesion").order(by: "fecha").start(at: [fechainicio]).end(at: [fechafinal]).getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting document: \(err)")
                 completion(.failure(err))
             } else {
                 for document in querySnapshot!.documents {
                     var p = Sesion(aDoc: document)
+                    if p.doctor == doctor {
                     cuota += p.cuota
+                    }
                 }
                 completion(.success(cuota))
             }
         }
     }
     
-    func fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: String, dateFinal: String, completion: @escaping (Result<Int, Error>)-> Void){
+    func fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: String, dateFinal: String, doctor: String, completion: @escaping (Result<Int, Error>)-> Void){
             var numero = 0
             var pacientes = [String]()
-            db.collection("sesion").order(by: "fecha").start(at: [dateInicio]).end(at: [dateFinal]).getDocuments{ (querySnapshot, err) in
+        db.collection("sesion").order(by: "fecha").start(at: [dateInicio]).end(at: [dateFinal]).getDocuments{ (querySnapshot, err) in
                 if let err = err {
                     print("Error getting document: \(err)")
                     completion(.failure(err))
                 } else {
                     for document in querySnapshot!.documents {
                         var p = Sesion(aDoc: document)
-                        if !pacientes.contains(p.paciente)  {
+                        if !pacientes.contains(p.paciente) && p.doctor == doctor {
                             numero += 1
                             pacientes.append(p.paciente)
                         }

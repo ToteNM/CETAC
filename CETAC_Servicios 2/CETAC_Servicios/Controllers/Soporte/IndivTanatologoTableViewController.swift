@@ -29,13 +29,14 @@ class IndivTanatologoTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //individualtableView.dataSource = self
         //individualtableView.delegate = self
-        individualControlador.fetchCuotaporTanatologo(fechainicio: fechai, fechafinal: fechaf){ (result) in
+        print(nombre)
+        individualControlador.fetchCuotaporTanatologo(fechainicio: fechai, fechafinal: fechaf, doctor: nombre){ (result) in
             switch result{
             case .success(let cuota):self.updateUI(with: cuota)
             case .failure(let error):self.displayError(error, title: "No se pudo acceder a las sesiones")
             }
         }
-        individualControlador.fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: fechai, dateFinal: fechaf){
+        individualControlador.fetchNumUsuariosPorTanatologoEnRangoDeFecha(dateInicio: fechai, dateFinal: fechaf, doctor: nombre){
             (result) in
                 switch result{
                 case .success(let numero):self.updateUI1(with: numero)
@@ -47,6 +48,7 @@ class IndivTanatologoTableViewController: UITableViewController {
     func updateUI(with cuota:Double){
         DispatchQueue.main.async {
             self.cuotas = cuota
+            print(self.cuotas)
             self.cuota.text = String(cuota)
             self.tableView.reloadData()
         }

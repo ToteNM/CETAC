@@ -12,6 +12,7 @@ class TanatologoTableViewCell: UITableViewCell {
     @IBOutlet weak var num: UILabel!
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var servicio: UILabel!
+    @IBOutlet weak var stackk: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

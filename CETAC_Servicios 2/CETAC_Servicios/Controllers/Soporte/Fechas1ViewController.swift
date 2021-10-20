@@ -22,6 +22,7 @@ class Fechas1ViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
         // Do any additional setup after loading the view.
+        print(nombre)
     }
     func setUpElements() {
         
@@ -39,6 +40,7 @@ class Fechas1ViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "irIndividual" {
         let siguiente = segue.destination as! IndivTanatologoTableViewController
+        siguiente.nombre = self.nombre
         siguiente.fechai = self.fechainicio.text!
         siguiente.fechaf = self.fechafin.text!
         }

@@ -4522,7 +4522,7 @@
                                     <outlet property="nombre" destination="okG-ar-ljh" id="zft-vU-LPt"/>
                                     <outlet property="num" destination="NuG-Cd-g6l" id="Z08-E0-aYG"/>
                                     <outlet property="servicio" destination="VCk-Dz-ZOU" id="VEH-1v-322"/>
-                                    <segue destination="RgI-HK-qwv" kind="show" identifier="irFechas" id="6Lv-Cl-UnL"/>
+                                    <outlet property="stackk" destination="gyI-cH-4D6" id="sgP-0Q-12o"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -4531,7 +4531,13 @@
                             <outlet property="delegate" destination="MWv-Pg-6Eh" id="Pc6-mG-qw3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tanatologos" id="BlM-eP-Eal"/>
+                    <navigationItem key="navigationItem" title="Tanatologos" id="BlM-eP-Eal">
+                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="eU3-GE-O2n">
+                            <connections>
+                                <segue destination="RgI-HK-qwv" kind="show" identifier="irFechas" id="uQz-Mp-YpZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xX-VH-RpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5155,13 +5161,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YtZ-Xg-irZ"/>
+        <segue reference="3YO-rq-k92"/>
         <segue reference="TyQ-xx-N1b"/>
         <segue reference="BYY-gz-bb4"/>
         <segue reference="N5W-8o-fNd"/>
         <segue reference="ulw-hF-OQO"/>
         <segue reference="cEe-9I-bfH"/>
-        <segue reference="IGd-iJ-laS"/>
+        <segue reference="0El-DE-Wv8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Acompanamiento grupal" width="960" height="540"/>
