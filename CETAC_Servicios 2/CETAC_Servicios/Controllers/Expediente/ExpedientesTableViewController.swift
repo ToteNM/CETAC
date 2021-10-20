@@ -30,6 +30,47 @@ class ExpedientesTableViewController: UITableViewController {
     @IBAction func toUsuario(_ sender: UIBarButtonItem) {
          performSegue(withIdentifier: "irUsuario", sender: continuar )
      }
+    
+    @IBAction func orderPorFecha(_ sender: UIButton) {
+        fetcher.fetchSeriviciosPorFecha{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorNombre(_ sender: UIButton) {
+        fetcher.fetchSeriviciosPorNombre{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorDoctor(_ sender: UIButton) {
+        fetcher.fetchSeriviciosPorDoctor{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
+    @IBAction func orderPorNum(_ sender: UIButton) {
+        fetcher.fetchSeriviciosPorNum{ (result) in
+            switch result{
+            //Funciona
+            case .success(let sesiones):self.updateUI(with: sesiones)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a Sesion")
+            }
+        }
+    }
+    
     /*
      var sessions = [Sesion]()
     var patients = [Paciente]()

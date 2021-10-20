@@ -28,6 +28,70 @@ class fetcherController {
         }
     }
     
+    func fetchSeriviciosPorFecha(completion: @escaping (Result<Sesiones, Error>)-> Void){
+        var sesiones = [Sesion]()
+        db.collection("sesion").order(by: "fecha").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var s = Sesion(aDoc: document)
+                    sesiones.append(s)
+                }
+                completion(.success(sesiones))
+            }
+        }
+    }
+    
+    func fetchSeriviciosPorNombre(completion: @escaping (Result<Sesiones, Error>)-> Void){
+        var sesiones = [Sesion]()
+        db.collection("sesion").order(by: "paciente").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var s = Sesion(aDoc: document)
+                    sesiones.append(s)
+                }
+                completion(.success(sesiones))
+            }
+        }
+    }
+    
+    func fetchSeriviciosPorDoctor(completion: @escaping (Result<Sesiones, Error>)-> Void){
+        var sesiones = [Sesion]()
+        db.collection("sesion").order(by: "doctor").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var s = Sesion(aDoc: document)
+                    sesiones.append(s)
+                }
+                completion(.success(sesiones))
+            }
+        }
+    }
+    
+    func fetchSeriviciosPorNum(completion: @escaping (Result<Sesiones, Error>)-> Void){
+        var sesiones = [Sesion]()
+        db.collection("sesion").order(by: "numSesion").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(.failure(err))
+            } else {
+                for document in querySnapshot!.documents {
+                    var s = Sesion(aDoc: document)
+                    sesiones.append(s)
+                }
+                completion(.success(sesiones))
+            }
+        }
+    }
+    
     
     func fetchPacientes(completion: @escaping (Result<Pacientes, Error>)-> Void){
         var pacientes = [Paciente]()
